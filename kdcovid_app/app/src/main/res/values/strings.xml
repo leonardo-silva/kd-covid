@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">KD-Covid</string>
+    <string name="welcome_msg">Como está se sentindo? Ajude os cientistas a combater a disseminação da COVID-19 na sua região!</string>
+    <string name="with_support_msg">Com o apoio de</string>
+    <string name="next_lbl">Continue</string>
+    <string name="agreement_msg">Aqui vem aquela parte: \"Concordo em compartilhar meus dados para ...\"</string>
+    <string name="iagree_lbl">Eu concordo</string>
+    <string name="feeling_msg">Como você está se sentindo?</string>
+    <string name="nosymptom_msg">bem, não sinto nenhum \ntipo de sintoma</string>
+    <string name="yessymptom_msg">Sinto algum sintoma \nou incômodo</string>
+    <string name="warning_feeling_msg">Obs: clique nesta opção se estiver sentindo qualquer tipo de sintoma, mesmo tosse ou nariz escorrendo</string>
+</resources>
