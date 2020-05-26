@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.dam.kdcovid_app.R;
@@ -32,10 +31,14 @@ public class YesSymptom extends AppCompatActivity {
         setContentView(R.layout.activity_yes_symptom);
         // Set up visual components
         this.setUpViewById();
-        this.setUpNextButtonListener();
         // Get Patient object
         Bundle bundle = getIntent().getExtras();
         this.patient = (Patient)bundle.get("patient");
+    }
+
+    public void onclickBtnYesSymptomNext(View view) {
+        // Click event for all radiobuttons except NOA
+        Toast.makeText(YesSymptom.this, "Ainda não fiz essa parte!", Toast.LENGTH_LONG).show();
     }
 
     public void uncheckNOA(View view) {
@@ -53,15 +56,6 @@ public class YesSymptom extends AppCompatActivity {
         rdbPurpleMouth.setChecked(false);
         rdbSoreThroat.setChecked(false);
         rdbChestPressure.setChecked(false);
-    }
-
-    private void setUpNextButtonListener() {
-        btnYesSymptomNext.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(YesSymptom.this, "Ainda não fiz essa parte!", Toast.LENGTH_LONG).show();
-            }
-        });
     }
 
     private void setUpViewById() {

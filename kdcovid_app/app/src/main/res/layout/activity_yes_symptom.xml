@@ -156,6 +156,7 @@
         android:layout_marginTop="35dp"
         android:background="@color/colorPrimary"
         android:drawableRight="@drawable/ic_arrow_forward_white_24dp"
+        android:onClick="onclickBtnYesSymptomNext"
         android:padding="16dp"
         android:text="@string/next_lbl"
         android:textColor="@android:color/background_light"
