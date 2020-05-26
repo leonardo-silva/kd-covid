@@ -12,7 +12,7 @@
         android:layout_width="128dp"
         android:layout_height="128dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/coronavirus128"
+        android:src="@drawable/kdcovid_logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvKD" />
@@ -21,7 +21,7 @@
         android:id="@+id/tvKD"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="KD ?"
+        android:text="KD-Covid"
         android:textColor="@android:color/black"
         android:textSize="30sp"
         android:textStyle="bold"

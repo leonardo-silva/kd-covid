@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical"
+    android:orientation="vertical"
+    android:padding="20sp"
+    tools:context=".activity.YesSymptom">
+
+    <TextView
+        android:id="@+id/tvSelectSymptom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:paddingLeft="5sp"
+        android:paddingRight="5sp"
+        android:paddingBottom="10sp"
+        android:text="@string/tell_symptoms_lbl"
+        android:textColor="@android:color/background_light"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <RadioButton
+        android:id="@+id/rdbFever"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:buttonTint="@android:color/white"
+        android:onClick="uncheckNOA"
+        android:paddingTop="5sp"
+        android:paddingBottom="5sp"
+        android:text="@string/fever_lbl"
+        android:textColor="@android:color/background_light"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <RadioButton
+        android:id="@+id/rdbRunningNose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:buttonTint="@android:color/white"
+        android:onClick="uncheckNOA"
+        android:paddingTop="5sp"
+        android:paddingBottom="5sp"
+        android:text="@string/running_nose_lbl"
+        android:textColor="@android:color/background_light"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <RadioButton
+        android:id="@+id/rdbTiredness"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:buttonTint="@android:color/white"
+        android:onClick="uncheckNOA"
+        android:paddingTop="5sp"
+        android:paddingBottom="5sp"
+        android:text="@string/tiredness_lbl"
+        android:textColor="@android:color/background_light"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <RadioButton
+        android:id="@+id/rdbCough"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:buttonTint="@android:color/white"
+        android:onClick="uncheckNOA"
+        android:paddingTop="5sp"
+        android:paddingBottom="5sp"
+        android:text="@string/cough_lbl"
+        android:textColor="@android:color/background_light"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <RadioButton
+        android:id="@+id/rdbBreathProblem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:buttonTint="@android:color/white"
+        android:onClick="uncheckNOA"
+        android:paddingTop="5sp"
+        android:paddingBottom="5sp"
+        android:text="@string/breath_problem_lbl"
+        android:textColor="@android:color/background_light"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <RadioButton
+        android:id="@+id/rdbPurpleMouth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:buttonTint="@android:color/white"
+        android:onClick="uncheckNOA"
+        android:paddingTop="5sp"
+        android:paddingBottom="5sp"
+        android:text="@string/purple_mouth_lbl"
+        android:textColor="@android:color/background_light"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <RadioButton
+        android:id="@+id/rdbSoreThroat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:buttonTint="@android:color/white"
+        android:onClick="uncheckNOA"
+        android:paddingTop="5sp"
+        android:paddingBottom="5sp"
+        android:text="@string/sore_throat_lbl"
+        android:textColor="@android:color/background_light"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <RadioButton
+        android:id="@+id/rdbChestPressure"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:buttonTint="@android:color/white"
+        android:onClick="uncheckNOA"
+        android:paddingTop="5sp"
+        android:paddingBottom="5sp"
+        android:text="@string/chest_pressure_lbl"
+        android:textColor="@android:color/background_light"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <RadioButton
+        android:id="@+id/rdbNOA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:buttonTint="@android:color/white"
+        android:onClick="uncheckAllRadioButtonsButNOA"
+        android:paddingTop="5sp"
+        android:paddingBottom="5sp"
+        android:text="@string/noa_lbl"
+        android:textColor="@android:color/background_light"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnYesSymptomNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="35dp"
+        android:background="@color/colorPrimary"
+        android:drawableRight="@drawable/ic_arrow_forward_white_24dp"
+        android:padding="16dp"
+        android:text="@string/next_lbl"
+        android:textColor="@android:color/background_light"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        app:layout_constraintVertical_bias="0.067" />
+
+</LinearLayout>

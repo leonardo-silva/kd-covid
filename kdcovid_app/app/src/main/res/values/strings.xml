@@ -9,4 +9,14 @@
     <string name="nosymptom_msg">bem, não sinto nenhum \ntipo de sintoma</string>
     <string name="yessymptom_msg">Sinto algum sintoma \nou incômodo</string>
     <string name="warning_feeling_msg">Obs: clique nesta opção se estiver sentindo qualquer tipo de sintoma, mesmo tosse ou nariz escorrendo</string>
+    <string name="tell_symptoms_lbl">Assinale os sintomas que você tem sentido:</string>
+    <string name="fever_lbl">Febre</string>
+    <string name="running_nose_lbl">Nariz escorrendo (coriza)</string>
+    <string name="tiredness_lbl">Cansaço</string>
+    <string name="purple_mouth_lbl">Cor azulada/roxa na boca ou rosto</string>
+    <string name="cough_lbl">Tosse ou espirro</string>
+    <string name="breath_problem_lbl">Dificuldade de respirar</string>
+    <string name="sore_throat_lbl">Dor de garganta</string>
+    <string name="chest_pressure_lbl">Pressão no peito</string>
+    <string name="noa_lbl">Nenhum destes</string>
 </resources>

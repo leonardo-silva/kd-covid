@@ -17,8 +17,6 @@ public class Agreement extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_agreement);
-        // To hide the title bar
-        getSupportActionBar().hide();
         // Set up visual components
         btnIAgree = findViewById(R.id.btnIAgree);
         btnIAgree.setOnClickListener(new View.OnClickListener() {
