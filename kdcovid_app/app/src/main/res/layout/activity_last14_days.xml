@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical"
+    android:orientation="vertical"
+    android:padding="20sp"
+    tools:context=".activity.Last14DaysActivity">
+
+    <TextView
+        android:id="@+id/tvLast14Days"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:paddingLeft="5sp"
+        android:paddingRight="5sp"
+        android:paddingBottom="10sp"
+        android:text="@string/last_14days_lbl"
+        android:textColor="@android:color/background_light"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <RadioButton
+        android:id="@+id/rdbWentOutOfCity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:buttonTint="@android:color/white"
+        android:onClick="uncheckLast14DaysNOA"
+        android:paddingTop="5sp"
+        android:paddingBottom="5sp"
+        android:text="@string/went_outof_city_lbl"
+        android:textColor="@android:color/white"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <RadioButton
+        android:id="@+id/rdbContactWithOutsider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:buttonTint="@android:color/white"
+        android:onClick="uncheckLast14DaysNOA"
+        android:paddingTop="5sp"
+        android:paddingBottom="5sp"
+        android:text="@string/contact_with_outsider_lbl"
+        android:textColor="@android:color/white"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <RadioButton
+        android:id="@+id/rdbContactWithInfected"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:buttonTint="@android:color/white"
+        android:onClick="uncheckLast14DaysNOA"
+        android:paddingTop="5sp"
+        android:paddingBottom="5sp"
+        android:text="@string/contact_with_infected_lbl"
+        android:textColor="@android:color/white"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <RadioButton
+        android:id="@+id/rdbLast14DaysNOA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:buttonTint="@android:color/white"
+        android:onClick="uncheckAllButLast14DaysNOA"
+        android:paddingTop="5sp"
+        android:paddingBottom="5sp"
+        android:text="@string/noa_lbl"
+        android:textColor="@android:color/white"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnLast14DaysNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="35dp"
+        android:background="@color/colorPrimary"
+        android:drawableEnd="@drawable/ic_arrow_forward_white_24dp"
+        android:padding="16dp"
+        android:text="@string/next_lbl"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        app:layout_constraintVertical_bias="0.067" />
+
+</LinearLayout>

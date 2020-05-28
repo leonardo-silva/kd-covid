@@ -7,7 +7,7 @@
     android:layout_gravity="center_vertical"
     android:orientation="vertical"
     android:padding="20sp"
-    tools:context=".activity.YesSymptom">
+    tools:context=".activity.YesSymptomActivity">
 
     <TextView
         android:id="@+id/tvSelectSymptom"
@@ -32,7 +32,7 @@
         android:paddingTop="5sp"
         android:paddingBottom="5sp"
         android:text="@string/fever_lbl"
-        android:textColor="@android:color/background_light"
+        android:textColor="@android:color/white"
         android:textSize="25sp"
         android:textStyle="bold" />
 
@@ -46,7 +46,7 @@
         android:paddingTop="5sp"
         android:paddingBottom="5sp"
         android:text="@string/running_nose_lbl"
-        android:textColor="@android:color/background_light"
+        android:textColor="@android:color/white"
         android:textSize="25sp"
         android:textStyle="bold" />
 
@@ -60,7 +60,7 @@
         android:paddingTop="5sp"
         android:paddingBottom="5sp"
         android:text="@string/tiredness_lbl"
-        android:textColor="@android:color/background_light"
+        android:textColor="@android:color/white"
         android:textSize="25sp"
         android:textStyle="bold" />
 
@@ -74,7 +74,7 @@
         android:paddingTop="5sp"
         android:paddingBottom="5sp"
         android:text="@string/cough_lbl"
-        android:textColor="@android:color/background_light"
+        android:textColor="@android:color/white"
         android:textSize="25sp"
         android:textStyle="bold" />
 
@@ -88,7 +88,7 @@
         android:paddingTop="5sp"
         android:paddingBottom="5sp"
         android:text="@string/breath_problem_lbl"
-        android:textColor="@android:color/background_light"
+        android:textColor="@android:color/white"
         android:textSize="25sp"
         android:textStyle="bold" />
 
@@ -102,7 +102,7 @@
         android:paddingTop="5sp"
         android:paddingBottom="5sp"
         android:text="@string/purple_mouth_lbl"
-        android:textColor="@android:color/background_light"
+        android:textColor="@android:color/white"
         android:textSize="25sp"
         android:textStyle="bold" />
 
@@ -116,7 +116,7 @@
         android:paddingTop="5sp"
         android:paddingBottom="5sp"
         android:text="@string/sore_throat_lbl"
-        android:textColor="@android:color/background_light"
+        android:textColor="@android:color/white"
         android:textSize="25sp"
         android:textStyle="bold" />
 
@@ -130,7 +130,7 @@
         android:paddingTop="5sp"
         android:paddingBottom="5sp"
         android:text="@string/chest_pressure_lbl"
-        android:textColor="@android:color/background_light"
+        android:textColor="@android:color/white"
         android:textSize="25sp"
         android:textStyle="bold" />
 
@@ -144,7 +144,7 @@
         android:paddingTop="5sp"
         android:paddingBottom="5sp"
         android:text="@string/noa_lbl"
-        android:textColor="@android:color/background_light"
+        android:textColor="@android:color/white"
         android:textSize="25sp"
         android:textStyle="bold" />
 
@@ -159,7 +159,7 @@
         android:onClick="onclickBtnYesSymptomNext"
         android:padding="16dp"
         android:text="@string/next_lbl"
-        android:textColor="@android:color/background_light"
+        android:textColor="@android:color/white"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"

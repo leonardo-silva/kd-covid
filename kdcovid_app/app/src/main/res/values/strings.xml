@@ -19,4 +19,14 @@
     <string name="sore_throat_lbl">Dor de garganta</string>
     <string name="chest_pressure_lbl">Pressão no peito</string>
     <string name="noa_lbl">Nenhum destes</string>
+    <string name="symptoms_duration_lbl">A quanto tempo você se sente assim?</string>
+    <string name="one_to_three_days_lbl">1 a 3 Dias</string>
+    <string name="four_to_seven_days_lbl">4 a 7 Dias</string>
+    <string name="eight_to_ten_days_lbl">8 a 10 Dias</string>
+    <string name="eleven_to_fourteen_days_lbl">11 a 14 Dias</string>
+    <string name="fourteen_plus_days_lbl">Mais de 14 Dias</string>
+    <string name="last_14days_lbl">Nos últimos 14 dias você:</string>
+    <string name="went_outof_city_lbl">Viajou para fora da sua cidade</string>
+    <string name="contact_with_outsider_lbl">Teve contato com alguém que chegou de fora da cidade</string>
+    <string name="contact_with_infected_lbl">Teve contato com alguém infectado por Covid-19</string>
 </resources>

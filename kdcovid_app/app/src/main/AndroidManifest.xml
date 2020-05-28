@@ -9,10 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.SymptomDuration"></activity>
-        <activity android:name=".activity.YesSymptom" />
-        <activity android:name=".activity.Feeling" />
-        <activity android:name=".activity.Agreement" />
+        <activity android:name=".activity.Last14DaysActivity"></activity>
+        <activity android:name=".activity.SymptomDurationActivity" />
+        <activity android:name=".activity.YesSymptomActivity" />
+        <activity android:name=".activity.FeelingActivity" />
+        <activity android:name=".activity.AgreementActivity" />
         <activity
             android:name=".activity.MainActivity"
             android:screenOrientation="portrait">

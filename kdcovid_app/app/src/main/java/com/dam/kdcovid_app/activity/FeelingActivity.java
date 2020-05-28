@@ -11,7 +11,7 @@ import android.widget.Toast;
 import com.dam.kdcovid_app.R;
 import com.dam.kdcovid_app.model.Patient;
 
-public class Feeling extends AppCompatActivity {
+public class FeelingActivity extends AppCompatActivity {
 
     private Button btnNoSymptom;
     private Button btnYesSymptom;
@@ -28,7 +28,7 @@ public class Feeling extends AppCompatActivity {
         btnNoSymptom.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(Feeling.this, "Ainda não fiz essa parte!", Toast.LENGTH_LONG).show();
+                Toast.makeText(FeelingActivity.this, "Ainda não fiz essa parte!", Toast.LENGTH_LONG).show();
             }
         });
         btnYesSymptom.setOnClickListener(new View.OnClickListener() {
@@ -42,8 +42,8 @@ public class Feeling extends AppCompatActivity {
     private void gotoYesSymptomActivity() {
         // Create Patient instance
         Patient patient = new Patient(YES);
-        // Call Agreement activity
-        Intent intent = new Intent(getApplicationContext(), YesSymptom.class);
+        // Call AgreementActivity activity
+        Intent intent = new Intent(getApplicationContext(), YesSymptomActivity.class);
         intent.putExtra("patient", patient);
         startActivity(intent);
     }

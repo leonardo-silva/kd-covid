@@ -37,8 +37,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     protected void nextActivity() {
-        // Call Agreement activity
-        Intent intent = new Intent(getApplicationContext(), Agreement.class);
+        // Call AgreementActivity activity
+        Intent intent = new Intent(getApplicationContext(), AgreementActivity.class);
         startActivity(intent);
     }
 }

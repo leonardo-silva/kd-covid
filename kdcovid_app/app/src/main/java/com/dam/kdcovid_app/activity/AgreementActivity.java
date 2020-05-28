@@ -9,7 +9,7 @@ import android.widget.Button;
 
 import com.dam.kdcovid_app.R;
 
-public class Agreement extends AppCompatActivity {
+public class AgreementActivity extends AppCompatActivity {
 
     private Button btnIAgree;
 
@@ -28,8 +28,8 @@ public class Agreement extends AppCompatActivity {
     }
 
     protected void nextActivity() {
-        // Call Agreement activity
-        Intent intent = new Intent(getApplicationContext(), Feeling.class);
+        // Call AgreementActivity activity
+        Intent intent = new Intent(getApplicationContext(), FeelingActivity.class);
         startActivity(intent);
     }
 }
