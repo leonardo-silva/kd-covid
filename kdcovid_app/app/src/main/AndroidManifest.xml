@@ -4,12 +4,13 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/kdcovid_logo"
+        android:icon="@drawable/kdcovid_logo_white_background"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.Last14DaysActivity"></activity>
+        <activity android:name=".activity.AgeRangeActivity"></activity>
+        <activity android:name=".activity.Last14DaysActivity" />
         <activity android:name=".activity.SymptomDurationActivity" />
         <activity android:name=".activity.YesSymptomActivity" />
         <activity android:name=".activity.FeelingActivity" />

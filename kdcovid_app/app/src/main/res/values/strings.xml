@@ -29,4 +29,11 @@
     <string name="went_outof_city_lbl">Viajou para fora da sua cidade</string>
     <string name="contact_with_outsider_lbl">Teve contato com alguém que chegou de fora da cidade</string>
     <string name="contact_with_infected_lbl">Teve contato com alguém infectado por Covid-19</string>
+    <string name="feel_sth_lbl">Sinto algum sintoma</string>
+    <string name="age_range_lbl">Assinale sua faixa étaria (idade)</string>
+    <string name="one_to_fifteen_years_lbl">1 a 15 Anos</string>
+    <string name="sixteen_to_thirty_years_lbl">16 a 30 Anos</string>
+    <string name="thirtyone_to_fortyfive_years_lbl">31 a 45 Anos</string>
+    <string name="fortysix_to_sixty_years_lbl">46 a 60 Anos</string>
+    <string name="sixty_plus_years_lbl">Mais de 60 Anos</string>
 </resources>

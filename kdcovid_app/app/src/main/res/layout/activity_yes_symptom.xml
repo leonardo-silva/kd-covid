@@ -10,6 +10,17 @@
     tools:context=".activity.YesSymptomActivity">
 
     <TextView
+        android:id="@+id/tvHeaderYesSymptom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20sp"
+        android:text="@string/feel_sth_lbl"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <TextView
         android:id="@+id/tvSelectSymptom"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -153,20 +164,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="20sp"
         android:background="@color/colorPrimary"
-        android:drawableRight="@drawable/ic_arrow_forward_white_24dp"
+        android:drawableEnd="@drawable/ic_arrow_forward_white_24dp"
         android:onClick="onclickBtnYesSymptomNext"
         android:padding="16dp"
         android:text="@string/next_lbl"
         android:textColor="@android:color/white"
         android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4"
-        app:layout_constraintVertical_bias="0.067" />
+        android:textStyle="bold" />
+
 
 </LinearLayout>

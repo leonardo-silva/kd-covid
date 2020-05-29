@@ -24,6 +24,9 @@ public class Last14DaysActivity extends AppCompatActivity {
         setContentView(R.layout.activity_last14_days);
         // Set up visual components
         this.setUpViewById();
+        // Get Patient object
+        Bundle bundle = getIntent().getExtras();
+        this.patient = (Patient)bundle.get("patient");
     }
 
     private void setUpViewById() {
@@ -57,9 +60,9 @@ public class Last14DaysActivity extends AppCompatActivity {
 
     private void gotoNextActivity() {
         // Call SymptomDurationActivity activity
-        //Intent intent = new Intent(getApplicationContext(), SymptomDurationActivity.class);
-        //intent.putExtra("patient", patient);
-        //startActivity(intent);
+        Intent intent = new Intent(getApplicationContext(), AgeRangeActivity.class);
+        intent.putExtra("patient", patient);
+        startActivity(intent);
     }
 
 }

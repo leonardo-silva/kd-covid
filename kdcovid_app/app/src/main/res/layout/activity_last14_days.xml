@@ -10,6 +10,17 @@
     tools:context=".activity.Last14DaysActivity">
 
     <TextView
+        android:id="@+id/tvHeaderLast14"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="30sp"
+        android:text="@string/feel_sth_lbl"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <TextView
         android:id="@+id/tvLast14Days"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -86,6 +97,7 @@
         android:layout_marginTop="35dp"
         android:background="@color/colorPrimary"
         android:drawableEnd="@drawable/ic_arrow_forward_white_24dp"
+        android:onClick="onclickBtnLast14DaysNext"
         android:padding="16dp"
         android:text="@string/next_lbl"
         android:textColor="@android:color/white"

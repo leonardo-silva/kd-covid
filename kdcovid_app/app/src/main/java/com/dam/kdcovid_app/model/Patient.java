@@ -25,9 +25,55 @@ public class Patient implements Serializable {
     private boolean hadContactWithOutsider;
     private boolean hadContactWithInfected;
     private boolean hadLast14DaysNOA;
+    // Age Range
+    private boolean age1to15Years;
+    private boolean age16to30Years;
+    private boolean age31to45Years;
+    private boolean age46to60Years;
+    private boolean age60PlusYears;
 
     public Patient(boolean hasSymptom) {
         this.hasSymptom = hasSymptom;
+    }
+
+    public boolean isAge1to15Years() {
+        return age1to15Years;
+    }
+
+    public void setAge1to15Years(boolean age1to15Years) {
+        this.age1to15Years = age1to15Years;
+    }
+
+    public boolean isAge16to30Years() {
+        return age16to30Years;
+    }
+
+    public void setAge16to30Years(boolean age16to30Years) {
+        this.age16to30Years = age16to30Years;
+    }
+
+    public boolean isAge31to45Years() {
+        return age31to45Years;
+    }
+
+    public void setAge31to45Years(boolean age31to45Years) {
+        this.age31to45Years = age31to45Years;
+    }
+
+    public boolean isAge46to60Years() {
+        return age46to60Years;
+    }
+
+    public void setAge46to60Years(boolean age46to60Years) {
+        this.age46to60Years = age46to60Years;
+    }
+
+    public boolean isAge60PlusYears() {
+        return age60PlusYears;
+    }
+
+    public void setAge60PlusYears(boolean age60PlusYears) {
+        this.age60PlusYears = age60PlusYears;
     }
 
     public boolean getWentOutOfCity() {
