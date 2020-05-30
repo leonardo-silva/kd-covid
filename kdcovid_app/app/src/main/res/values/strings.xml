@@ -36,4 +36,13 @@
     <string name="thirtyone_to_fortyfive_years_lbl">31 a 45 Anos</string>
     <string name="fortysix_to_sixty_years_lbl">46 a 60 Anos</string>
     <string name="sixty_plus_years_lbl">Mais de 60 Anos</string>
+    <string name="prior_diseases_lbl">Possui alguma dessas doenças?</string>
+    <string name="diabetes_lbl">Diabetes</string>
+    <string name="heart_problem_lbl">Doença do coração</string>
+    <string name="chronic_kidney_lbl">Doença renal crônica</string>
+    <string name="chronic_respiratory_lbl">Doença respiratória crônica (asma, bronquite, etc)</string>
+    <string name="high_pressure_lbl">Pressão alta</string>
+    <string name="cancer_lbl">Câncer</string>
+    <string name="dont_have_lbl">Não possuo</string>
+    <string name="dwa_lbl">Não quero responder</string>
 </resources>

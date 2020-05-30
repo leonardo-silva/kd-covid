@@ -44,10 +44,9 @@ public class AgeRangeActivity extends AppCompatActivity {
 
     private void gotoNextActivity() {
         // Call SymptomDurationActivity activity
-        //Intent intent = new Intent(getApplicationContext(), Last14DaysActivity.class);
-        //intent.putExtra("patient", patient);
-        //startActivity(intent);
-        Toast.makeText(AgeRangeActivity.this, "Ainda não fiz essa parte!", Toast.LENGTH_LONG).show();
+        Intent intent = new Intent(getApplicationContext(), PriorDiseasesActivity.class);
+        intent.putExtra("patient", patient);
+        startActivity(intent);
     }
 
     private void setUpViewById() {

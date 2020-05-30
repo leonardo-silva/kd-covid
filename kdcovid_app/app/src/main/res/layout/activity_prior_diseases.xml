@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical"
+    android:orientation="vertical"
+    android:padding="20sp"
+    tools:context=".activity.PriorDiseasesActivity">
+
+    <TextView
+        android:id="@+id/tvHeaderPriorDiseases"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="30sp"
+        android:text="@string/feel_sth_lbl"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvPriorDiseases"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:paddingLeft="5sp"
+        android:paddingRight="5sp"
+        android:paddingBottom="10sp"
+        android:text="@string/prior_diseases_lbl"
+        android:textColor="@android:color/background_light"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <RadioButton
+        android:id="@+id/rdbDiabetes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:buttonTint="@android:color/white"
+        android:onClick="uncheckRDBDiseases"
+        android:paddingTop="5sp"
+        android:paddingBottom="5sp"
+        android:text="@string/diabetes_lbl"
+        android:textColor="@android:color/white"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <RadioButton
+        android:id="@+id/rdbHeartProblem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:buttonTint="@android:color/white"
+        android:onClick="uncheckRDBDiseases"
+        android:paddingTop="5sp"
+        android:paddingBottom="5sp"
+        android:text="@string/heart_problem_lbl"
+        android:textColor="@android:color/white"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <RadioButton
+        android:id="@+id/rdbChronicKidney"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:buttonTint="@android:color/white"
+        android:onClick="uncheckRDBDiseases"
+        android:paddingTop="5sp"
+        android:paddingBottom="5sp"
+        android:text="@string/chronic_kidney_lbl"
+        android:textColor="@android:color/white"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <RadioButton
+        android:id="@+id/rdbChronicRespiratory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:buttonTint="@android:color/white"
+        android:onClick="uncheckRDBDiseases"
+        android:paddingTop="5sp"
+        android:paddingBottom="5sp"
+        android:text="@string/chronic_respiratory_lbl"
+        android:textColor="@android:color/white"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <RadioButton
+        android:id="@+id/rdbHighPressure"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:buttonTint="@android:color/white"
+        android:onClick="uncheckRDBDiseases"
+        android:paddingTop="5sp"
+        android:paddingBottom="5sp"
+        android:text="@string/high_pressure_lbl"
+        android:textColor="@android:color/white"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <RadioButton
+        android:id="@+id/rdbCancer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:buttonTint="@android:color/white"
+        android:onClick="uncheckRDBDiseases"
+        android:paddingTop="5sp"
+        android:paddingBottom="5sp"
+        android:text="@string/cancer_lbl"
+        android:textColor="@android:color/white"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <RadioButton
+        android:id="@+id/rdbDontHavePriorDisease"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:buttonTint="@android:color/white"
+        android:onClick="uncheckAllButDontHavePriorDisease"
+        android:paddingTop="5sp"
+        android:paddingBottom="5sp"
+        android:text="@string/dont_have_lbl"
+        android:textColor="@android:color/white"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <RadioButton
+        android:id="@+id/rdbPriorDiseaseDWA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:buttonTint="@android:color/white"
+        android:onClick="uncheckAllButPriorDiseaseDWA"
+        android:paddingTop="5sp"
+        android:paddingBottom="5sp"
+        android:text="@string/dwa_lbl"
+        android:textColor="@android:color/white"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnPriorDiseasesNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="25sp"
+        android:background="@color/colorPrimary"
+        android:drawableEnd="@drawable/ic_arrow_forward_white_24dp"
+        android:onClick="onclickBtnPriorDiseasesNext"
+        android:padding="16dp"
+        android:text="@string/next_lbl"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+</LinearLayout>

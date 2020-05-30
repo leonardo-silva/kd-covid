@@ -31,9 +31,82 @@ public class Patient implements Serializable {
     private boolean age31to45Years;
     private boolean age46to60Years;
     private boolean age60PlusYears;
+    // Prior Diseases
+    private boolean hasDiabetes;
+    private boolean hasHeartProblem;
+    private boolean hasChronicKidney;
+    private boolean hasChronicRespiratory;
+    private boolean hasHighPressure;
+    private boolean hasCancer;
+    private boolean dontHavePriorDisease;
+    private boolean priorDiseasesDWA;
 
     public Patient(boolean hasSymptom) {
         this.hasSymptom = hasSymptom;
+    }
+
+    public boolean hasDiabetes() {
+        return hasDiabetes;
+    }
+
+    public void setHasDiabetes(boolean hasDiabetes) {
+        this.hasDiabetes = hasDiabetes;
+    }
+
+    public boolean hasHeartProblem() {
+        return hasHeartProblem;
+    }
+
+    public void setHasHeartProblem(boolean hasHeartProblem) {
+        this.hasHeartProblem = hasHeartProblem;
+    }
+
+    public boolean hasChronicKidney() {
+        return hasChronicKidney;
+    }
+
+    public void setHasChronicKidney(boolean hasChronicKidney) {
+        this.hasChronicKidney = hasChronicKidney;
+    }
+
+    public boolean hasChronicRespiratory() {
+        return hasChronicRespiratory;
+    }
+
+    public void setHasChronicRespiratory(boolean hasChronicRespiratory) {
+        this.hasChronicRespiratory = hasChronicRespiratory;
+    }
+
+    public boolean hasHighPressure() {
+        return hasHighPressure;
+    }
+
+    public void setHasHighPressure(boolean hasHighPressure) {
+        this.hasHighPressure = hasHighPressure;
+    }
+
+    public boolean hasCancer() {
+        return hasCancer;
+    }
+
+    public void setHasCancer(boolean hasCancer) {
+        this.hasCancer = hasCancer;
+    }
+
+    public boolean getDontHavePriorDisease() {
+        return dontHavePriorDisease;
+    }
+
+    public void setDontHavePriorDisease(boolean dontHavePriorDisease) {
+        this.dontHavePriorDisease = dontHavePriorDisease;
+    }
+
+    public boolean getPriorDiseasesDWA() {
+        return priorDiseasesDWA;
+    }
+
+    public void setPriorDiseasesDWA(boolean priorDiseasesDWA) {
+        this.priorDiseasesDWA = priorDiseasesDWA;
     }
 
     public boolean isAge1to15Years() {
