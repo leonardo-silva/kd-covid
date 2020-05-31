@@ -40,9 +40,119 @@ public class Patient implements Serializable {
     private boolean hasCancer;
     private boolean dontHavePriorDisease;
     private boolean priorDiseasesDWA;
+    // Gender
+    private boolean male;
+    private boolean female;
+    private boolean otherGender;
+    // City
+    private boolean citySalinas;
+    private boolean cityAracuai;
+    private boolean cityTaiobeiras;
+    private boolean cityCoronelMurta;
+    private boolean citySaoJoaoDoParaiso;
+    private boolean cityJanauba;
+    private boolean cityPorteirinha;
+    private boolean cityMontesClaros;
+    private boolean otherCity;
 
     public Patient(boolean hasSymptom) {
         this.hasSymptom = hasSymptom;
+    }
+
+    public boolean isCitySalinas() {
+        return citySalinas;
+    }
+
+    public void setCitySalinas(boolean citySalinas) {
+        this.citySalinas = citySalinas;
+    }
+
+    public boolean isCityAracuai() {
+        return cityAracuai;
+    }
+
+    public void setCityAracuai(boolean cityAracuai) {
+        this.cityAracuai = cityAracuai;
+    }
+
+    public boolean isCityTaiobeiras() {
+        return cityTaiobeiras;
+    }
+
+    public void setCityTaiobeiras(boolean cityTaiobeiras) {
+        this.cityTaiobeiras = cityTaiobeiras;
+    }
+
+    public boolean isCityCoronelMurta() {
+        return cityCoronelMurta;
+    }
+
+    public void setCityCoronelMurta(boolean cityCoronelMurta) {
+        this.cityCoronelMurta = cityCoronelMurta;
+    }
+
+    public boolean isCitySaoJoaoDoParaiso() {
+        return citySaoJoaoDoParaiso;
+    }
+
+    public void setCitySaoJoaoDoParaiso(boolean citySaoJoaoDoParaiso) {
+        this.citySaoJoaoDoParaiso = citySaoJoaoDoParaiso;
+    }
+
+    public boolean isCityJanauba() {
+        return cityJanauba;
+    }
+
+    public void setCityJanauba(boolean cityJanauba) {
+        this.cityJanauba = cityJanauba;
+    }
+
+    public boolean isCityPorteirinha() {
+        return cityPorteirinha;
+    }
+
+    public void setCityPorteirinha(boolean cityPorteirinha) {
+        this.cityPorteirinha = cityPorteirinha;
+    }
+
+    public boolean isCityMontesClaros() {
+        return cityMontesClaros;
+    }
+
+    public void setCityMontesClaros(boolean cityMontesClaros) {
+        this.cityMontesClaros = cityMontesClaros;
+    }
+
+    public boolean isOtherCity() {
+        return otherCity;
+    }
+
+    public void setOtherCity(boolean otherCity) {
+        this.otherCity = otherCity;
+    }
+
+    public boolean isMale() {
+        return male;
+    }
+
+    public void setMale(boolean male) {
+        this.male = male;
+    }
+
+    public boolean isFemale() {
+        return female;
+    }
+
+    public void setFemale(boolean female) {
+        this.female = female;
+    }
+
+    public boolean isOtherGender() {
+        return otherGender;
+    }
+
+    public void setOtherGender(boolean otherGender) {
+        this.otherGender = otherGender;
     }
 
     public boolean hasDiabetes() {

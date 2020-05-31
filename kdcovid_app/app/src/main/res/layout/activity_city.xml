@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical"
+    android:orientation="vertical"
+    android:padding="20sp"
+    tools:context=".activity.CityActivity">
+
+    <TextView
+        android:id="@+id/tvHeaderCity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="30sp"
+        android:text="@string/feel_sth_lbl"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvCity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:paddingLeft="5sp"
+        android:paddingRight="5sp"
+        android:paddingBottom="10sp"
+        android:text="@string/city_lbl"
+        android:textColor="@android:color/background_light"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <RadioGroup
+        android:id="@+id/rdgCity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/rdbSalinas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:buttonTint="@android:color/white"
+            android:paddingTop="5sp"
+            android:paddingBottom="5sp"
+            android:text="@string/salinas_lbl"
+            android:textColor="@android:color/white"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/rdbAracuai"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:buttonTint="@android:color/white"
+            android:paddingTop="5sp"
+            android:paddingBottom="5sp"
+            android:text="@string/aracuai_lbl"
+            android:textColor="@android:color/white"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/rdbTaiobeiras"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:buttonTint="@android:color/white"
+            android:paddingTop="5sp"
+            android:paddingBottom="5sp"
+            android:text="@string/taiobeiras_lbl"
+            android:textColor="@android:color/white"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/rdbCoronelMurta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:buttonTint="@android:color/white"
+            android:paddingTop="5sp"
+            android:paddingBottom="5sp"
+            android:text="@string/coronel_murta_lbl"
+            android:textColor="@android:color/white"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/rdbSaoJoaoDoParaiso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:buttonTint="@android:color/white"
+            android:paddingTop="5sp"
+            android:paddingBottom="5sp"
+            android:text="@string/sao_joao_do_paraiso_lbl"
+            android:textColor="@android:color/white"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/rdbJanauba"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:buttonTint="@android:color/white"
+            android:paddingTop="5sp"
+            android:paddingBottom="5sp"
+            android:text="@string/janauba_lbl"
+            android:textColor="@android:color/white"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/rdbPorteirinha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:buttonTint="@android:color/white"
+            android:paddingTop="5sp"
+            android:paddingBottom="5sp"
+            android:text="@string/porteirinha_lbl"
+            android:textColor="@android:color/white"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/rdbMontesClaros"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:buttonTint="@android:color/white"
+            android:paddingTop="5sp"
+            android:paddingBottom="5sp"
+            android:text="@string/montes_claros_lbl"
+            android:textColor="@android:color/white"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/rdbOtherCity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:buttonTint="@android:color/white"
+            android:paddingTop="5sp"
+            android:paddingBottom="5sp"
+            android:text="@string/other_city_lbl"
+            android:textColor="@android:color/white"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnCityNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30sp"
+        android:background="@color/colorPrimary"
+        android:drawableEnd="@drawable/ic_arrow_forward_white_24dp"
+        android:onClick="onclickBtnCityNext"
+        android:padding="16dp"
+        android:text="@string/next_lbl"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+</LinearLayout>

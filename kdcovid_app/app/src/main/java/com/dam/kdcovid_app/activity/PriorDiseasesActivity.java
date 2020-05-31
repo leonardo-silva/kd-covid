@@ -89,10 +89,9 @@ public class PriorDiseasesActivity extends AppCompatActivity {
 
     private void gotoNextActivity() {
         // Call SymptomDurationActivity activity
-        //Intent intent = new Intent(getApplicationContext(), AgeRangeActivity.class);
-        //intent.putExtra("patient", patient);
-        //startActivity(intent);
-        Toast.makeText(PriorDiseasesActivity.this, "Ainda não fiz essa parte!", Toast.LENGTH_LONG).show();
+        Intent intent = new Intent(getApplicationContext(), GenderActivity.class);
+        intent.putExtra("patient", patient);
+        startActivity(intent);
     }
 
 }

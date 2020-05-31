@@ -45,4 +45,19 @@
     <string name="cancer_lbl">Câncer</string>
     <string name="dont_have_lbl">Não possuo</string>
     <string name="dwa_lbl">Não quero responder</string>
+    <string name="gender_lbl">Qual o seu sexo?</string>
+    <string name="male_lbl">Masculino</string>
+    <string name="female_lbl">Feminino</string>
+    <string name="other_gender_lbl">Outro</string>
+    <string name="city_lbl">Qual cidade você mora?</string>
+    <string name="salinas_lbl">Salinas</string>
+    <string name="aracuai_lbl">Araçuai</string>
+    <string name="taiobeiras_lbl">Taiobeiras</string>
+    <string name="coronel_murta_lbl">Coronel Murta</string>
+    <string name="sao_joao_do_paraiso_lbl">São João do Paraíso</string>
+    <string name="janauba_lbl">Janaúba</string>
+    <string name="porteirinha_lbl">Porteirinha</string>
+    <string name="montes_claros_lbl">Montes Claros</string>
+    <string name="other_city_lbl">Outra</string>
+    <string name="neighborhood_lbl">Qual o seu bairro?</string>
 </resources>

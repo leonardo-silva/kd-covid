@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.PriorDiseasesActivity"></activity>
+        <activity android:name=".activity.NeighborhoodActivity"></activity>
+        <activity android:name=".activity.CityActivity" />
+        <activity android:name=".activity.GenderActivity" />
+        <activity android:name=".activity.PriorDiseasesActivity" />
         <activity android:name=".activity.AgeRangeActivity" />
         <activity android:name=".activity.Last14DaysActivity" />
         <activity android:name=".activity.SymptomDurationActivity" />
