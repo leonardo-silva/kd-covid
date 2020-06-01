@@ -33,13 +33,12 @@
         android:textSize="25sp"
         android:textStyle="bold" />
 
-    <RadioButton
-        android:id="@+id/rdbFever"
+    <CheckBox
+        android:id="@+id/chkFever"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
         android:buttonTint="@android:color/white"
-        android:onClick="uncheckNOA"
         android:paddingTop="5sp"
         android:paddingBottom="5sp"
         android:text="@string/fever_lbl"
@@ -47,13 +46,12 @@
         android:textSize="25sp"
         android:textStyle="bold" />
 
-    <RadioButton
-        android:id="@+id/rdbRunningNose"
+    <CheckBox
+        android:id="@+id/chkRunningNose"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
         android:buttonTint="@android:color/white"
-        android:onClick="uncheckNOA"
         android:paddingTop="5sp"
         android:paddingBottom="5sp"
         android:text="@string/running_nose_lbl"
@@ -61,13 +59,12 @@
         android:textSize="25sp"
         android:textStyle="bold" />
 
-    <RadioButton
-        android:id="@+id/rdbTiredness"
+    <CheckBox
+        android:id="@+id/chkTiredness"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
         android:buttonTint="@android:color/white"
-        android:onClick="uncheckNOA"
         android:paddingTop="5sp"
         android:paddingBottom="5sp"
         android:text="@string/tiredness_lbl"
@@ -75,13 +72,12 @@
         android:textSize="25sp"
         android:textStyle="bold" />
 
-    <RadioButton
-        android:id="@+id/rdbCough"
+    <CheckBox
+        android:id="@+id/chkCough"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
         android:buttonTint="@android:color/white"
-        android:onClick="uncheckNOA"
         android:paddingTop="5sp"
         android:paddingBottom="5sp"
         android:text="@string/cough_lbl"
@@ -89,13 +85,12 @@
         android:textSize="25sp"
         android:textStyle="bold" />
 
-    <RadioButton
-        android:id="@+id/rdbBreathProblem"
+    <CheckBox
+        android:id="@+id/chkBreathProblem"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
         android:buttonTint="@android:color/white"
-        android:onClick="uncheckNOA"
         android:paddingTop="5sp"
         android:paddingBottom="5sp"
         android:text="@string/breath_problem_lbl"
@@ -103,13 +98,12 @@
         android:textSize="25sp"
         android:textStyle="bold" />
 
-    <RadioButton
-        android:id="@+id/rdbPurpleMouth"
+    <CheckBox
+        android:id="@+id/chkPurpleMouth"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
         android:buttonTint="@android:color/white"
-        android:onClick="uncheckNOA"
         android:paddingTop="5sp"
         android:paddingBottom="5sp"
         android:text="@string/purple_mouth_lbl"
@@ -117,13 +111,12 @@
         android:textSize="25sp"
         android:textStyle="bold" />
 
-    <RadioButton
-        android:id="@+id/rdbSoreThroat"
+    <CheckBox
+        android:id="@+id/chkSoreThroat"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
         android:buttonTint="@android:color/white"
-        android:onClick="uncheckNOA"
         android:paddingTop="5sp"
         android:paddingBottom="5sp"
         android:text="@string/sore_throat_lbl"
@@ -131,13 +124,12 @@
         android:textSize="25sp"
         android:textStyle="bold" />
 
-    <RadioButton
-        android:id="@+id/rdbChestPressure"
+    <CheckBox
+        android:id="@+id/chkChestPressure"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
         android:buttonTint="@android:color/white"
-        android:onClick="uncheckNOA"
         android:paddingTop="5sp"
         android:paddingBottom="5sp"
         android:text="@string/chest_pressure_lbl"
@@ -145,13 +137,12 @@
         android:textSize="25sp"
         android:textStyle="bold" />
 
-    <RadioButton
-        android:id="@+id/rdbNOA"
+    <CheckBox
+        android:id="@+id/chkNOA"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
         android:buttonTint="@android:color/white"
-        android:onClick="uncheckAllRadioButtonsButNOA"
         android:paddingTop="5sp"
         android:paddingBottom="5sp"
         android:text="@string/noa_lbl"

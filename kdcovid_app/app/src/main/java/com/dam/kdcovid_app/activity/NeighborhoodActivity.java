@@ -16,6 +16,8 @@ import com.dam.kdcovid_app.model.Patient;
 public class NeighborhoodActivity extends AppCompatActivity {
 
     private Patient patient;
+    private TextView tvHeaderNeighborhood;
+    private TextView tvHeaderFeelOkNeighborhood;
     private Spinner spnNeighborhood;
     private TextView tvNeighborhood;
 
@@ -44,6 +46,14 @@ public class NeighborhoodActivity extends AppCompatActivity {
         ArrayAdapter<CharSequence> adapter =
                 ArrayAdapter.createFromResource(this, cityArrayId, R.layout.spinner_item);
         spnNeighborhood.setAdapter(adapter);
+
+        tvHeaderNeighborhood = findViewById(R.id.tvHeaderNeighborhood);
+        tvHeaderFeelOkNeighborhood = findViewById(R.id.tvHeaderFeelOkNeighborhood);
+        // Control header
+        if (! this.patient.getHasSymptom()) {
+            tvHeaderNeighborhood.setVisibility(View.GONE);
+            tvHeaderFeelOkNeighborhood.setVisibility(View.VISIBLE);
+        }
     }
 
     public void onclickBtnNeighborhoodNext(View view) {
@@ -55,10 +65,10 @@ public class NeighborhoodActivity extends AppCompatActivity {
 
     private void gotoNextActivity() {
         // Call SymptomDurationActivity activity
-        //Intent intent = new Intent(getApplicationContext(), CityActivity.class);
-        //intent.putExtra("patient", patient);
-        //startActivity(intent);
-        Toast.makeText(NeighborhoodActivity.this, this.patient.getNeighborhoodName(), Toast.LENGTH_LONG).show();
+        Intent intent = new Intent(getApplicationContext(), FullNameActivity.class);
+        intent.putExtra("patient", patient);
+        startActivity(intent);
+        //Toast.makeText(NeighborhoodActivity.this, this.patient.getNeighborhoodName(), Toast.LENGTH_LONG).show();
     }
 
 }

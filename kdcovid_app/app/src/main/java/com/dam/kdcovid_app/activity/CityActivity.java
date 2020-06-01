@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.RadioButton;
 import android.content.Intent;
+import android.widget.TextView;
 
 import com.dam.kdcovid_app.R;
 import com.dam.kdcovid_app.model.Patient;
@@ -13,6 +14,8 @@ import com.dam.kdcovid_app.model.Patient;
 public class CityActivity extends AppCompatActivity {
 
     private Patient patient;
+    private TextView tvHeaderCity;
+    private TextView tvHeaderFeelOkCity;
     private RadioButton rdbSalinas;
     private RadioButton rdbAracuai;
     private RadioButton rdbTaiobeiras;
@@ -27,11 +30,11 @@ public class CityActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_city);
-        // Set up visual components
-        this.setUpViewById();
         // Get Patient object
         Bundle bundle = getIntent().getExtras();
         this.patient = (Patient)bundle.get("patient");
+        // Set up visual components
+        this.setUpViewById();
     }
 
     private void setUpViewById() {
@@ -44,6 +47,13 @@ public class CityActivity extends AppCompatActivity {
         rdbPorteirinha = findViewById(R.id.rdbPorteirinha);
         rdbMontesClaros = findViewById(R.id.rdbMontesClaros);
         rdbOtherCity = findViewById(R.id.rdbOtherCity);
+        tvHeaderCity = findViewById(R.id.tvHeaderCity);
+        tvHeaderFeelOkCity = findViewById(R.id.tvHeaderFeelOkCity);
+        // Control header
+        if (! this.patient.getHasSymptom()) {
+            tvHeaderCity.setVisibility(View.GONE);
+            tvHeaderFeelOkCity.setVisibility(View.VISIBLE);
+        }
     }
 
     public void onclickBtnCityNext(View view) {

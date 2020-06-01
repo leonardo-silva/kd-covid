@@ -59,11 +59,54 @@ public class Patient implements Serializable {
     // Zip Code
     private String zipCode;
     // Full Name
-    private boolean fullNameDOA; // DOA = Dont Want to Answer
+    private boolean fullNameDWA; // DWA = Dont Want to Answer
     private String fullName;
+    // Phone
+    private boolean phoneDWA; // DWA = Dont Want to Answer
+    private String phone;
 
     public Patient(boolean hasSymptom) {
         this.hasSymptom = hasSymptom;
+    }
+
+    public boolean getPhoneDWA() {
+        return phoneDWA;
+    }
+
+    public void setPhoneDWA(boolean phoneDWA) {
+        this.phoneDWA = phoneDWA;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getZipCode() {
+        return zipCode;
+    }
+
+    public void setZipCode(String zipCode) {
+        this.zipCode = zipCode;
+    }
+
+    public boolean getFullNameDWA() {
+        return fullNameDWA;
+    }
+
+    public void setFullNameDWA(boolean fullNameDWA) {
+        this.fullNameDWA = fullNameDWA;
+    }
+
+    public String getFullName() {
+        return fullName;
+    }
+
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
     }
 
     public String getNeighborhoodName() {

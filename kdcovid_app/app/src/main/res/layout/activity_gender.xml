@@ -10,6 +10,18 @@
     tools:context=".activity.GenderActivity">
 
     <TextView
+        android:id="@+id/tvHeaderFeelOkGender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="30sp"
+        android:text="@string/feel_ok_lbl"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <TextView
         android:id="@+id/tvHeaderGender"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

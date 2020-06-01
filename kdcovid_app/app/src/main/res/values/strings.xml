@@ -30,6 +30,7 @@
     <string name="contact_with_outsider_lbl">Teve contato com alguém que chegou de fora da cidade</string>
     <string name="contact_with_infected_lbl">Teve contato com alguém infectado por Covid-19</string>
     <string name="feel_sth_lbl">Sinto algum sintoma</string>
+    <string name="feel_ok_lbl">Sinto-me bem!</string>
     <string name="age_range_lbl">Assinale sua faixa étaria (idade)</string>
     <string name="one_to_fifteen_years_lbl">1 a 15 Anos</string>
     <string name="sixteen_to_thirty_years_lbl">16 a 30 Anos</string>
@@ -61,4 +62,11 @@
     <string name="other_city_lbl">Outra</string>
     <string name="neighborhood_salinas_lbl">Selecione o seu bairro em Salinas:</string>
     <string name="neighborhood_janauba_lbl">Selecione o seu bairro em Janaúba:</string>
+    <string name="zip_code_lbl">Informe aqui o seu CEP</string>
+    <string name="full_name_lbl">Qual o seu nome completo?</string>
+    <string name="fill_lbl">Preencher</string>
+    <string name="hint_full_name_lbl">Informe aqui o seu nome</string>
+    <string name="phone_lbl">Qual o seu telefone?</string>
+    <string name="hint_phone_lbl">Informe aqui seu telefone</string>
+    <string name="err_select_atleast_one_answer">Favor selecionar pelo menos uma resposta!</string>
 </resources>

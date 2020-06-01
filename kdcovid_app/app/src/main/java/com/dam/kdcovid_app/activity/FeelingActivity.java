@@ -28,7 +28,7 @@ public class FeelingActivity extends AppCompatActivity {
         btnNoSymptom.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(FeelingActivity.this, "Ainda não fiz essa parte!", Toast.LENGTH_LONG).show();
+                gotoLast14DaysActivity();
             }
         });
         btnYesSymptom.setOnClickListener(new View.OnClickListener() {
@@ -42,8 +42,17 @@ public class FeelingActivity extends AppCompatActivity {
     private void gotoYesSymptomActivity() {
         // Create Patient instance
         Patient patient = new Patient(YES);
-        // Call AgreementActivity activity
+        // Call next activity
         Intent intent = new Intent(getApplicationContext(), YesSymptomActivity.class);
+        intent.putExtra("patient", patient);
+        startActivity(intent);
+    }
+
+    private void gotoLast14DaysActivity() {
+        // Create Patient instance
+        Patient patient = new Patient(NO);
+        // Call next activity
+        Intent intent = new Intent(getApplicationContext(), Last14DaysActivity.class);
         intent.putExtra("patient", patient);
         startActivity(intent);
     }

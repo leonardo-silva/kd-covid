@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.RadioButton;
+import android.widget.TextView;
 
 import com.dam.kdcovid_app.R;
 import com.dam.kdcovid_app.model.Patient;
@@ -13,6 +14,8 @@ import com.dam.kdcovid_app.model.Patient;
 public class GenderActivity extends AppCompatActivity {
 
     private Patient patient;
+    private TextView tvHeaderGender;
+    private TextView tvHeaderFeelOkGender;
     private RadioButton rdbMale;
     private RadioButton rdbFemale;
     private RadioButton rdbOtherGender;
@@ -21,17 +24,24 @@ public class GenderActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gender);
-        // Set up visual components
-        this.setUpViewById();
         // Get Patient object
         Bundle bundle = getIntent().getExtras();
         this.patient = (Patient)bundle.get("patient");
+        // Set up visual components
+        this.setUpViewById();
     }
 
     private void setUpViewById() {
         rdbMale = findViewById(R.id.rdbMale);
         rdbFemale = findViewById(R.id.rdbFemale);
         rdbOtherGender = findViewById(R.id.rdbOtherGender);
+        tvHeaderGender = findViewById(R.id.tvHeaderGender);
+        tvHeaderFeelOkGender = findViewById(R.id.tvHeaderFeelOkGender);
+        // Control header
+        if (! this.patient.getHasSymptom()) {
+            tvHeaderGender.setVisibility(View.GONE);
+            tvHeaderFeelOkGender.setVisibility(View.VISIBLE);
+        }
     }
 
     public void onclickBtnGenderNext(View view) {

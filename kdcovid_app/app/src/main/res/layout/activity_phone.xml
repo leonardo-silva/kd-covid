@@ -7,10 +7,10 @@
     android:layout_gravity="center_vertical"
     android:orientation="vertical"
     android:padding="20sp"
-    tools:context=".activity.AgeRangeActivity">
+    tools:context=".activity.PhoneActivity">
 
     <TextView
-        android:id="@+id/tvHeaderFeelOkAgeRange"
+        android:id="@+id/tvHeaderFeelOkPhone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingBottom="30sp"
@@ -22,7 +22,7 @@
         android:visibility="gone" />
 
     <TextView
-        android:id="@+id/tvHeaderAgeRange"
+        android:id="@+id/tvHeaderPhone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingBottom="30sp"
@@ -33,99 +33,71 @@
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/tvAgeRange"
+        android:id="@+id/tvPhoneLBL"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorAccent"
         android:paddingLeft="5sp"
         android:paddingRight="5sp"
         android:paddingBottom="10sp"
-        android:text="@string/age_range_lbl"
+        android:text="@string/phone_lbl"
         android:textColor="@android:color/background_light"
         android:textSize="25sp"
         android:textStyle="bold" />
 
     <RadioGroup
-        android:id="@+id/rdgAgeRange"
+        android:id="@+id/rdgPhone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <RadioButton
-            android:id="@+id/rdb1to15Years"
+            android:id="@+id/rdbPhoneDWA"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorPrimary"
             android:buttonTint="@android:color/white"
             android:paddingTop="5sp"
             android:paddingBottom="5sp"
-            android:text="@string/one_to_fifteen_years_lbl"
+            android:text="@string/dwa_lbl"
             android:textColor="@android:color/white"
             android:textSize="25sp"
             android:textStyle="bold" />
 
         <RadioButton
-            android:id="@+id/rdb16to30Years"
+            android:id="@+id/rdbFillPhone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorPrimary"
             android:buttonTint="@android:color/white"
             android:paddingTop="5sp"
             android:paddingBottom="5sp"
-            android:text="@string/sixteen_to_thirty_years_lbl"
-            android:textColor="@android:color/white"
-            android:textSize="25sp"
-            android:textStyle="bold" />
-
-        <RadioButton
-            android:id="@+id/rdb31to45Years"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/colorPrimary"
-            android:buttonTint="@android:color/white"
-            android:paddingTop="5sp"
-            android:paddingBottom="5sp"
-            android:text="@string/thirtyone_to_fortyfive_years_lbl"
-            android:textColor="@android:color/white"
-            android:textSize="25sp"
-            android:textStyle="bold" />
-
-        <RadioButton
-            android:id="@+id/rdb46to60Years"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/colorPrimary"
-            android:buttonTint="@android:color/white"
-            android:paddingTop="5sp"
-            android:paddingBottom="5sp"
-            android:text="@string/fortysix_to_sixty_years_lbl"
-            android:textColor="@android:color/white"
-            android:textSize="25sp"
-            android:textStyle="bold" />
-
-        <RadioButton
-            android:id="@+id/rdb60PlusYears"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/colorPrimary"
-            android:buttonTint="@android:color/white"
-            android:paddingTop="5sp"
-            android:paddingBottom="5sp"
-            android:text="@string/sixty_plus_years_lbl"
+            android:text="@string/fill_lbl"
             android:textColor="@android:color/white"
             android:textSize="25sp"
             android:textStyle="bold" />
 
     </RadioGroup>
 
+    <EditText
+        android:id="@+id/etPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/hint_phone_lbl"
+        android:inputType="phone"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20sp"
+        android:visibility="invisible" />
+
     <Button
-        android:id="@+id/btnAgeRangeNext"
+        android:id="@+id/btnPhoneNext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="30sp"
         android:background="@color/colorPrimary"
         android:drawableEnd="@drawable/ic_arrow_forward_white_24dp"
-        android:onClick="onclickBtnAgeRangeNext"
+        android:onClick="onclickBtnPhoneNext"
         android:padding="16dp"
         android:text="@string/next_lbl"
         android:textColor="@android:color/white"
