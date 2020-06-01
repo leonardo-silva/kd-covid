@@ -62,8 +62,16 @@ public class CityActivity extends AppCompatActivity {
     }
 
     private void gotoNextActivity() {
+        Class<?> cls;
+
+        if (this.patient.isOtherCity())
+            cls = ZipCodeActivity.class;
+        else if (this.patient.isCitySalinas() || this.patient.isCityJanauba())
+            cls = NeighborhoodActivity.class;
+        else
+            cls = FullNameActivity.class;
         // Call next activity
-        Intent intent = new Intent(getApplicationContext(), NeighborhoodActivity.class);
+        Intent intent = new Intent(getApplicationContext(), cls);
         intent.putExtra("patient", patient);
         startActivity(intent);
         //Toast.makeText(CityActivity.this, "Ainda não fiz essa parte!", Toast.LENGTH_LONG).show();

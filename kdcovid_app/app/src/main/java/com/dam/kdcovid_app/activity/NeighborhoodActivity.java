@@ -2,9 +2,13 @@ package com.dam.kdcovid_app.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.dam.kdcovid_app.R;
 import com.dam.kdcovid_app.model.Patient;
@@ -13,24 +17,48 @@ public class NeighborhoodActivity extends AppCompatActivity {
 
     private Patient patient;
     private Spinner spnNeighborhood;
+    private TextView tvNeighborhood;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_neighborhood);
+        // Get Patient object
+        Bundle bundle = getIntent().getExtras();
+        this.patient = (Patient) bundle.get("patient");
         // Set up visual components
         this.setUpViewById();
-        // Get Patient object
-        //Bundle bundle = getIntent().getExtras();
-        //this.patient = (Patient) bundle.get("patient");
     }
 
     private void setUpViewById() {
+        int cityArrayId = R.array.neighborhood_salinas;
+
+        tvNeighborhood = findViewById(R.id.tvNeighborhood);
+        if (this.patient.isCityJanauba()) {
+            tvNeighborhood.setText(R.string.neighborhood_janauba_lbl);
+            cityArrayId = R.array.neighborhood_janauba;
+        }
+
         spnNeighborhood = findViewById(R.id.spnNeighborhood);
-        //ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.spinner_item, R.array.neighborhood_salinas);
+        // Setting up the adapter for spinner
         ArrayAdapter<CharSequence> adapter =
-                ArrayAdapter.createFromResource(this, R.array.neighborhood_salinas, R.layout.spinner_item);
-        //adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                ArrayAdapter.createFromResource(this, cityArrayId, R.layout.spinner_item);
         spnNeighborhood.setAdapter(adapter);
     }
+
+    public void onclickBtnNeighborhoodNext(View view) {
+        // Transfer the answers to the Patient object before proceeding
+        this.patient.setNeighborhoodName(spnNeighborhood.getSelectedItem().toString());
+        // Call next activity
+        this.gotoNextActivity();
+    }
+
+    private void gotoNextActivity() {
+        // Call SymptomDurationActivity activity
+        //Intent intent = new Intent(getApplicationContext(), CityActivity.class);
+        //intent.putExtra("patient", patient);
+        //startActivity(intent);
+        Toast.makeText(NeighborhoodActivity.this, this.patient.getNeighborhoodName(), Toast.LENGTH_LONG).show();
+    }
+
 }

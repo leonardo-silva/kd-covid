@@ -54,9 +54,24 @@ public class Patient implements Serializable {
     private boolean cityPorteirinha;
     private boolean cityMontesClaros;
     private boolean otherCity;
+    // Neighborhood
+    private String neighborhoodName;
+    // Zip Code
+    private String zipCode;
+    // Full Name
+    private boolean fullNameDOA; // DOA = Dont Want to Answer
+    private String fullName;
 
     public Patient(boolean hasSymptom) {
         this.hasSymptom = hasSymptom;
+    }
+
+    public String getNeighborhoodName() {
+        return neighborhoodName;
+    }
+
+    public void setNeighborhoodName(String neighborhoodName) {
+        this.neighborhoodName = neighborhoodName;
     }
 
     public boolean isCitySalinas() {

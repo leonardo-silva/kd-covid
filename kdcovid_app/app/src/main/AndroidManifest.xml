@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.NeighborhoodActivity"></activity>
+        <activity android:name=".activity.FullNameActivity"></activity>
+        <activity android:name=".activity.ZipCodeActivity" />
+        <activity android:name=".activity.NeighborhoodActivity" />
         <activity android:name=".activity.CityActivity" />
         <activity android:name=".activity.GenderActivity" />
         <activity android:name=".activity.PriorDiseasesActivity" />

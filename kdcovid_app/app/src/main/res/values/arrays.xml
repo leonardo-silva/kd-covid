@@ -8,5 +8,99 @@
         <item>Alvorada</item>
         <item>Baixa Grande</item>
         <item>Belvedere</item>
+        <item>Betel</item>
+        <item>Boa Vista</item>
+        <item>Cachoeira Seca</item>
+        <item>Cândido Village</item>
+        <item>Cantinho</item>
+        <item>Casa Blanca</item>
+        <item>Centro</item>
+        <item>Cidade Nova</item>
+        <item>Curralinho</item>
+        <item>Esplanada</item>
+        <item>Ferreirópolis</item>
+        <item>Floresta</item>
+        <item>Industrial</item>
+        <item>Joana Costa</item>
+        <item>Maracanã</item>
+        <item>Mário Guedes</item>
+        <item>Montesclarinhos</item>
+        <item>Muritiba</item>
+        <item>Nova Esperança</item>
+        <item>Nova Fátima</item>
+        <item>Nova Matrona</item>
+        <item>Novo Horizonte</item>
+        <item>Novo Panorama</item>
+        <item>Panorama</item>
+        <item>Parque Industrial</item>
+        <item>Peniel</item>
+        <item>Povoado Lagoa de Baixo</item>
+        <item>Povoado Cantinho</item>
+        <item>Progresso</item>
+        <item>Raquel</item>
+        <item>Rodovia Salinas-Taiobeiras</item>
+        <item>Santa Marta</item>
+        <item>Santa Mônica</item>
+        <item>Santo Antônio</item>
+        <item>Santo Expedito</item>
+        <item>São Fidelis</item>
+        <item>São Fidelis 2</item>
+        <item>São Geraldo</item>
+        <item>São José</item>
+        <item>São Miguel</item>
+        <item>São Pedro</item>
+        <item>Setor Industrial</item>
+        <item>Sílvio Santiago</item>
+        <item>Sosevendo</item>
+        <item>Varginha-São Geraldo</item>
+        <item>Vereda</item>
+        <item>Vila Aparecida</item>
+        <item>Vila Canaã</item>
+        <item>Vila Januária</item>
+        <item>Vila Santa Marta</item>
+        <item>Vista Alegre</item>
+        <item>Zona Rural</item>
     </string-array>
+    <string-array name="neighborhood_janauba">
+        <item></item>
+        <item>Algodões</item>
+        <item>Algodões I</item>
+        <item>Balneário</item>
+        <item>Barbosa</item>
+        <item>Bico da Pedra</item>
+        <item>Boa Vista</item>
+        <item>Centro</item>
+        <item>Cerâmica</item>
+        <item>Cohab</item>
+        <item>Dente Grande</item>
+        <item>Esplanada</item>
+        <item>Gameleira</item>
+        <item>Industrial</item>
+        <item>Isaías Pereira</item>
+        <item>Jacarezinho</item>
+        <item>Kennedy</item>
+        <item>Nova Esperança</item>
+        <item>Novo Paraíso</item>
+        <item>Padre Eustáquio</item>
+        <item>Pedra Preta</item>
+        <item>Planalto</item>
+        <item>Poção Santa Cruz</item>
+        <item>Poço Dourado</item>
+        <item>Quem Quem</item>
+        <item>Ribeirão do Ouro</item>
+        <item>Rio Novo</item>
+        <item>Santa Cruz</item>
+        <item>Santa Terezinha</item>
+        <item>Santo Antônio</item>
+        <item>São Gonçalo</item>
+        <item>São Lucas</item>
+        <item>São Vicente</item>
+        <item>Saudade</item>
+        <item>Veredas</item>
+        <item>Vila Isaías</item>
+        <item>Vila Nova dos Poções</item>
+        <item>Vila São Vicente</item>
+        <item>Zona Rural</item>
+    </string-array>
+
 </resources>

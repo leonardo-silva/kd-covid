@@ -59,5 +59,6 @@
     <string name="porteirinha_lbl">Porteirinha</string>
     <string name="montes_claros_lbl">Montes Claros</string>
     <string name="other_city_lbl">Outra</string>
-    <string name="neighborhood_lbl">Qual o seu bairro?</string>
+    <string name="neighborhood_salinas_lbl">Selecione o seu bairro em Salinas:</string>
+    <string name="neighborhood_janauba_lbl">Selecione o seu bairro em Janaúba:</string>
 </resources>
