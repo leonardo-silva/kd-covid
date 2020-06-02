@@ -6,7 +6,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.RadioButton;
 import android.content.Intent;
+import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.dam.kdcovid_app.R;
 import com.dam.kdcovid_app.model.Patient;
@@ -25,6 +27,7 @@ public class CityActivity extends AppCompatActivity {
     private RadioButton rdbPorteirinha;
     private RadioButton rdbMontesClaros;
     private RadioButton rdbOtherCity;
+    private RadioGroup rdgCity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +50,7 @@ public class CityActivity extends AppCompatActivity {
         rdbPorteirinha = findViewById(R.id.rdbPorteirinha);
         rdbMontesClaros = findViewById(R.id.rdbMontesClaros);
         rdbOtherCity = findViewById(R.id.rdbOtherCity);
+        rdgCity = findViewById(R.id.rdgCity);
         tvHeaderCity = findViewById(R.id.tvHeaderCity);
         tvHeaderFeelOkCity = findViewById(R.id.tvHeaderFeelOkCity);
         // Control header
@@ -57,18 +61,23 @@ public class CityActivity extends AppCompatActivity {
     }
 
     public void onclickBtnCityNext(View view) {
-        // Transfer the answers to the Patient object before proceeding
-        this.patient.setCitySalinas(rdbSalinas.isChecked());
-        this.patient.setCityAracuai(rdbAracuai.isChecked());
-        this.patient.setCityTaiobeiras(rdbTaiobeiras.isChecked());
-        this.patient.setCityCoronelMurta(rdbCoronelMurta.isChecked());
-        this.patient.setCitySaoJoaoDoParaiso(rdbSaoJoaoDoParaiso.isChecked());
-        this.patient.setCityJanauba(rdbJanauba.isChecked());
-        this.patient.setCityPorteirinha(rdbPorteirinha.isChecked());
-        this.patient.setCityMontesClaros(rdbMontesClaros.isChecked());
-        this.patient.setOtherCity(rdbOtherCity.isChecked());
-        // Call next activity
-        this.gotoNextActivity();
+        if (rdgCity.getCheckedRadioButtonId() != -1) {
+            // Transfer the answers to the Patient object before proceeding
+            this.patient.setCitySalinas(rdbSalinas.isChecked());
+            this.patient.setCityAracuai(rdbAracuai.isChecked());
+            this.patient.setCityTaiobeiras(rdbTaiobeiras.isChecked());
+            this.patient.setCityCoronelMurta(rdbCoronelMurta.isChecked());
+            this.patient.setCitySaoJoaoDoParaiso(rdbSaoJoaoDoParaiso.isChecked());
+            this.patient.setCityJanauba(rdbJanauba.isChecked());
+            this.patient.setCityPorteirinha(rdbPorteirinha.isChecked());
+            this.patient.setCityMontesClaros(rdbMontesClaros.isChecked());
+            this.patient.setOtherCity(rdbOtherCity.isChecked());
+            // Call next activity
+            this.gotoNextActivity();
+        } else {
+            Toast.makeText(CityActivity.this,
+                    R.string.err_select_atleast_one_answer, Toast.LENGTH_LONG).show();
+        }
     }
 
     private void gotoNextActivity() {

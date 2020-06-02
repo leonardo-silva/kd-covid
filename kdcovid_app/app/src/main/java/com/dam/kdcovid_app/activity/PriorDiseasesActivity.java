@@ -119,12 +119,6 @@ public class PriorDiseasesActivity extends AppCompatActivity {
         chkDontHavePriorDisease.setChecked(false);
     }
 
-    //public void uncheckRDBDiseases(View view) {
-    //    // Click event for all radiobuttons except chkDontHavePriorDisease and chkPriorDiseaseDWA
-    //    chkDontHavePriorDisease.setChecked(false);
-    //    chkPriorDiseaseDWA.setChecked(false);
-    //}
-
     public void onclickBtnPriorDiseasesNext(View view) {
         if (this.answerSelected()) {
             // Transfer the answers to the Patient object before proceeding

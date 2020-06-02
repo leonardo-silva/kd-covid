@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,6 +23,7 @@ public class AgeRangeActivity extends AppCompatActivity {
     private RadioButton rdb31to45Years;
     private RadioButton rdb46to60Years;
     private RadioButton rdb60PlusYears;
+    private RadioGroup rdgAgeRange;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +42,7 @@ public class AgeRangeActivity extends AppCompatActivity {
         rdb31to45Years = findViewById(R.id.rdb31to45Years);
         rdb46to60Years = findViewById(R.id.rdb46to60Years);
         rdb60PlusYears = findViewById(R.id.rdb60PlusYears);
+        rdgAgeRange = findViewById(R.id.rdgAgeRange);
         tvHeaderAgeRange = findViewById(R.id.tvHeaderAgeRange);
         tvHeaderFeelOkAgeRange = findViewById(R.id.tvHeaderFeelOkAgeRange);
         // Control header
@@ -50,14 +53,19 @@ public class AgeRangeActivity extends AppCompatActivity {
     }
 
     public void onclickBtnAgeRangeNext(View view) {
-        // Transfer the answers to the Patient object before proceeding
-        this.patient.setAge1to15Years(rdb1to15Years.isChecked());
-        this.patient.setAge16to30Years(rdb16to30Years.isChecked());
-        this.patient.setAge31to45Years(rdb31to45Years.isChecked());
-        this.patient.setAge46to60Years(rdb46to60Years.isChecked());
-        this.patient.setAge60PlusYears(rdb60PlusYears.isChecked());
-        // Call next activity
-        this.gotoNextActivity();
+        if (rdgAgeRange.getCheckedRadioButtonId() != -1) {
+            // Transfer the answers to the Patient object before proceeding
+            this.patient.setAge1to15Years(rdb1to15Years.isChecked());
+            this.patient.setAge16to30Years(rdb16to30Years.isChecked());
+            this.patient.setAge31to45Years(rdb31to45Years.isChecked());
+            this.patient.setAge46to60Years(rdb46to60Years.isChecked());
+            this.patient.setAge60PlusYears(rdb60PlusYears.isChecked());
+            // Call next activity
+            this.gotoNextActivity();
+        } else {
+            Toast.makeText(AgeRangeActivity.this,
+                    R.string.err_select_atleast_one_answer, Toast.LENGTH_LONG).show();
+        }
     }
 
     private void gotoNextActivity() {

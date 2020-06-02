@@ -6,7 +6,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.dam.kdcovid_app.R;
 import com.dam.kdcovid_app.model.Patient;
@@ -19,6 +21,7 @@ public class GenderActivity extends AppCompatActivity {
     private RadioButton rdbMale;
     private RadioButton rdbFemale;
     private RadioButton rdbOtherGender;
+    private RadioGroup rdgGender;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +38,7 @@ public class GenderActivity extends AppCompatActivity {
         rdbMale = findViewById(R.id.rdbMale);
         rdbFemale = findViewById(R.id.rdbFemale);
         rdbOtherGender = findViewById(R.id.rdbOtherGender);
+        rdgGender = findViewById(R.id.rdgGender);
         tvHeaderGender = findViewById(R.id.tvHeaderGender);
         tvHeaderFeelOkGender = findViewById(R.id.tvHeaderFeelOkGender);
         // Control header
@@ -45,12 +49,17 @@ public class GenderActivity extends AppCompatActivity {
     }
 
     public void onclickBtnGenderNext(View view) {
-        // Transfer the answers to the Patient object before proceeding
-        this.patient.setMale(rdbMale.isChecked());
-        this.patient.setFemale(rdbFemale.isChecked());
-        this.patient.setOtherGender(rdbOtherGender.isChecked());
-        // Call next activity
-        this.gotoNextActivity();
+        if (rdgGender.getCheckedRadioButtonId() != -1) {
+            // Transfer the answers to the Patient object before proceeding
+            this.patient.setMale(rdbMale.isChecked());
+            this.patient.setFemale(rdbFemale.isChecked());
+            this.patient.setOtherGender(rdbOtherGender.isChecked());
+            // Call next activity
+            this.gotoNextActivity();
+        } else {
+            Toast.makeText(GenderActivity.this,
+                    R.string.err_select_atleast_one_answer, Toast.LENGTH_LONG).show();
+        }
     }
 
     private void gotoNextActivity() {

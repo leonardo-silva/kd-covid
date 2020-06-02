@@ -60,11 +60,16 @@ public class PhoneActivity extends AppCompatActivity {
     }
 
     public void onclickBtnPhoneNext(View view) {
-        // Transfer the answers to the Patient object before proceeding
-        this.patient.setPhoneDWA(rdbPhoneDWA.isChecked());
-        this.patient.setPhone(etPhone.getText().toString());
-        // Call next activity
-        this.gotoNextActivity();
+        if (rdgPhone.getCheckedRadioButtonId() != -1) {
+            // Transfer the answers to the Patient object before proceeding
+            this.patient.setPhoneDWA(rdbPhoneDWA.isChecked());
+            this.patient.setPhone(etPhone.getText().toString());
+            // Call next activity
+            this.gotoNextActivity();
+        } else {
+            Toast.makeText(PhoneActivity.this,
+                    R.string.err_select_atleast_one_answer, Toast.LENGTH_LONG).show();
+        }
     }
 
     private void gotoNextActivity() {

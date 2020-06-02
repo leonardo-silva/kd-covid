@@ -9,6 +9,7 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.dam.kdcovid_app.R;
 import com.dam.kdcovid_app.model.Patient;
@@ -59,11 +60,16 @@ public class FullNameActivity extends AppCompatActivity {
     }
 
     public void onclickBtnFullNameNext(View view) {
-        // Transfer the answers to the Patient object before proceeding
-        this.patient.setFullNameDWA(rdbFullNameDWA.isChecked());
-        this.patient.setFullName(etFullName.getText().toString());
-        // Call next activity
-        this.gotoNextActivity();
+        if (rdgFullName.getCheckedRadioButtonId() != -1) {
+            // Transfer the answers to the Patient object before proceeding
+            this.patient.setFullNameDWA(rdbFullNameDWA.isChecked());
+            this.patient.setFullName(etFullName.getText().toString());
+            // Call next activity
+            this.gotoNextActivity();
+        } else {
+            Toast.makeText(FullNameActivity.this,
+                    R.string.err_select_atleast_one_answer, Toast.LENGTH_LONG).show();
+        }
     }
 
     private void gotoNextActivity() {
