@@ -45,13 +45,12 @@
         android:textSize="25sp"
         android:textStyle="bold" />
 
-    <RadioButton
-        android:id="@+id/rdbWentOutOfCity"
+    <CheckBox
+        android:id="@+id/chkWentOutOfCity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
         android:buttonTint="@android:color/white"
-        android:onClick="uncheckLast14DaysNOA"
         android:paddingTop="5sp"
         android:paddingBottom="5sp"
         android:text="@string/went_outof_city_lbl"
@@ -59,13 +58,12 @@
         android:textSize="25sp"
         android:textStyle="bold" />
 
-    <RadioButton
-        android:id="@+id/rdbContactWithOutsider"
+    <CheckBox
+        android:id="@+id/chkContactWithOutsider"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
         android:buttonTint="@android:color/white"
-        android:onClick="uncheckLast14DaysNOA"
         android:paddingTop="5sp"
         android:paddingBottom="5sp"
         android:text="@string/contact_with_outsider_lbl"
@@ -73,13 +71,12 @@
         android:textSize="25sp"
         android:textStyle="bold" />
 
-    <RadioButton
-        android:id="@+id/rdbContactWithInfected"
+    <CheckBox
+        android:id="@+id/chkContactWithInfected"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
         android:buttonTint="@android:color/white"
-        android:onClick="uncheckLast14DaysNOA"
         android:paddingTop="5sp"
         android:paddingBottom="5sp"
         android:text="@string/contact_with_infected_lbl"
@@ -87,13 +84,12 @@
         android:textSize="25sp"
         android:textStyle="bold" />
 
-    <RadioButton
-        android:id="@+id/rdbLast14DaysNOA"
+    <CheckBox
+        android:id="@+id/chkLast14DaysNOA"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
         android:buttonTint="@android:color/white"
-        android:onClick="uncheckAllButLast14DaysNOA"
         android:paddingTop="5sp"
         android:paddingBottom="5sp"
         android:text="@string/noa_lbl"
