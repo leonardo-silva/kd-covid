@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.PhoneActivity"></activity>
+        <activity android:name=".activity.ResultActivity"></activity>
+        <activity android:name=".activity.PhoneActivity" />
         <activity android:name=".activity.FullNameActivity" />
         <activity android:name=".activity.ZipCodeActivity" />
         <activity android:name=".activity.NeighborhoodActivity" />
@@ -24,6 +25,7 @@
         <activity android:name=".activity.AgreementActivity" />
         <activity
             android:name=".activity.MainActivity"
+            android:launchMode="singleTask"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

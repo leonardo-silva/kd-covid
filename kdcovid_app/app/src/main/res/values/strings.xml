@@ -69,4 +69,13 @@
     <string name="phone_lbl">Qual o seu telefone?</string>
     <string name="hint_phone_lbl">Informe aqui seu telefone</string>
     <string name="err_select_atleast_one_answer">Favor selecionar pelo menos uma resposta!</string>
+    <string name="result_lbl">Relatório Preliminar</string>
+    <string name="result_low_risk1_msg">Risco baixo! \nSem sintomas, \ne sem comportamento \nde risco</string>
+    <string name="result_low_risk2_msg">Risco baixo! \nSem sintomas, \nmas com comportamento \nde risco</string>
+    <string name="result_medium_risk3_msg">Risco médio! \nMais de dois sintomas, \nou febre e outro sintoma, \nem menos de oito dias, \nmas sem comportamento \nde risco</string>
+    <string name="result_medium_risk4_msg">Risco médio! \nMais de dois sintomas, \nou febre e outro sintoma, \na mais de oito dias, \nmas sem comportamento \nde risco</string>
+    <string name="result_high_risk5_msg">Risco potencial! \nMais de dois sintomas \n ou febre + outro sintoma, \nou comportamento \nde risco, \na menos de oito dias</string>
+    <string name="result_high_risk6_msg">Risco potencial! \nMais de dois sintomas \n ou febre + outro sintoma, \nou comportamento \nde risco, \na mais de oito dias</string>
+    <string name="result_very_high_risk7_msg">Alto risco! \nIdade de risco \nou com comorbidade, \nmais de dois sintomas \n ou febre + outro sintoma, \nou comportamento \nde risco</string>
+    <string name="go_home_lbl">Voltar para o início</string>
 </resources>

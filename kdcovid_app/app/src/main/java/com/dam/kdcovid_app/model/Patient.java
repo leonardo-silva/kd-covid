@@ -69,6 +69,48 @@ public class Patient implements Serializable {
         this.hasSymptom = hasSymptom;
     }
 
+    public boolean[] generateCovid19Input() {
+        boolean[] answers = {
+                // Symptoms - 0 a 8
+                this.getHasFever(),
+                this.getHasRunningNose(),
+                this.getHasTiredness(),
+                this.getHasCough(),
+                this.getHasBreathProblem(),
+                this.getHasPurpleMouth(),
+                this.getHasSoreThroat(),
+                this.getHasChestPressure(),
+                this.getHasNOASymptom(),
+                // SymptomsDuration - 9 a 13
+                this.isDuration1to3Days(),
+                this.isDuration4to7Days(),
+                this.isDuration8to10Days(),
+                this.isDuration11to14Days(),
+                this.isDuration14PlusDays(),
+                // Prior Diseases - 14 a 20
+                this.hasDiabetes(),
+                this.hasHeartProblem(),
+                this.hasChronicKidney(),
+                this.hasChronicRespiratory(),
+                this.hasHighPressure(),
+                this.hasCancer(),
+                this.getDontHavePriorDisease() || this.getPriorDiseasesDWA(),
+                // Last14Days - 21 a 24
+                this.getWentOutOfCity(),
+                this.getHadContactWithOutsider(),
+                this.getHadContactWithInfected(),
+                this.getHadLast14DaysNOA(),
+                // Age range
+                this.isAge1to15Years(),
+                this.isAge16to30Years(),
+                this.isAge31to45Years(),
+                this.isAge46to60Years(),
+                this.isAge60PlusYears()
+        };
+
+        return answers;
+    }
+
     public boolean getPhoneDWA() {
         return phoneDWA;
     }

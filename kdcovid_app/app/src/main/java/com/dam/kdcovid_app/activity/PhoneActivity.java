@@ -74,10 +74,10 @@ public class PhoneActivity extends AppCompatActivity {
 
     private void gotoNextActivity() {
         // Call next activity
-        //Intent intent = new Intent(getApplicationContext(), PhoneActivity.class);
-        //intent.putExtra("patient", patient);
-        //startActivity(intent);
-        Toast.makeText(PhoneActivity.this, "AGORA VEM O RESULTADO!", Toast.LENGTH_LONG).show();
+        Intent intent = new Intent(getApplicationContext(), ResultActivity.class);
+        intent.putExtra("patient", patient);
+        startActivity(intent);
+        //Toast.makeText(PhoneActivity.this, "AGORA VEM O RESULTADO!", Toast.LENGTH_LONG).show();
     }
 
 }
