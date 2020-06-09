@@ -4,8 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Html;
 import android.widget.Button;
 import android.view.View;
+import android.widget.TextView;
 
 import com.dam.kdcovid_app.R;
 
@@ -17,14 +19,12 @@ import com.dam.kdcovid_app.R;
 public class MainActivity extends AppCompatActivity {
 
     private Button btnNext;
+    //private TextView tvWelcome;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        // To hide the title bar
-        //getSupportActionBar().hide();
-
         // Set up visual components
         btnNext = findViewById(R.id.btnNext);
         btnNext.setOnClickListener(new View.OnClickListener() {
@@ -33,7 +33,8 @@ public class MainActivity extends AppCompatActivity {
                 nextActivity();
             }
         });
-
+        //tvWelcome = findViewById(R.id.tvWelcome);
+        //tvWelcome.setText(Html.fromHtml(getString(R.string.welcome_msg)));
     }
 
     protected void nextActivity() {

@@ -11,14 +11,14 @@ package com.dam.kdcovid_app.control;
  */
 
 public final class Covid19 {
-    // Symptoms - 0 a 8
+    // Symptoms - 0 a 9
     public enum Symptoms {
-        FEVER(0), RUNNING_NOSE(1), TIREDNESS(2), COUGH(3), BREATH_PROBLEM(4),
-        PURPLE_MOUTH(5), SORE_THROAT(6), CHEST_PRESSURE(7), NOA(8);
+        FEVER(0), SMELL_TASTE_LOSS(1), RUNNING_NOSE(2), TIREDNESS(3), COUGH(4), BREATH_PROBLEM(5),
+        PURPLE_MOUTH(6), SORE_THROAT(7), CHEST_PRESSURE(8), NOA(9);
 
         private final int value;
 
-        private Symptoms(int value) {
+        Symptoms(int value) {
             this.value = value;
         }
 
@@ -27,9 +27,9 @@ public final class Covid19 {
         }
     }
 
-    // SymptomsDuration - 9 a 13
+    // SymptomsDuration - 10 a 14
     public enum SymptomsDuration {
-        DAYS_1TO3(9), DAYS_4TO7(10), DAYS_8TO10(11), DAYS_11TO14(12), DAYS_14PLUS(13);
+        DAYS_1TO3(10), DAYS_4TO7(11), DAYS_8TO10(12), DAYS_11TO14(13), DAYS_14PLUS(14);
 
         private final int value;
 
@@ -42,10 +42,10 @@ public final class Covid19 {
         }
     }
 
-    // Diseases - 14 a 20
+    // Diseases - 15 a 21
     public enum Diseases {
-        DIABETES(14), HEART_PROBLEM(15), CHRONIC_KIDNEY(16), CHRONIC_RESPIRATORY(17),
-        HIGH_PRESSURE(18), CANCER(19), PRIOR_DISEASE_DWA(20);
+        DIABETES(15), HEART_PROBLEM(16), CHRONIC_KIDNEY(17), CHRONIC_RESPIRATORY(18),
+        HIGH_PRESSURE(19), CANCER(20), PRIOR_DISEASE_DWA(21);
 
         private final int value;
 
@@ -58,9 +58,9 @@ public final class Covid19 {
         }
     }
 
-    // Last14Days - 21 a 24
+    // Last14Days - 22 a 25
     public enum Last14Days {
-        WENT_OUT_OF_CITY(21), CONTACT_WITH_OUTSIDER(22), CONTACT_WITH_INFECTED(23), LAST14_DAYS_NOA(24);
+        WENT_OUT_OF_CITY(22), CONTACT_WITH_OUTSIDER(23), CONTACT_WITH_INFECTED(24), LAST14_DAYS_NOA(25);
 
         private final int value;
 
@@ -73,9 +73,9 @@ public final class Covid19 {
         }
     }
 
-    // AgeRange - 25 a 29
+    // AgeRange - 26 a 30
     public enum AgeRange {
-        YEARS_1TO15(25), YEARS_16TO30(26), YEARS_31TO45(27), YEARS_46TO60(28), YEARS_46PLUS(29);
+        YEARS_1TO15(26), YEARS_16TO30(27), YEARS_31TO45(28), YEARS_46TO60(29), YEARS_46PLUS(30);
 
         private final int value;
 

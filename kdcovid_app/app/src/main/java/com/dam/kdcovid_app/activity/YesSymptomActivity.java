@@ -17,6 +17,7 @@ public class YesSymptomActivity extends AppCompatActivity {
 
     private Patient patient;
     private CheckBox chkFever;
+    private CheckBox chkSmellTasteLoss;
     private CheckBox chkRunningNose;
     private CheckBox chkTiredness;
     private CheckBox chkCough;
@@ -40,6 +41,7 @@ public class YesSymptomActivity extends AppCompatActivity {
 
     private void setUpViewById() {
         chkFever = findViewById(R.id.chkFever);
+        chkSmellTasteLoss = findViewById(R.id.chkSmellTasteLoss);
         chkRunningNose = findViewById(R.id.chkRunningNose);
         chkTiredness = findViewById(R.id.chkTiredness);
         chkCough = findViewById(R.id.chkCough);
@@ -64,6 +66,7 @@ public class YesSymptomActivity extends AppCompatActivity {
                     }
                 };
         chkFever.setOnCheckedChangeListener(listener);
+        chkSmellTasteLoss.setOnCheckedChangeListener(listener);
         chkRunningNose.setOnCheckedChangeListener(listener);
         chkTiredness.setOnCheckedChangeListener(listener);
         chkCough.setOnCheckedChangeListener(listener);
@@ -92,6 +95,7 @@ public class YesSymptomActivity extends AppCompatActivity {
         if (this.answerSelected()) {
             // Transfer the answers to the Patient object before proceeding
             this.patient.setHasFever(chkFever.isChecked());
+            this.patient.setHasSmellTasteLoss(chkSmellTasteLoss.isChecked());
             this.patient.setHasRunningNose(chkRunningNose.isChecked());
             this.patient.setHasTiredness(chkTiredness.isChecked());
             this.patient.setHasCough(chkCough.isChecked());
@@ -111,6 +115,7 @@ public class YesSymptomActivity extends AppCompatActivity {
     private boolean answerSelected() {
         return (
                 chkFever.isChecked() ||
+                chkSmellTasteLoss.isChecked() ||
                 chkRunningNose.isChecked() ||
                 chkTiredness.isChecked() ||
                 chkCough.isChecked() ||
@@ -147,6 +152,7 @@ public class YesSymptomActivity extends AppCompatActivity {
     private void uncheckAllCheckboxesButNOA() {
         // Click event for chkNOA
         chkFever.setChecked(false);
+        chkSmellTasteLoss.setChecked(false);
         chkRunningNose.setChecked(false);
         chkTiredness.setChecked(false);
         chkCough.setChecked(false);

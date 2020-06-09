@@ -6,6 +6,7 @@ public class Patient implements Serializable {
     // Symptoms
     private boolean hasSymptom;
     private boolean hasFever;
+    private boolean hasSmellTasteLoss;
     private boolean hasRunningNose;
     private boolean hasTiredness;
     private boolean hasCough;
@@ -73,6 +74,7 @@ public class Patient implements Serializable {
         boolean[] answers = {
                 // Symptoms - 0 a 8
                 this.getHasFever(),
+                this.getHasSmellTasteLoss(),
                 this.getHasRunningNose(),
                 this.getHasTiredness(),
                 this.getHasCough(),
@@ -80,7 +82,7 @@ public class Patient implements Serializable {
                 this.getHasPurpleMouth(),
                 this.getHasSoreThroat(),
                 this.getHasChestPressure(),
-                this.getHasNOASymptom(),
+                this.getHasNOASymptom() || !this.getHasSymptom(),
                 // SymptomsDuration - 9 a 13
                 this.isDuration1to3Days(),
                 this.isDuration4to7Days(),
@@ -445,6 +447,14 @@ public class Patient implements Serializable {
 
     public void setHasFever(boolean hasFever) {
         this.hasFever = hasFever;
+    }
+
+    public boolean getHasSmellTasteLoss() {
+        return hasSmellTasteLoss;
+    }
+
+    public void setHasSmellTasteLoss(boolean hasSmellTasteLoss) {
+        this.hasSmellTasteLoss = hasSmellTasteLoss;
     }
 
     public boolean getHasRunningNose() {

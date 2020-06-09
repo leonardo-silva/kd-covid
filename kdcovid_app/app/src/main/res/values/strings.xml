@@ -1,6 +1,14 @@
 <resources>
     <string name="app_name">KD-Covid</string>
-    <string name="welcome_msg">Como está se sentindo? Ajude os cientistas a combater a disseminação da COVID-19 na sua região!</string>
+    <string name="welcome_msg">Olá, bem-vindo ao <b>KD-Covid</b>! \n\nEste aplicativo tem
+        a intenção de acompanhar e monitorar os casos de COVID-19 na nossa região,
+        principalmente nas cidades de Salinas e Janaúba. Para nos ajudar a
+        construir essa rede segura de informações, é simples: responda ao
+        questionário a seguir, relatando o seu estado de saúde atual.
+        As respostas geradas com este aplicativo fornecerão dados para
+        o mapeamento dos casos e posteriores ações. A detecção prévia de
+        casos pode promover um melhor acesso aos testes e serviços de saúde.
+        \n\nEstamos com você!</string>
     <string name="with_support_msg">Com o apoio de</string>
     <string name="next_lbl">Continue</string>
     <string name="agreement_msg">Aqui vem aquela parte: \"Concordo em compartilhar meus dados para ...\"</string>
@@ -78,4 +86,5 @@
     <string name="result_high_risk6_msg">Risco potencial! \nMais de dois sintomas \n ou febre + outro sintoma, \nou comportamento \nde risco, \na mais de oito dias</string>
     <string name="result_very_high_risk7_msg">Alto risco! \nIdade de risco \nou com comorbidade, \nmais de dois sintomas \n ou febre + outro sintoma, \nou comportamento \nde risco</string>
     <string name="go_home_lbl">Voltar para o início</string>
+    <string name="smell_taste_loss_lbl">Perda de olfato ou paladar</string>
 </resources>
