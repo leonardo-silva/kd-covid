@@ -62,9 +62,10 @@ public class Patient implements Serializable {
     // Full Name
     private boolean fullNameDWA; // DWA = Dont Want to Answer
     private String fullName;
-    // Phone
-    private boolean phoneDWA; // DWA = Dont Want to Answer
+    // Phone and Email
+    //private boolean phoneDWA; // DWA = Dont Want to Answer
     private String phone;
+    private String email;
 
     public Patient(boolean hasSymptom) {
         this.hasSymptom = hasSymptom;
@@ -113,12 +114,12 @@ public class Patient implements Serializable {
         return answers;
     }
 
-    public boolean getPhoneDWA() {
-        return phoneDWA;
+    public String getEmail() {
+        return email;
     }
 
-    public void setPhoneDWA(boolean phoneDWA) {
-        this.phoneDWA = phoneDWA;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getPhone() {

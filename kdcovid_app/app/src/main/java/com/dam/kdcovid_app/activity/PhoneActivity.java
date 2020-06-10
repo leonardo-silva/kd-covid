@@ -13,15 +13,20 @@ import android.widget.Toast;
 
 import com.dam.kdcovid_app.R;
 import com.dam.kdcovid_app.model.Patient;
+import com.github.rtoshiro.util.format.SimpleMaskFormatter;
+import com.github.rtoshiro.util.format.text.MaskTextWatcher;
+import com.google.android.material.textfield.TextInputEditText;
+
+import static com.dam.kdcovid_app.control.Util.isValidMail;
+import static com.dam.kdcovid_app.control.Util.isValidMobile;
 
 public class PhoneActivity extends AppCompatActivity {
 
     private Patient patient;
     private TextView tvHeaderPhone;
     private TextView tvHeaderFeelOkPhone;
-    private RadioGroup rdgPhone;
-    private RadioButton rdbPhoneDWA;
-    private EditText etPhone;
+    private TextInputEditText etEnterPhone;
+    private TextInputEditText etEnterEmail;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,21 +40,16 @@ public class PhoneActivity extends AppCompatActivity {
     }
 
     private void setUpViewById() {
-        etPhone = findViewById(R.id.etPhone);
-        rdbPhoneDWA = findViewById(R.id.rdbPhoneDWA);
-        rdgPhone = findViewById(R.id.rdgPhone);
+        etEnterEmail = findViewById(R.id.etEnterEmail);
+        etEnterPhone = findViewById(R.id.etEnterPhone);
+        //etEnterPhone.addTextChangedListener(new PhoneNumberFormattingTextWatcher("55"));
 
-        rdgPhone.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-                if (checkedId == R.id.rdbFillPhone) {
-                    etPhone.setVisibility(View.VISIBLE);
-                    etPhone.requestFocus();
-                }
-                else
-                    etPhone.setVisibility(View.INVISIBLE);
-            }
-        });
+        // Brazilian cell phone mask
+        SimpleMaskFormatter smf =
+                new SimpleMaskFormatter(getResources().getString(R.string.cell_phone_mask));
+        MaskTextWatcher mtw = new MaskTextWatcher(etEnterPhone, smf);
+        etEnterPhone.addTextChangedListener(mtw);
+
         tvHeaderPhone = findViewById(R.id.tvHeaderPhone);
         tvHeaderFeelOkPhone = findViewById(R.id.tvHeaderFeelOkPhone);
         // Control header
@@ -60,6 +60,26 @@ public class PhoneActivity extends AppCompatActivity {
     }
 
     public void onclickBtnPhoneNext(View view) {
+        if (! etEnterEmail.getText().toString().isEmpty() &&
+            ! isValidMail(etEnterEmail.getText().toString())) {
+            Toast.makeText(this, getResources().getText(R.string.err_invalid_email), Toast.LENGTH_SHORT).show();
+
+        } else if (! etEnterPhone.getText().toString().isEmpty() &&
+                ! isValidMobile(etEnterPhone.getText().toString())) {
+            Toast.makeText(this, getResources().getText(R.string.err_invalid_phone), Toast.LENGTH_SHORT).show();
+
+        } else if (etEnterEmail.getText().toString().isEmpty() &&
+                etEnterPhone.getText().toString().isEmpty()) {
+            Toast.makeText(this, getResources().getText(R.string.err_nophone_noremail), Toast.LENGTH_SHORT).show();
+
+        } else {
+            // Transfer the answers to the Patient object before proceeding
+            this.patient.setEmail(etEnterEmail.getText().toString());
+            this.patient.setPhone(etEnterPhone.getText().toString());
+            // Call next activity
+            this.gotoNextActivity();
+        }
+        /*
         if (rdgPhone.getCheckedRadioButtonId() != -1) {
             // Transfer the answers to the Patient object before proceeding
             this.patient.setPhoneDWA(rdbPhoneDWA.isChecked());
@@ -70,6 +90,8 @@ public class PhoneActivity extends AppCompatActivity {
             Toast.makeText(PhoneActivity.this,
                     R.string.err_select_atleast_one_answer, Toast.LENGTH_LONG).show();
         }
+
+         */
     }
 
     private void gotoNextActivity() {

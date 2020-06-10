@@ -76,7 +76,6 @@
     <string name="hint_full_name_lbl">Informe aqui o seu nome</string>
     <string name="phone_lbl">Qual o seu telefone?</string>
     <string name="hint_phone_lbl">Informe aqui seu telefone</string>
-    <string name="err_select_atleast_one_answer">Favor selecionar pelo menos uma resposta!</string>
     <string name="result_lbl">Relatório Preliminar</string>
     <string name="result_low_risk1_msg">Risco baixo! \nSem sintomas, \ne sem comportamento \nde risco</string>
     <string name="result_low_risk2_msg">Risco baixo! \nSem sintomas, \nmas com comportamento \nde risco</string>
@@ -87,4 +86,12 @@
     <string name="result_very_high_risk7_msg">Alto risco! \nIdade de risco \nou com comorbidade, \nmais de dois sintomas \n ou febre + outro sintoma, \nou comportamento \nde risco</string>
     <string name="go_home_lbl">Voltar para o início</string>
     <string name="smell_taste_loss_lbl">Perda de olfato ou paladar</string>
+    <string name="phone_or_email_lbl">Para finalizar, informe seu telefone e/ou email de contato</string>
+    <string name="enter_phone_lbl">Informe aqui seu telefone</string>
+    <string name="enter_email_lbl">Informe aqui seu email</string>
+    <string name="cell_phone_mask">(NN)NNNNN-NNNN</string>
+    <string name="err_select_atleast_one_answer">Favor selecionar pelo menos uma resposta!</string>
+    <string name="err_invalid_phone">Favor informar um telefone VÁLIDO!</string>
+    <string name="err_invalid_email">Favor informar um email VÁLIDO!</string>
+    <string name="err_nophone_noremail">Favor informar telefone e/ou email!</string>
 </resources>
