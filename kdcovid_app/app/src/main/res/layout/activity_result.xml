@@ -1,69 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_gravity="center_vertical"
-    android:orientation="vertical"
-    android:padding="25sp"
-    tools:context=".activity.ResultActivity">
+    android:fillViewport="true">
 
-    <TextView
-        android:id="@+id/tvHeaderResult"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="30sp"
-        android:text="@string/result_lbl"
-        android:textAlignment="center"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="25sp"
-        android:textStyle="bold" />
+        android:layout_gravity="center_vertical"
+        android:background="@color/colorBackgroundGreen"
+        android:orientation="vertical"
+        android:paddingTop="15sp"
+        android:paddingBottom="15sp"
+        tools:context=".activity.ResultActivity">
 
-    <Button
-        android:id="@+id/btnLowRisk"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
-        android:padding="20sp"
-        android:text="@string/result_low_risk2_msg"
-        android:textColor="@android:color/white"
-        android:textSize="23sp"
-        tools:text="low risk text" />
+        <TextView
+            android:id="@+id/tvHeaderResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="19sp"
+            android:text="@string/result_lbl"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="23sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
 
-    <Button
-        android:id="@+id/btnMediumRisk"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/colorWarning"
-        android:padding="20sp"
-        android:text="@string/result_medium_risk4_msg"
-        android:textColor="@android:color/black"
-        android:textSize="23sp"
-        tools:text="medium risk text" />
+        <Button
+            android:id="@+id/btnLowRisk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:padding="19sp"
+            android:text="@string/result_low_risk2_msg"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="22sp"
+            tools:text="low risk text"
+            tools:visibility="visible" />
 
-    <Button
-        android:id="@+id/btnHighRisk"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/colorRisk"
-        android:padding="20sp"
-        android:text="@string/result_very_high_risk7_msg"
-        android:textColor="@android:color/white"
-        android:textSize="23sp"
-        tools:text="high risk text" />
+        <Button
+            android:id="@+id/btnMediumRisk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWarning"
+            android:padding="20sp"
+            android:text="@string/result_medium_risk4_msg"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textColor="@android:color/black"
+            android:textSize="22sp"
+            tools:text="medium risk text"
+            tools:visibility="visible" />
 
-    <Button
-        android:id="@+id/btnGoHome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="30sp"
-        android:background="@color/colorPrimary"
-        android:padding="16dp"
-        android:text="@string/go_home_lbl"
-        android:textColor="@android:color/white"
-        android:textSize="18sp"
-        android:textStyle="bold" />
+        <Button
+            android:id="@+id/btnHighRisk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorRisk"
+            android:padding="16sp"
+            android:text="@string/result_very_high_risk7_msg"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            tools:text="high risk text"
+            tools:visibility="visible" />
+
+        <Button
+            android:id="@+id/btnGoHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20sp"
+            android:background="@drawable/rounded_button"
+            android:padding="15dp"
+            android:text="@string/go_home_lbl"
+            android:textColor="@android:color/white"
+            android:textSize="17sp"
+            android:textStyle="bold" />
 
 
-</LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

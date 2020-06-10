@@ -191,7 +191,8 @@ public final class Covid19 {
                 }
             }
         }
-        return Risk.LOW;
+        // If no case matches, the default will be Risk.MEDIUM_1
+        return Risk.MEDIUM_1;
     }
 }
     

@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_gravity="center_vertical"
+    android:background="@android:color/white"
     android:fillViewport="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -104,7 +105,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="6dp"
-            android:background="@color/colorPrimary"
+            android:background="@drawable/rounded_button"
             android:drawableRight="@drawable/ic_arrow_forward_white_24dp"
             android:padding="9sp"
             android:text="@string/next_lbl"

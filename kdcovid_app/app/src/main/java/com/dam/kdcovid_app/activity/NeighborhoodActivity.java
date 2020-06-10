@@ -57,10 +57,17 @@ public class NeighborhoodActivity extends AppCompatActivity {
     }
 
     public void onclickBtnNeighborhoodNext(View view) {
-        // Transfer the answers to the Patient object before proceeding
-        this.patient.setNeighborhoodName(spnNeighborhood.getSelectedItem().toString());
-        // Call next activity
-        this.gotoNextActivity();
+        Object selectedNeighborhood = spnNeighborhood.getSelectedItem();
+
+        if (selectedNeighborhood == null ||
+                selectedNeighborhood.toString().isEmpty()) {
+            Toast.makeText(this, getResources().getString(R.string.err_select_atleast_one_neighborhood), Toast.LENGTH_LONG).show();
+        } else {
+            // Transfer the answers to the Patient object before proceeding
+            this.patient.setNeighborhoodName(selectedNeighborhood.toString());
+            // Call next activity
+            this.gotoNextActivity();
+        }
     }
 
     private void gotoNextActivity() {

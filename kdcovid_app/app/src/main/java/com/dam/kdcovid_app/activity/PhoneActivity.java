@@ -62,15 +62,15 @@ public class PhoneActivity extends AppCompatActivity {
     public void onclickBtnPhoneNext(View view) {
         if (! etEnterEmail.getText().toString().isEmpty() &&
             ! isValidMail(etEnterEmail.getText().toString())) {
-            Toast.makeText(this, getResources().getText(R.string.err_invalid_email), Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getResources().getText(R.string.err_invalid_email), Toast.LENGTH_LONG).show();
 
         } else if (! etEnterPhone.getText().toString().isEmpty() &&
                 ! isValidMobile(etEnterPhone.getText().toString())) {
-            Toast.makeText(this, getResources().getText(R.string.err_invalid_phone), Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getResources().getText(R.string.err_invalid_phone), Toast.LENGTH_LONG).show();
 
         } else if (etEnterEmail.getText().toString().isEmpty() &&
                 etEnterPhone.getText().toString().isEmpty()) {
-            Toast.makeText(this, getResources().getText(R.string.err_nophone_noremail), Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getResources().getText(R.string.err_nophone_noremail), Toast.LENGTH_LONG).show();
 
         } else {
             // Transfer the answers to the Patient object before proceeding

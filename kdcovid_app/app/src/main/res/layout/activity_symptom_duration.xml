@@ -110,7 +110,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="35dp"
-        android:background="@color/colorPrimary"
+        android:background="@drawable/rounded_button"
         android:drawableRight="@drawable/ic_arrow_forward_white_24dp"
         android:onClick="onclickBtnSymptomDurationNext"
         android:padding="16dp"
