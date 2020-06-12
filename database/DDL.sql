@@ -55,13 +55,16 @@ CREATE TABLE IF NOT EXISTS `kd-covid`.`PATIENT` (
   `cityMontesClaros` TINYINT NOT NULL,
   `otherCity` TINYINT NOT NULL,
   `neighborhoodName` VARCHAR(40) NOT NULL,
-  `zipCode` CHAR(10) NOT NULL,
+  `zipCode` CHAR(10) NOT NULL, -- Formato: '00.000-000'
   `fullNameDWA` TINYINT NOT NULL,
   `fullName` VARCHAR(40) NULL,
   `phoneDWA` TINYINT NOT NULL,
-  `phone` CHAR(16) NULL,
+  `phone` CHAR(16) NULL, -- Formato: '(00) 9 0000-0000'
   `emailDWA` TINYINT NOT NULL,
-  `email` VARCHAR(40) NULL)
+  `email` VARCHAR(40) NULL,
+  `visitedPoints` MULTIPOINT NOT NULL,
+  `created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP(),
+  `updated_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP())
 ENGINE = InnoDB;
 
 USE `kd-covid`;
@@ -94,5 +97,11 @@ BEGIN
 		SET NEW.email = email;
 	END IF;
     
+END$$
+
+USE `kd-covid`$$
+CREATE DEFINER = CURRENT_USER TRIGGER `kd-covid`.`PATIENT_BEFORE_UPDATE` BEFORE UPDATE ON `PATIENT` FOR EACH ROW
+BEGIN
+	SET NEW.updated_at = CURRENT_TIMESTAMP();
 END$$
 DELIMITER ;
