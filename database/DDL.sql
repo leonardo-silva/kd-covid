@@ -1,14 +1,25 @@
+-- MySQL Workbench Forward Engineering
+
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
+
 -- -----------------------------------------------------
 -- Schema kd-covid
 -- -----------------------------------------------------
-DROP SCHEMA IF EXISTS `kd-covid`;
-CREATE SCHEMA IF NOT EXISTS `kd-covid` DEFAULT CHARACTER SET utf8;
-USE `kd-covid`;
+DROP SCHEMA IF EXISTS `kd-covid` ;
+
+-- -----------------------------------------------------
+-- Schema kd-covid
+-- -----------------------------------------------------
+CREATE SCHEMA IF NOT EXISTS `kd-covid` DEFAULT CHARACTER SET utf8 ;
+USE `kd-covid` ;
 
 -- -----------------------------------------------------
 -- Table `kd-covid`.`PATIENT`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `kd-covid`.`PATIENT` (
+  `id` INT NOT NULL AUTO_INCREMENT,
   `hasSymptom` TINYINT NOT NULL,
   `hasFever` TINYINT NOT NULL,
   `hasSmellTasteLoss` TINYINT NOT NULL,
@@ -55,16 +66,16 @@ CREATE TABLE IF NOT EXISTS `kd-covid`.`PATIENT` (
   `cityMontesClaros` TINYINT NOT NULL,
   `otherCity` TINYINT NOT NULL,
   `neighborhoodName` VARCHAR(40) NOT NULL,
-  `zipCode` CHAR(10) NOT NULL, -- Formato: '00.000-000'
+  `zipCode` CHAR(10) NOT NULL,
   `fullNameDWA` TINYINT NOT NULL,
   `fullName` VARCHAR(40) NULL,
-  `phoneDWA` TINYINT NOT NULL,
-  `phone` CHAR(16) NULL, -- Formato: '(00) 9 0000-0000'
-  `emailDWA` TINYINT NOT NULL,
+  `phone` CHAR(16) NULL,
   `email` VARCHAR(40) NULL,
   `visitedPoints` MULTIPOINT NOT NULL,
   `created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP(),
-  `updated_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP())
+  `updated_at` TIMESTAMP NULL,
+  `android_id` VARCHAR(25) NULL,
+  PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
 USE `kd-covid`;
@@ -83,7 +94,7 @@ BEGIN
 	DECLARE phone VARCHAR(16) DEFAULT TRIM(NEW.phone);
 	DECLARE email VARCHAR(40) DEFAULT TRIM(NEW.email);
     
-    IF (NEW.phoneDWA AND NEW.emailDWA) OR (phone = '' AND email = '')
+    IF (phone = '' AND email = '')
 		THEN
 			SIGNAL SQLSTATE '02000' SET MESSAGE_TEXT = phoneOrEmailErrorMessage;
 	ELSEIF NOT(NEW.citySalinas XOR NEW.cityAracuai XOR NEW.cityTaiobeiras XOR NEW.cityCoronelMurta XOR NEW.citySaoJoaoDoParaiso XOR NEW.cityJanauba XOR NEW.cityPorteirinha XOR NEW.cityMontesClaros XOR NEW.otherCity)
@@ -104,4 +115,10 @@ CREATE DEFINER = CURRENT_USER TRIGGER `kd-covid`.`PATIENT_BEFORE_UPDATE` BEFORE 
 BEGIN
 	SET NEW.updated_at = CURRENT_TIMESTAMP();
 END$$
+
+
 DELIMITER ;
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;

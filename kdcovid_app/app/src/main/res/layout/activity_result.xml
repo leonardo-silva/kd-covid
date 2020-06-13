@@ -53,7 +53,7 @@
             android:textAlignment="textStart"
             android:textAllCaps="false"
             android:textColor="@android:color/black"
-            android:textSize="22sp"
+            android:textSize="21sp"
             tools:text="medium risk text"
             tools:visibility="visible" />
 

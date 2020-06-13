@@ -77,7 +77,7 @@
     <string name="phone_lbl">Qual o seu telefone?</string>
     <string name="hint_phone_lbl">Informe aqui seu telefone</string>
     <string name="result_lbl">Relatório Preliminar</string>
-    <string name="result_low_risk1_msg">1 - Baseado em suas respostas, \né provável que você não se
+    <string name="result_low_risk1_msg">Baseado em suas respostas, \né provável que você não se
         \nencaixe como caso suspeito de Covid-19.
         No entanto, continue mantendo as condutas de prevenção, como:
         \n- Higienize sempre as mãos com água e sabão ou álcool gel;
@@ -86,7 +86,7 @@
         \n- Evite tocar nos olhos, nariz e boca com as mãos não higienizadas;
         \n- Não compartilhe objetos de uso pessoal.
         \n\nCaso a sua situação mude, refaça o questionário.</string>
-    <string name="result_low_risk2_msg">2 - Baseado em suas respostas, \né provável que você não se
+    <string name="result_low_risk2_msg">Baseado em suas respostas, \né provável que você não se
         \nencaixe como caso suspeito de Covid-19.
         No entanto, continue mantendo as condutas de prevenção, como:
         \n- Higienize sempre as mãos com água e sabão ou álcool gel;
@@ -95,7 +95,7 @@
         \n- Evite tocar nos olhos, nariz e boca com as mãos não higienizadas;
         \n- Não compartilhe objetos de uso pessoal.
         \n\nCaso a sua situação mude, refaça o questionário.</string>
-    <string name="result_medium_risk3_msg">3 - Baseado em suas respostas,
+    <string name="result_medium_risk3_msg">Baseado em suas respostas,
         é possível que você se encaixe como caso suspeito de Covid-19.
         No entanto, isso não se trata de um diagnóstico.
         O ideal é que você busque a unidade básica de saúde mais próxima e
@@ -106,7 +106,7 @@
         \n- Evite tocar nos olhos, nariz e boca com as mãos não higienizadas;
         \n- Não compartilhe objetos de uso pessoal.
         \n\nNos próximos dias, a equipe do KD-Covid poderá entrar em contato!</string>
-    <string name="result_medium_risk4_msg">4 - Baseado em suas respostas,
+    <string name="result_medium_risk4_msg">Baseado em suas respostas,
         é possível que você se encaixe como caso suspeito de Covid-19.
         No entanto, isso não se trata de um diagnóstico.
         O ideal é que você busque a unidade básica de saúde mais próxima e
@@ -117,7 +117,7 @@
         \n- Evite tocar nos olhos, nariz e boca com as mãos não higienizadas;
         \n- Não compartilhe objetos de uso pessoal.
         \n\nNos próximos dias, a equipe do KD-Covid poderá entrar em contato!</string>
-    <string name="result_high_risk5_msg">5 - Baseado em suas respostas,
+    <string name="result_high_risk5_msg">Baseado em suas respostas,
         é possível que você se encaixe como caso suspeito de Covid-19.
         No entanto, isso não se trata de um diagnóstico.
         O ideal é que você busque a unidade básica de saúde mais próxima e
@@ -131,7 +131,7 @@
         mais próxima.
         \n\nNos próximos dias, a equipe do KD-Covid
         poderá entrar em contato com você!</string>
-    <string name="result_high_risk6_msg">6 - Baseado em suas respostas,
+    <string name="result_high_risk6_msg">Baseado em suas respostas,
         é possível que você se encaixe como caso suspeito de Covid-19.
         No entanto, isso não se trata de um diagnóstico.
         O ideal é que você busque a unidade básica de saúde mais próxima e
@@ -145,7 +145,7 @@
         mais próxima.
         \n\nNos próximos dias, a equipe do KD-Covid
         poderá entrar em contato com você!</string>
-    <string name="result_very_high_risk7_msg">7 - Baseado em suas respostas,
+    <string name="result_very_high_risk7_msg">Baseado em suas respostas,
         é possível que você se encaixe como caso suspeito de Covid-19.
         No entanto, isso não se trata de um diagnóstico.
         O ideal é que você busque a unidade básica de saúde mais próxima e
@@ -170,4 +170,5 @@
     <string name="err_invalid_phone">Favor informar um telefone VÁLIDO!</string>
     <string name="err_invalid_email">Favor informar um email VÁLIDO!</string>
     <string name="err_nophone_noremail">Favor informar telefone e/ou email!</string>
+    <string name="finish_lbl">Finalizar</string>
 </resources>

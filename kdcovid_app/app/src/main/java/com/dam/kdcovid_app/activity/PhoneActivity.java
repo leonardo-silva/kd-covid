@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -62,6 +63,8 @@ public class PhoneActivity extends AppCompatActivity {
     public void onclickBtnPhoneNext(View view) {
         if (! etEnterEmail.getText().toString().isEmpty() &&
             ! isValidMail(etEnterEmail.getText().toString())) {
+            //String androidId = Settings.Secure.getString(getContentResolver(), Settings.Secure.ANDROID_ID);
+            //Toast.makeText(this, androidId, Toast.LENGTH_LONG).show();
             Toast.makeText(this, getResources().getText(R.string.err_invalid_email), Toast.LENGTH_LONG).show();
 
         } else if (! etEnterPhone.getText().toString().isEmpty() &&
@@ -73,9 +76,11 @@ public class PhoneActivity extends AppCompatActivity {
             Toast.makeText(this, getResources().getText(R.string.err_nophone_noremail), Toast.LENGTH_LONG).show();
 
         } else {
+            String androidId = Settings.Secure.getString(getContentResolver(), Settings.Secure.ANDROID_ID);
             // Transfer the answers to the Patient object before proceeding
             this.patient.setEmail(etEnterEmail.getText().toString());
             this.patient.setPhone(etEnterPhone.getText().toString());
+            this.patient.setAndroid_id(androidId);
             // Call next activity
             this.gotoNextActivity();
         }

@@ -4,10 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.text.Html;
 import android.widget.Button;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.dam.kdcovid_app.R;
 
@@ -19,7 +21,6 @@ import com.dam.kdcovid_app.R;
 public class MainActivity extends AppCompatActivity {
 
     private Button btnNext;
-    //private TextView tvWelcome;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +36,8 @@ public class MainActivity extends AppCompatActivity {
         });
         //tvWelcome = findViewById(R.id.tvWelcome);
         //tvWelcome.setText(Html.fromHtml(getString(R.string.welcome_msg)));
+        //String androidId = Settings.Secure.getString(getContentResolver(), Settings.Secure.ANDROID_ID);
+
     }
 
     protected void nextActivity() {
