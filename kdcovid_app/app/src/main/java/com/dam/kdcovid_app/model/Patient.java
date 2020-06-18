@@ -1,5 +1,8 @@
 package com.dam.kdcovid_app.model;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import java.io.Serializable;
 
 public class Patient implements Serializable {
@@ -72,6 +75,15 @@ public class Patient implements Serializable {
         this.hasSymptom = hasSymptom;
     }
 
+    public String objToJson() throws JsonProcessingException {
+        String json="";
+
+        ObjectMapper mapper = new ObjectMapper();
+        json = mapper.writeValueAsString(this);
+
+        return json;
+    }
+
     public boolean[] generateCovid19Input() {
         boolean[] answers = {
                 // Symptoms - 0 a 8
@@ -92,12 +104,12 @@ public class Patient implements Serializable {
                 this.isDuration11to14Days(),
                 this.isDuration14PlusDays(),
                 // Prior Diseases - 14 a 20
-                this.hasDiabetes(),
-                this.hasHeartProblem(),
-                this.hasChronicKidney(),
-                this.hasChronicRespiratory(),
-                this.hasHighPressure(),
-                this.hasCancer(),
+                this.getHasDiabetes(),
+                this.getHasHeartProblem(),
+                this.getHasChronicKidney(),
+                this.getHasChronicRespiratory(),
+                this.getHasHighPressure(),
+                this.getHasCancer(),
                 this.getDontHavePriorDisease() || this.getPriorDiseasesDWA(),
                 // Last14Days - 21 a 24
                 this.getWentOutOfCity(),
@@ -267,7 +279,7 @@ public class Patient implements Serializable {
         this.otherGender = otherGender;
     }
 
-    public boolean hasDiabetes() {
+    public boolean getHasDiabetes() {
         return hasDiabetes;
     }
 
@@ -275,7 +287,7 @@ public class Patient implements Serializable {
         this.hasDiabetes = hasDiabetes;
     }
 
-    public boolean hasHeartProblem() {
+    public boolean getHasHeartProblem() {
         return hasHeartProblem;
     }
 
@@ -283,7 +295,7 @@ public class Patient implements Serializable {
         this.hasHeartProblem = hasHeartProblem;
     }
 
-    public boolean hasChronicKidney() {
+    public boolean getHasChronicKidney() {
         return hasChronicKidney;
     }
 
@@ -291,7 +303,7 @@ public class Patient implements Serializable {
         this.hasChronicKidney = hasChronicKidney;
     }
 
-    public boolean hasChronicRespiratory() {
+    public boolean getHasChronicRespiratory() {
         return hasChronicRespiratory;
     }
 
@@ -299,7 +311,7 @@ public class Patient implements Serializable {
         this.hasChronicRespiratory = hasChronicRespiratory;
     }
 
-    public boolean hasHighPressure() {
+    public boolean getHasHighPressure() {
         return hasHighPressure;
     }
 
@@ -307,7 +319,7 @@ public class Patient implements Serializable {
         this.hasHighPressure = hasHighPressure;
     }
 
-    public boolean hasCancer() {
+    public boolean getHasCancer() {
         return hasCancer;
     }
 

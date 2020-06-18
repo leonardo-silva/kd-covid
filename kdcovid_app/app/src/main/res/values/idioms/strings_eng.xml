@@ -171,9 +171,5 @@
     <string name="err_invalid_email">Favor informar um email VÁLIDO!</string>
     <string name="err_nophone_noremail">Favor informar telefone e/ou email!</string>
     <string name="err_generate_json">Erro ao preparar dados! Tente novamente em alguns instantes!</string>
-    <string name="err_execute_db_operation">Ocorreu um erro de comunicação! Tente novamente em alguns instantes!</string>
-    <string name="err_db_record_exists">Registro já foi feito! Deve-se esperar no mínimo dois dias de intervalo!</string>
-    <string name="err_db_unexpected_exception">Ocorreu um erro inesperado! Tente novamente em alguns instantes!</string>
-    <string name="msg_db_insert_ok">Dados enviados com SUCESSO!</string>
     <string name="finish_lbl">Finalizar</string>
 </resources>

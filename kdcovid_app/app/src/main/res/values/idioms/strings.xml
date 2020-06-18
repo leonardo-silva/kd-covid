@@ -1,22 +1,21 @@
 <resources>
     <string name="app_name">KD-Covid</string>
-    <string name="welcome_msg">Olá, bem-vindo ao <b>KD-Covid</b>! \n\nEste aplicativo tem
-        a intenção de acompanhar e monitorar os casos de COVID-19 na nossa região,
-        principalmente nas cidades de Salinas e Janaúba. Para nos ajudar a
-        construir essa rede segura de informações, é simples: responda ao
-        questionário a seguir, relatando o seu estado de saúde atual.
-        As respostas geradas com este aplicativo fornecerão dados para
-        o mapeamento dos casos e posteriores ações. A detecção prévia de
-        casos pode promover um melhor acesso aos testes e serviços de saúde.
-        \n\nEstamos com você!</string>
-    <string name="with_support_msg">Com o apoio de</string>
+    <string name="welcome_msg">Hello, welcome to <b>KD-Covid</b>! \n\nThe goal of this application is to follow and monitor the cases of COVID-19 in our region,
+         mainly in the cities of Salinas and Janaúba. To help us
+         building this secure information network, it\'s simple: answer the
+         questionnaire to follow, related to your current health status.
+         The responses generated with this application provide data for
+         mapping of cases and subsequent actions. Prior detection of
+         cases can promote better access to health tests and services.
+         \n\nWe are with you!</string>
+    <string name="with_support_msg">With the support of</string>
     <string name="next_lbl">Continue</string>
     <string name="agreement_msg">Aqui vem aquela parte: \"Concordo em compartilhar meus dados para ...\"</string>
     <string name="iagree_lbl">Eu concordo</string>
-    <string name="feeling_msg">Como você está se sentindo?</string>
-    <string name="nosymptom_msg">bem, não sinto nenhum \ntipo de sintoma</string>
-    <string name="yessymptom_msg">Sinto algum sintoma \nou incômodo</string>
-    <string name="warning_feeling_msg">Obs: clique nesta opção se estiver sentindo qualquer tipo de sintoma, mesmo tosse ou nariz escorrendo</string>
+    <string name="feeling_msg">How are you feeling?</string>
+    <string name="nosymptom_msg">Well, I don\'t feel any \nkind of symptom</string>
+    <string name="yessymptom_msg">I feel some symptom \nor discomfort</string>
+    <string name="warning_feeling_msg">Note: click this option if you are experiencing any type of symptom, even coughing or running nose</string>
     <string name="tell_symptoms_lbl">Assinale os sintomas que você tem sentido:</string>
     <string name="fever_lbl">Febre</string>
     <string name="running_nose_lbl">Nariz escorrendo (coriza)</string>
@@ -171,9 +170,5 @@
     <string name="err_invalid_email">Favor informar um email VÁLIDO!</string>
     <string name="err_nophone_noremail">Favor informar telefone e/ou email!</string>
     <string name="err_generate_json">Erro ao preparar dados! Tente novamente em alguns instantes!</string>
-    <string name="err_execute_db_operation">Ocorreu um erro de comunicação! Tente novamente em alguns instantes!</string>
-    <string name="err_db_record_exists">Registro já foi feito! Deve-se esperar no mínimo dois dias de intervalo!</string>
-    <string name="err_db_unexpected_exception">Ocorreu um erro inesperado! Tente novamente em alguns instantes!</string>
-    <string name="msg_db_insert_ok">Dados enviados com SUCESSO!</string>
     <string name="finish_lbl">Finalizar</string>
 </resources>

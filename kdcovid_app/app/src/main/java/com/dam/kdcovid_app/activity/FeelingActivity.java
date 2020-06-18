@@ -13,6 +13,7 @@ import com.dam.kdcovid_app.model.Patient;
 
 public class FeelingActivity extends AppCompatActivity {
 
+    private Patient patient;
     private Button btnNoSymptom;
     private Button btnYesSymptom;
     private static final boolean YES = true;
@@ -41,7 +42,7 @@ public class FeelingActivity extends AppCompatActivity {
 
     private void gotoYesSymptomActivity() {
         // Create Patient instance
-        Patient patient = new Patient(YES);
+        this.patient = new Patient(YES);
         // Call next activity
         Intent intent = new Intent(getApplicationContext(), YesSymptomActivity.class);
         intent.putExtra("patient", patient);
@@ -50,10 +51,24 @@ public class FeelingActivity extends AppCompatActivity {
 
     private void gotoLast14DaysActivity() {
         // Create Patient instance
-        Patient patient = new Patient(NO);
+        this.patient = new Patient(NO);
         // Call next activity
         Intent intent = new Intent(getApplicationContext(), Last14DaysActivity.class);
         intent.putExtra("patient", patient);
         startActivity(intent);
     }
+
+    /*
+    private void setFalsePriorDiseases() {
+        // Set false to all prior diseases because the patient is feeling well, and the activity
+        // to collect prior diseases won't be started.
+        this.patient.setHasDiabetes(false);
+        this.patient.setHasHeartProblem(false);
+        this.patient.setHasChronicKidney(false);
+        this.patient.setHasChronicRespiratory(false);
+        this.patient.setHasHighPressure(false);
+        this.patient.setHasCancer(false);
+        this.patient.setDontHavePriorDisease(false);
+        this.patient.setPriorDiseasesDWA(false);
+    }*/
 }
