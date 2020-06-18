@@ -35,7 +35,7 @@
         android:id="@+id/tvNeighborhood"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorAccent"
+        android:background="@drawable/rounded_subheader_textview"
         android:paddingLeft="5sp"
         android:paddingRight="5sp"
         android:paddingBottom="10sp"

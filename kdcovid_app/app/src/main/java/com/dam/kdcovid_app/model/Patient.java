@@ -17,6 +17,7 @@ public class Patient implements Serializable {
     private boolean hasPurpleMouth;
     private boolean hasSoreThroat;
     private boolean hasChestPressure;
+    private boolean hasDiarrhea;
     private boolean hasNOASymptom;
     // Symptoms duration
     private boolean duration1to3Days;
@@ -96,6 +97,7 @@ public class Patient implements Serializable {
                 this.getHasPurpleMouth(),
                 this.getHasSoreThroat(),
                 this.getHasChestPressure(),
+                this.getHasDiarrhea(),
                 this.getHasNOASymptom() || !this.getHasSymptom(),
                 // SymptomsDuration - 9 a 13
                 this.isDuration1to3Days(),
@@ -110,7 +112,7 @@ public class Patient implements Serializable {
                 this.getHasChronicRespiratory(),
                 this.getHasHighPressure(),
                 this.getHasCancer(),
-                this.getDontHavePriorDisease() || this.getPriorDiseasesDWA(),
+                this.getDontHavePriorDisease() || this.getPriorDiseasesDWA() || !this.getHasSymptom(),
                 // Last14Days - 21 a 24
                 this.getWentOutOfCity(),
                 this.getHadContactWithOutsider(),
@@ -125,6 +127,14 @@ public class Patient implements Serializable {
         };
 
         return answers;
+    }
+
+    public boolean getHasDiarrhea() {
+        return hasDiarrhea;
+    }
+
+    public void setHasDiarrhea(boolean hasDiarrhea) {
+        this.hasDiarrhea = hasDiarrhea;
     }
 
     public String getAndroid_id() {

@@ -4,17 +4,17 @@ package com.dam.kdcovid_app.control;
  * Arquivo: Covid19.java
  * Descrição: Triagem de respostas de possíveis casos suspeitos. O método de
  * Screening recebe como parâmetro um vetor booleano, correspondendo a Symptoms
- * (0-8), tempo dos Symptoms (9-13), comorbidades (14-20), comportamento de Risk
- * (21-24) e AgeRange etária (25 a 29). Para facilitar a identificação das posições
+ * (0-10), tempo dos Symptoms (11-15), comorbidades (16-22), comportamento de Risk
+ * (23-26) e AgeRange etária (27 a 31). Para facilitar a identificação das posições
  * foram utilizadas enumerações: Symptoms, SymptomsDuration, Diseases, Last14Days e AgeRange.
  * A resposta também é dada utilizando o enumerador chamado Risk.
  */
 
 public final class Covid19 {
-    // Symptoms - 0 a 9
+    // Symptoms - 0 a 10
     public enum Symptoms {
         FEVER(0), SMELL_TASTE_LOSS(1), RUNNING_NOSE(2), TIREDNESS(3), COUGH(4), BREATH_PROBLEM(5),
-        PURPLE_MOUTH(6), SORE_THROAT(7), CHEST_PRESSURE(8), NOA(9);
+        PURPLE_MOUTH(6), SORE_THROAT(7), CHEST_PRESSURE(8), DIARRHEA(9), NOA(10);
 
         private final int value;
 
@@ -27,9 +27,9 @@ public final class Covid19 {
         }
     }
 
-    // SymptomsDuration - 10 a 14
+    // SymptomsDuration - 11 a 15
     public enum SymptomsDuration {
-        DAYS_1TO3(10), DAYS_4TO7(11), DAYS_8TO10(12), DAYS_11TO14(13), DAYS_14PLUS(14);
+        DAYS_1TO3(11), DAYS_4TO7(12), DAYS_8TO10(13), DAYS_11TO14(14), DAYS_14PLUS(15);
 
         private final int value;
 
@@ -42,10 +42,10 @@ public final class Covid19 {
         }
     }
 
-    // Diseases - 15 a 21
+    // Diseases - 16 a 22
     public enum Diseases {
-        DIABETES(15), HEART_PROBLEM(16), CHRONIC_KIDNEY(17), CHRONIC_RESPIRATORY(18),
-        HIGH_PRESSURE(19), CANCER(20), PRIOR_DISEASE_DWA(21);
+        DIABETES(16), HEART_PROBLEM(17), CHRONIC_KIDNEY(18), CHRONIC_RESPIRATORY(19),
+        HIGH_PRESSURE(20), CANCER(21), PRIOR_DISEASE_DWA(22);
 
         private final int value;
 
@@ -58,9 +58,9 @@ public final class Covid19 {
         }
     }
 
-    // Last14Days - 22 a 25
+    // Last14Days - 23 a 26
     public enum Last14Days {
-        WENT_OUT_OF_CITY(22), CONTACT_WITH_OUTSIDER(23), CONTACT_WITH_INFECTED(24), LAST14_DAYS_NOA(25);
+        WENT_OUT_OF_CITY(23), CONTACT_WITH_OUTSIDER(24), CONTACT_WITH_INFECTED(25), LAST14_DAYS_NOA(26);
 
         private final int value;
 
@@ -73,9 +73,9 @@ public final class Covid19 {
         }
     }
 
-    // AgeRange - 26 a 30
+    // AgeRange - 27 a 31
     public enum AgeRange {
-        YEARS_1TO15(26), YEARS_16TO30(27), YEARS_31TO45(28), YEARS_46TO60(29), YEARS_46PLUS(30);
+        YEARS_1TO15(27), YEARS_16TO30(28), YEARS_31TO45(29), YEARS_46TO60(30), YEARS_46PLUS(31);
 
         private final int value;
 

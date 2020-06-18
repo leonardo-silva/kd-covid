@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
-import android.widget.RadioButton;
 import android.widget.Toast;
 
 import com.dam.kdcovid_app.R;
@@ -25,6 +24,7 @@ public class YesSymptomActivity extends AppCompatActivity {
     private CheckBox chkPurpleMouth;
     private CheckBox chkSoreThroat;
     private CheckBox chkChestPressure;
+    private CheckBox chkDiarrhea;
     private CheckBox chkNOA;
     //private Button btnYesSymptomNext;
 
@@ -49,6 +49,7 @@ public class YesSymptomActivity extends AppCompatActivity {
         chkPurpleMouth = findViewById(R.id.chkPurpleMouth);
         chkSoreThroat = findViewById(R.id.chkSoreThroat);
         chkChestPressure = findViewById(R.id.chkChestPressure);
+        chkDiarrhea = findViewById(R.id.chkDiarrhea);
         chkNOA = findViewById(R.id.chkNOA);
 
         CompoundButton.OnCheckedChangeListener listener =
@@ -74,6 +75,7 @@ public class YesSymptomActivity extends AppCompatActivity {
         chkPurpleMouth.setOnCheckedChangeListener(listener);
         chkSoreThroat.setOnCheckedChangeListener(listener);
         chkChestPressure.setOnCheckedChangeListener(listener);
+        chkDiarrhea.setOnCheckedChangeListener(listener);
 
         chkNOA.setOnCheckedChangeListener(
                 new CompoundButton.OnCheckedChangeListener() {
@@ -103,6 +105,7 @@ public class YesSymptomActivity extends AppCompatActivity {
             this.patient.setHasPurpleMouth(chkPurpleMouth.isChecked());
             this.patient.setHasSoreThroat(chkSoreThroat.isChecked());
             this.patient.setHasChestPressure(chkChestPressure.isChecked());
+            this.patient.setHasDiarrhea(chkDiarrhea.isChecked());
             this.patient.setHasNOASymptom(chkNOA.isChecked());
             // Call next activity
             this.gotoNextActivity();
@@ -123,6 +126,7 @@ public class YesSymptomActivity extends AppCompatActivity {
                 chkPurpleMouth.isChecked() ||
                 chkSoreThroat.isChecked() ||
                 chkChestPressure.isChecked() ||
+                chkDiarrhea.isChecked() ||
                 chkNOA.isChecked()
         );
     }
@@ -133,21 +137,6 @@ public class YesSymptomActivity extends AppCompatActivity {
         intent.putExtra("patient", patient);
         startActivity(intent);
     }
-
-    /*
-    public void uncheckNOA(View view) {
-        // Click event for all checkboxes except NOA
-        chkNOA.setChecked(false);
-
-        CheckBox chk = ((CheckBox) view);
-        if (chk.isChecked()) {
-            chk.setBackgroundColor(getResources().getColor(R.color.colorSelected));
-        } else {
-            chk.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
-        }
-    }
-
-     */
 
     private void uncheckAllCheckboxesButNOA() {
         // Click event for chkNOA
@@ -160,6 +149,7 @@ public class YesSymptomActivity extends AppCompatActivity {
         chkPurpleMouth.setChecked(false);
         chkSoreThroat.setChecked(false);
         chkChestPressure.setChecked(false);
+        chkDiarrhea.setChecked(false);
     }
 
 }

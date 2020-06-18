@@ -36,6 +36,7 @@ class DbOperation
 		$hasPurpleMouth = $obj->hasPurpleMouth;
 		$hasSoreThroat = $obj->hasSoreThroat;
 		$hasChestPressure = $obj->hasChestPressure;
+		$hasDiarrhea = $obj->hasDiarrhea;
 		$hasNOASymptom = $obj->hasNOASymptom;
 		$duration1to3Days = $obj->duration1to3Days;
 		$duration4to7Days = $obj->duration4to7Days;
@@ -80,14 +81,14 @@ class DbOperation
 		$android_id = $obj->android_id;
 				
 		$stmt = $this->con->prepare("INSERT INTO patient (hasSymptom, hasFever, hasSmellTasteLoss, hasRunningNose, hasTiredness, hasCough,
-				hasBreathProblem, hasPurpleMouth, hasSoreThroat, hasChestPressure, hasNOASymptom, duration1to3Days, 
-				duration4to7Days, duration8to10Days, duration11to14Days, duration14PlusDays, wentOutOfCity, hadContactWithOutsider, 
-				hadContactWithInfected, hadLast14DaysNOA, age1to15Years, age16to30Years, age31to45Years, age46to60Years, 
-				age60PlusYears, hasDiabetes, hasHeartProblem, hasChronicKidney,	hasChronicRespiratory, hasHighPressure, 
-				hasCancer, dontHavePriorDisease, priorDiseasesDWA, male, female, otherGender,
-				citySalinas, cityAracuai, cityTaiobeiras, cityCoronelMurta, citySaoJoaoDoParaiso, cityJanauba,
-				cityPorteirinha, cityMontesClaros, otherCity, neighborhoodName, zipCode, fullNameDWA, 
-				fullName, phone, email, android_id) 
+				hasBreathProblem, hasPurpleMouth, hasSoreThroat, hasChestPressure, hasDiarrhea, hasNOASymptom, 
+				duration1to3Days, duration4to7Days, duration8to10Days, duration11to14Days, duration14PlusDays, wentOutOfCity, 
+				hadContactWithOutsider, hadContactWithInfected, hadLast14DaysNOA, age1to15Years, age16to30Years, age31to45Years, 
+				age46to60Years, age60PlusYears, hasDiabetes, hasHeartProblem, hasChronicKidney,	hasChronicRespiratory, 
+				hasHighPressure, hasCancer, dontHavePriorDisease, priorDiseasesDWA, male, female, 
+				otherGender, citySalinas, cityAracuai, cityTaiobeiras, cityCoronelMurta, citySaoJoaoDoParaiso, 
+				cityJanauba, cityPorteirinha, cityMontesClaros, otherCity, neighborhoodName, zipCode, 
+				fullNameDWA, fullName, phone, email, android_id) 
 			VALUES(?, ?, ?, ?, ?, ?,
 				   ?, ?, ?, ?, ?, ?,   
 				   ?, ?, ?, ?, ?, ?,   
@@ -96,19 +97,19 @@ class DbOperation
 				   ?, ?, ?, ?, ?, ?,   
 				   ?, ?, ?, ?, ?, ?,   
 				   ?, ?, ?, ?, ?, ?,   
-			       ?, ?, ?, ?)");
+			       ?, ?, ?, ?, ?)");
 				   
-		$field_types = "iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiississss";		   
+		$field_types = "iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiississss";		   
 		
 		$stmt->bind_param($field_types, $hasSymptom, $hasFever, $hasSmellTasteLoss, $hasRunningNose, $hasTiredness, $hasCough,
-				$hasBreathProblem, $hasPurpleMouth, $hasSoreThroat, $hasChestPressure, $hasNOASymptom, $duration1to3Days,   
-				$duration4to7Days, $duration8to10Days, $duration11to14Days, $duration14PlusDays, $wentOutOfCity, $hadContactWithOutsider,
-				$hadContactWithInfected, $hadLast14DaysNOA, $age1to15Years, $age16to30Years, $age31to45Years, $age46to60Years, 
-				$age60PlusYears, $hasDiabetes, $hasHeartProblem, $hasChronicKidney,	$hasChronicRespiratory, $hasHighPressure, 
-				$hasCancer, $dontHavePriorDisease, $priorDiseasesDWA, $male, $female, $otherGender,
-				$citySalinas, $cityAracuai, $cityTaiobeiras, $cityCoronelMurta, $citySaoJoaoDoParaiso, $cityJanauba,
-				$cityPorteirinha, $cityMontesClaros, $otherCity, $neighborhoodName, $zipCode, $fullNameDWA,
-				$fullName, $phone, $email, $android_id 
+				$hasBreathProblem, $hasPurpleMouth, $hasSoreThroat, $hasChestPressure, $hasDiarrhea, $hasNOASymptom, 
+				$duration1to3Days, $duration4to7Days, $duration8to10Days, $duration11to14Days, $duration14PlusDays, $wentOutOfCity, 
+				$hadContactWithOutsider, $hadContactWithInfected, $hadLast14DaysNOA, $age1to15Years, $age16to30Years, $age31to45Years, 
+				$age46to60Years, $age60PlusYears, $hasDiabetes, $hasHeartProblem, $hasChronicKidney, $hasChronicRespiratory, 
+				$hasHighPressure, $hasCancer, $dontHavePriorDisease, $priorDiseasesDWA, $male, $female, 
+				$otherGender, $citySalinas, $cityAracuai, $cityTaiobeiras, $cityCoronelMurta, $citySaoJoaoDoParaiso, 
+				$cityJanauba, $cityPorteirinha, $cityMontesClaros, $otherCity, $neighborhoodName, $zipCode, 
+				$fullNameDWA, $fullName, $phone, $email, $android_id 
 			);
 							
 		if($stmt->execute())
