@@ -27,7 +27,7 @@
             android:textColor="@color/colorPrimaryDark"
             android:textSize="23sp"
             android:textStyle="bold"
-            android:visibility="gone" />
+            android:visibility="visible" />
 
         <Button
             android:id="@+id/btnLowRisk"

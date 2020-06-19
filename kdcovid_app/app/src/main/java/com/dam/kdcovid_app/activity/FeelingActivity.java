@@ -23,6 +23,9 @@ public class FeelingActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_feeling);
+        // Get Patient object
+        Bundle bundle = getIntent().getExtras();
+        this.patient = (Patient)bundle.get("patient");
         // Set up visual components
         btnNoSymptom = findViewById(R.id.btnNoSymptom);
         btnYesSymptom = findViewById(R.id.btnYesSymptom);
@@ -42,7 +45,7 @@ public class FeelingActivity extends AppCompatActivity {
 
     private void gotoYesSymptomActivity() {
         // Create Patient instance
-        this.patient = new Patient(YES);
+        this.patient.setHasSymptom(YES);
         // Call next activity
         Intent intent = new Intent(getApplicationContext(), YesSymptomActivity.class);
         intent.putExtra("patient", patient);
@@ -51,24 +54,11 @@ public class FeelingActivity extends AppCompatActivity {
 
     private void gotoLast14DaysActivity() {
         // Create Patient instance
-        this.patient = new Patient(NO);
+        this.patient.setHasSymptom(NO);
         // Call next activity
         Intent intent = new Intent(getApplicationContext(), Last14DaysActivity.class);
         intent.putExtra("patient", patient);
         startActivity(intent);
     }
 
-    /*
-    private void setFalsePriorDiseases() {
-        // Set false to all prior diseases because the patient is feeling well, and the activity
-        // to collect prior diseases won't be started.
-        this.patient.setHasDiabetes(false);
-        this.patient.setHasHeartProblem(false);
-        this.patient.setHasChronicKidney(false);
-        this.patient.setHasChronicRespiratory(false);
-        this.patient.setHasHighPressure(false);
-        this.patient.setHasCancer(false);
-        this.patient.setDontHavePriorDisease(false);
-        this.patient.setPriorDiseasesDWA(false);
-    }*/
 }

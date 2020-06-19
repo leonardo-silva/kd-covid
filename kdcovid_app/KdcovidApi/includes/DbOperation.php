@@ -79,6 +79,7 @@ class DbOperation
 		$phone = $obj->phone;
 		$email = $obj->email;
 		$android_id = $obj->android_id;
+		$visitedPoints = $obj->visitedPoints;
 				
 		$stmt = $this->con->prepare("INSERT INTO patient (hasSymptom, hasFever, hasSmellTasteLoss, hasRunningNose, hasTiredness, hasCough,
 				hasBreathProblem, hasPurpleMouth, hasSoreThroat, hasChestPressure, hasDiarrhea, hasNOASymptom, 
@@ -88,7 +89,7 @@ class DbOperation
 				hasHighPressure, hasCancer, dontHavePriorDisease, priorDiseasesDWA, male, female, 
 				otherGender, citySalinas, cityAracuai, cityTaiobeiras, cityCoronelMurta, citySaoJoaoDoParaiso, 
 				cityJanauba, cityPorteirinha, cityMontesClaros, otherCity, neighborhoodName, zipCode, 
-				fullNameDWA, fullName, phone, email, android_id) 
+				fullNameDWA, fullName, phone, email, android_id, visitedPoints) 
 			VALUES(?, ?, ?, ?, ?, ?,
 				   ?, ?, ?, ?, ?, ?,   
 				   ?, ?, ?, ?, ?, ?,   
@@ -97,9 +98,11 @@ class DbOperation
 				   ?, ?, ?, ?, ?, ?,   
 				   ?, ?, ?, ?, ?, ?,   
 				   ?, ?, ?, ?, ?, ?,   
-			       ?, ?, ?, ?, ?)");
+			       ?, ?, ?, ?, ?, ST_GeomFromText(?))");
 				   
-		$field_types = "iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiississss";		   
+		$field_types = "iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiississsss";		 
+		
+		$multipoint_field = "MULTIPOINT(" . $visitedPoints . ")"; 
 		
 		$stmt->bind_param($field_types, $hasSymptom, $hasFever, $hasSmellTasteLoss, $hasRunningNose, $hasTiredness, $hasCough,
 				$hasBreathProblem, $hasPurpleMouth, $hasSoreThroat, $hasChestPressure, $hasDiarrhea, $hasNOASymptom, 
@@ -109,7 +112,7 @@ class DbOperation
 				$hasHighPressure, $hasCancer, $dontHavePriorDisease, $priorDiseasesDWA, $male, $female, 
 				$otherGender, $citySalinas, $cityAracuai, $cityTaiobeiras, $cityCoronelMurta, $citySaoJoaoDoParaiso, 
 				$cityJanauba, $cityPorteirinha, $cityMontesClaros, $otherCity, $neighborhoodName, $zipCode, 
-				$fullNameDWA, $fullName, $phone, $email, $android_id 
+				$fullNameDWA, $fullName, $phone, $email, $android_id, $multipoint_field
 			);
 							
 		if($stmt->execute())

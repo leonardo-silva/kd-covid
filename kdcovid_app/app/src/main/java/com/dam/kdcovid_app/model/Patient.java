@@ -71,9 +71,15 @@ public class Patient implements Serializable {
     private String email;
     // Android ID
     private String android_id;
+    // GPS coordinates
+    private String visitedPoints;
 
     public Patient(boolean hasSymptom) {
         this.hasSymptom = hasSymptom;
+    }
+
+    public Patient() {
+
     }
 
     public String objToJson() throws JsonProcessingException {
@@ -127,6 +133,14 @@ public class Patient implements Serializable {
         };
 
         return answers;
+    }
+
+    public String getVisitedPoints() {
+        return visitedPoints;
+    }
+
+    public void setVisitedPoints(String visitedPoints) {
+        this.visitedPoints = visitedPoints;
     }
 
     public boolean getHasDiarrhea() {
