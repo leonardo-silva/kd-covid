@@ -12,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.dam.kdcovid_app.R;
+import com.dam.kdcovid_app.model.Patient;
 
 /*
     Main activity, initial screen
@@ -34,10 +35,25 @@ public class MainActivity extends AppCompatActivity {
                 nextActivity();
             }
         });
-        //tvWelcome = findViewById(R.id.tvWelcome);
-        //tvWelcome.setText(Html.fromHtml(getString(R.string.welcome_msg)));
-        //String androidId = Settings.Secure.getString(getContentResolver(), Settings.Secure.ANDROID_ID);
+    }
 
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        // Get parameter (if exists)
+        Bundle bundle = intent.getExtras();
+        if (bundle != null) {
+            int exit_code = (int)bundle.get("exit");
+            if (exit_code == 1) {
+                // bundle has exit code (see ResultActivity)
+                this.finish();
+            }
+        }
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
     }
 
     protected void nextActivity() {

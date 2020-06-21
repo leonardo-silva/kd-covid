@@ -102,7 +102,11 @@ class DbOperation
 				   
 		$field_types = "iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiississsss";		 
 		
-		$multipoint_field = "MULTIPOINT(" . $visitedPoints . ")"; 
+		if (empty($visitedPoints)) {
+			$multipoint_field = null;
+		} else {
+			$multipoint_field = "MULTIPOINT(" . $visitedPoints . ")"; 
+		}	
 		
 		$stmt->bind_param($field_types, $hasSymptom, $hasFever, $hasSmellTasteLoss, $hasRunningNose, $hasTiredness, $hasCough,
 				$hasBreathProblem, $hasPurpleMouth, $hasSoreThroat, $hasChestPressure, $hasDiarrhea, $hasNOASymptom, 
