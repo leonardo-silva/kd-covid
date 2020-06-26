@@ -105,7 +105,7 @@
         android:drawableEnd="@drawable/ic_arrow_forward_white_24dp"
         android:onClick="onclickBtnPhoneNext"
         android:padding="16dp"
-        android:text="@string/finish_lbl"
+        android:text="@string/lbl_finish"
         android:textColor="@android:color/white"
         android:textSize="18sp"
         android:textStyle="bold" />

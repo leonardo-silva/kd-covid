@@ -11,7 +11,6 @@
         \n\nEstamos com você!</string>
     <string name="with_support_msg">Com o apoio de</string>
     <string name="next_lbl">Continue</string>
-    <string name="agreement_msg">Aqui vem aquela parte: \"Concordo em compartilhar meus dados para ...\"</string>
     <string name="iagree_lbl">Eu concordo</string>
     <string name="feeling_msg">Como você está se sentindo?</string>
     <string name="nosymptom_msg">bem, não sinto nenhum \ntipo de sintoma</string>
@@ -175,7 +174,31 @@
     <string name="err_db_record_exists">Registro já foi feito! Deve-se esperar no mínimo dois dias de intervalo!</string>
     <string name="err_db_unexpected_exception">Ocorreu um erro inesperado! Tente novamente em alguns instantes!</string>
     <string name="msg_db_insert_ok">Dados enviados com SUCESSO!</string>
-    <string name="finish_lbl">Finalizar</string>
+    <string name="lbl_finish">Finalizar</string>
     <string name="msg_press_again_to_leave">Pressione novamente para sair</string>
+    <string name="lbl_terms_of_use">TERMO DE USO</string>
+    <string name="msg_agreement">Bem-vindo(a)! Obrigado por utilizar o KD-Covid!
+        \n\nEsta aplicação e seu conteúdo são controlados
+        \ne operados pelo próprio KD-Covid.
+        \n<b>Todos os direitos reservados.</b>
+        \n\nEstes termos de uso têm por objetivo definir as
+        \nregras a serem seguidas para a utilização do
+        \nKD-Covid (\'<b><a href="http://www.leonardosilva.educationhost.cloud/kdcovid/TermosUsoATF-24_6_20.html">Termos de Uso</a></b>\'), sem prejuízo da
+        \naplicação da legislação vigente.
+        \n\n<b>Ao utilizar o KD-Covid, você automaticamente
+        \nconcorda com estes termos de uso,
+        \nresponsabilizando-se integralmente por todos
+        \ne quaisquer atos praticados por você na
+        \naplicação ou em serviços a ela relacionados.
+        \nVocê também concorda com os termos descritos
+        \nem nossa <a href="http://www.leonardosilva.educationhost.cloud/kdcovid/PoliticaPrivacidade-ATF-24_6_20.html">Política de Privacidade</a>.
+        \nCaso você não concorde com qualquer dos
+        \ntermos e condições abaixo estabelecidos,
+        \nvocê não deve utilizar o KD-Covid.</b>
+        \n\nCaso queira nos dar algum feedback sobre o
+        \nKD-Covid, tenha dúvidas ou precise tratar de
+        \nqualquer assunto relacionado na estes
+        \nTermos de Uso, entre em contato conosco
+        \natravés do e-mail <a href="mailto:kdcovid19@gmail.com">kdcovid19@gmail.com</a></string>
     <string name="diarrhea_lbl">Diarreia</string>
 </resources>
