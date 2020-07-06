@@ -15,6 +15,8 @@
     android:padding="20sp"
     tools:context=".activity.CityActivity">
 
+    <include layout="@layout/header_logo" />
+
     <TextView
         android:id="@+id/tvHeaderFeelOkCity"
         android:layout_width="match_parent"
@@ -36,19 +38,18 @@
         android:textAlignment="center"
         android:textColor="@color/colorAccent"
         android:textSize="25sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:visibility="gone" />
 
     <TextView
         android:id="@+id/tvCity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/rounded_subheader_textview"
-        android:paddingLeft="5sp"
-        android:paddingRight="5sp"
-        android:paddingBottom="10sp"
+        android:background="@drawable/border"
+        android:padding="5sp"
         android:text="@string/city_lbl"
-        android:textColor="@android:color/background_light"
-        android:textSize="25sp"
+        android:textAlignment="center"
+        android:textSize="23sp"
         android:textStyle="bold" />
 
     <RadioGroup
@@ -60,129 +61,92 @@
             android:id="@+id/rdbAracuai"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorPrimary"
-            android:buttonTint="@android:color/white"
             android:paddingTop="5sp"
             android:paddingBottom="5sp"
             android:text="@string/aracuai_lbl"
-            android:textColor="@android:color/white"
-            android:textSize="25sp"
-            android:textStyle="bold" />
+            android:textSize="23sp" />
 
         <RadioButton
             android:id="@+id/rdbCoronelMurta"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorPrimary"
-            android:buttonTint="@android:color/white"
             android:paddingTop="5sp"
             android:paddingBottom="5sp"
             android:text="@string/coronel_murta_lbl"
-            android:textColor="@android:color/white"
-            android:textSize="25sp"
-            android:textStyle="bold" />
+            android:textSize="23sp" />
 
         <RadioButton
             android:id="@+id/rdbJanauba"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorPrimary"
-            android:buttonTint="@android:color/white"
             android:paddingTop="5sp"
             android:paddingBottom="5sp"
             android:text="@string/janauba_lbl"
-            android:textColor="@android:color/white"
-            android:textSize="25sp"
-            android:textStyle="bold" />
+            android:textSize="23sp" />
 
         <RadioButton
             android:id="@+id/rdbMontesClaros"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorPrimary"
-            android:buttonTint="@android:color/white"
             android:paddingTop="5sp"
             android:paddingBottom="5sp"
             android:text="@string/montes_claros_lbl"
-            android:textColor="@android:color/white"
-            android:textSize="25sp"
-            android:textStyle="bold" />
+            android:textSize="23sp" />
 
         <RadioButton
             android:id="@+id/rdbPorteirinha"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorPrimary"
-            android:buttonTint="@android:color/white"
             android:paddingTop="5sp"
             android:paddingBottom="5sp"
             android:text="@string/porteirinha_lbl"
-            android:textColor="@android:color/white"
-            android:textSize="25sp"
-            android:textStyle="bold" />
+            android:textSize="23sp" />
 
         <RadioButton
             android:id="@+id/rdbSalinas"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorPrimary"
-            android:buttonTint="@android:color/white"
             android:paddingTop="5sp"
             android:paddingBottom="5sp"
             android:text="@string/salinas_lbl"
-            android:textColor="@android:color/white"
-            android:textSize="25sp"
-            android:textStyle="bold" />
+            android:textSize="23sp" />
 
         <RadioButton
             android:id="@+id/rdbSaoJoaoDoParaiso"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorPrimary"
-            android:buttonTint="@android:color/white"
             android:paddingTop="5sp"
             android:paddingBottom="5sp"
             android:text="@string/sao_joao_do_paraiso_lbl"
-            android:textColor="@android:color/white"
-            android:textSize="25sp"
-            android:textStyle="bold" />
+            android:textSize="23sp" />
 
         <RadioButton
             android:id="@+id/rdbTaiobeiras"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorPrimary"
-            android:buttonTint="@android:color/white"
             android:paddingTop="5sp"
             android:paddingBottom="5sp"
             android:text="@string/taiobeiras_lbl"
-            android:textColor="@android:color/white"
-            android:textSize="25sp"
-            android:textStyle="bold" />
+            android:textSize="23sp" />
 
         <RadioButton
             android:id="@+id/rdbOtherCity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/rounded_bottom_item"
-            android:buttonTint="@android:color/white"
             android:paddingTop="5sp"
             android:paddingBottom="5sp"
             android:text="@string/other_city_lbl"
-            android:textColor="@android:color/white"
-            android:textSize="25sp"
-            android:textStyle="bold" />
+            android:textSize="23sp" />
 
     </RadioGroup>
 
     <Button
         android:id="@+id/btnCityNext"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="30sp"
         android:background="@drawable/rounded_button"
-        android:drawableEnd="@drawable/ic_arrow_forward_white_24dp"
         android:onClick="onclickBtnCityNext"
         android:padding="16dp"
         android:text="@string/next_lbl"

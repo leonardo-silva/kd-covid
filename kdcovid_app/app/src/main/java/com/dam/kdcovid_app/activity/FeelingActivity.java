@@ -6,6 +6,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.Switch;
 import android.widget.Toast;
 
 import com.dam.kdcovid_app.R;
@@ -14,8 +17,10 @@ import com.dam.kdcovid_app.model.Patient;
 public class FeelingActivity extends AppCompatActivity {
 
     private Patient patient;
-    private Button btnNoSymptom;
-    private Button btnYesSymptom;
+    private Button btnFeelingNext;
+    private RadioGroup rdgFeeling;
+    private RadioButton rdbNoSymptom;
+    //private RadioButton rdbYesSymptom;
     private static final boolean YES = true;
     private static final boolean NO = false;
 
@@ -27,18 +32,25 @@ public class FeelingActivity extends AppCompatActivity {
         Bundle bundle = getIntent().getExtras();
         this.patient = (Patient)bundle.get("patient");
         // Set up visual components
-        btnNoSymptom = findViewById(R.id.btnNoSymptom);
-        btnYesSymptom = findViewById(R.id.btnYesSymptom);
-        btnNoSymptom.setOnClickListener(new View.OnClickListener() {
+        btnFeelingNext = findViewById(R.id.btnFeelingNext);
+        rdgFeeling = findViewById(R.id.rdgFeeling);
+        rdbNoSymptom = findViewById(R.id.rdbNoSymptom);
+        //rdbYesSymptom = findViewById(R.id.rdbYesSymptom);
+
+        btnFeelingNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                gotoLast14DaysActivity();
-            }
-        });
-        btnYesSymptom.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                gotoYesSymptomActivity();
+                if (rdgFeeling.getCheckedRadioButtonId() != -1) {
+                    // Transfer the answer to the Patient object before proceeding and Call next activity
+                    if (rdbNoSymptom.isChecked()) {
+                        gotoLast14DaysActivity();
+                    } else {
+                        gotoYesSymptomActivity();
+                    }
+                } else {
+                    Toast.makeText(FeelingActivity.this,
+                            R.string.err_select_atleast_one_answer, Toast.LENGTH_LONG).show();
+                }
             }
         });
     }

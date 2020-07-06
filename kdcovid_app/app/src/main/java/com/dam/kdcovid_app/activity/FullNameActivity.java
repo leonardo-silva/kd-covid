@@ -17,8 +17,8 @@ import com.dam.kdcovid_app.model.Patient;
 public class FullNameActivity extends AppCompatActivity {
 
     private Patient patient;
-    private TextView tvHeaderFullName;
-    private TextView tvHeaderFeelOkFullName;
+    //private TextView tvHeaderFullName;
+    //private TextView tvHeaderFeelOkFullName;
     private RadioGroup rdgFullName;
     private RadioButton rdbFullNameDWA;
     private EditText etFullName;
@@ -47,16 +47,16 @@ public class FullNameActivity extends AppCompatActivity {
                     etFullName.requestFocus();
                 }
                 else
-                    etFullName.setVisibility(View.INVISIBLE);
+                    etFullName.setVisibility(View.GONE);
             }
         });
-        tvHeaderFullName = findViewById(R.id.tvHeaderFullName);
-        tvHeaderFeelOkFullName = findViewById(R.id.tvHeaderFeelOkFullName);
+        //tvHeaderFullName = findViewById(R.id.tvHeaderFullName);
+        //tvHeaderFeelOkFullName = findViewById(R.id.tvHeaderFeelOkFullName);
         // Control header
-        if (! this.patient.getHasSymptom()) {
-            tvHeaderFullName.setVisibility(View.GONE);
-            tvHeaderFeelOkFullName.setVisibility(View.VISIBLE);
-        }
+        //if (! this.patient.getHasSymptom()) {
+        //    tvHeaderFullName.setVisibility(View.GONE);
+        //    tvHeaderFeelOkFullName.setVisibility(View.VISIBLE);
+        //}
     }
 
     public void onclickBtnFullNameNext(View view) {
@@ -77,7 +77,6 @@ public class FullNameActivity extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(), PhoneActivity.class);
         intent.putExtra("patient", patient);
         startActivity(intent);
-        //Toast.makeText(FullNameActivity.this, "Ainda não fiz essa parte!", Toast.LENGTH_LONG).show();
     }
 
 }

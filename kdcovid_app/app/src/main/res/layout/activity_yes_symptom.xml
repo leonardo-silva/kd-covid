@@ -16,6 +16,8 @@
         android:padding="15sp"
         tools:context=".activity.YesSymptomActivity">
 
+        <include layout="@layout/header_logo" />
+
         <TextView
             android:id="@+id/tvHeaderYesSymptom"
             android:layout_width="match_parent"
@@ -32,166 +34,119 @@
             android:id="@+id/tvSelectSymptom"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/rounded_subheader_textview"
-            android:paddingLeft="5sp"
-            android:paddingRight="5sp"
-            android:paddingBottom="10sp"
+            android:background="@drawable/border"
+            android:padding="5sp"
             android:text="@string/tell_symptoms_lbl"
-            android:textColor="@android:color/background_light"
-            android:textSize="23sp"
+            android:textAlignment="center"
+            android:textSize="22sp"
             android:textStyle="bold" />
 
         <CheckBox
             android:id="@+id/chkFever"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorPrimary"
-            android:buttonTint="@android:color/white"
-            android:paddingTop="5sp"
-            android:paddingBottom="5sp"
+            android:paddingTop="4sp"
+            android:paddingBottom="4sp"
             android:text="@string/fever_lbl"
-            android:textColor="@android:color/white"
-            android:textSize="23sp"
-            android:textStyle="bold" />
+            android:textSize="22sp" />
 
         <CheckBox
             android:id="@+id/chkSmellTasteLoss"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorPrimary"
-            android:buttonTint="@android:color/white"
-            android:paddingTop="5sp"
-            android:paddingBottom="5sp"
-            android:text="@string/smell_taste_loss_lbl"
-            android:textColor="@android:color/white"
-            android:textSize="23sp"
-            android:textStyle="bold" />
+            android:paddingTop="4sp"
+            android:paddingBottom="4sp"
+            android:text="@string/lbl_smell_taste_loss"
+            android:textSize="22sp" />
 
         <CheckBox
             android:id="@+id/chkRunningNose"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorPrimary"
-            android:buttonTint="@android:color/white"
-            android:paddingTop="5sp"
-            android:paddingBottom="5sp"
+            android:paddingTop="4sp"
+            android:paddingBottom="4sp"
             android:text="@string/running_nose_lbl"
-            android:textColor="@android:color/white"
-            android:textSize="23sp"
-            android:textStyle="bold" />
+            android:textSize="22sp" />
 
         <CheckBox
             android:id="@+id/chkTiredness"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorPrimary"
-            android:buttonTint="@android:color/white"
-            android:paddingTop="5sp"
-            android:paddingBottom="5sp"
+            android:paddingTop="4sp"
+            android:paddingBottom="4sp"
             android:text="@string/tiredness_lbl"
-            android:textColor="@android:color/white"
-            android:textSize="23sp"
-            android:textStyle="bold" />
+            android:textSize="22sp" />
 
         <CheckBox
             android:id="@+id/chkCough"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorPrimary"
-            android:buttonTint="@android:color/white"
-            android:paddingTop="5sp"
-            android:paddingBottom="5sp"
+            android:paddingTop="4sp"
+            android:paddingBottom="4sp"
             android:text="@string/cough_lbl"
-            android:textColor="@android:color/white"
-            android:textSize="23sp"
-            android:textStyle="bold" />
+            android:textSize="22sp" />
 
         <CheckBox
             android:id="@+id/chkBreathProblem"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorPrimary"
-            android:buttonTint="@android:color/white"
-            android:paddingTop="5sp"
-            android:paddingBottom="5sp"
+            android:paddingTop="4sp"
+            android:paddingBottom="4sp"
             android:text="@string/breath_problem_lbl"
-            android:textColor="@android:color/white"
-            android:textSize="23sp"
-            android:textStyle="bold" />
+            android:textSize="22sp" />
 
         <CheckBox
             android:id="@+id/chkPurpleMouth"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorPrimary"
-            android:buttonTint="@android:color/white"
-            android:paddingTop="5sp"
-            android:paddingBottom="5sp"
+            android:paddingTop="4sp"
+            android:paddingBottom="4sp"
             android:text="@string/purple_mouth_lbl"
-            android:textColor="@android:color/white"
-            android:textSize="23sp"
-            android:textStyle="bold" />
+            android:textSize="22sp" />
 
         <CheckBox
             android:id="@+id/chkSoreThroat"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorPrimary"
-            android:buttonTint="@android:color/white"
-            android:paddingTop="5sp"
-            android:paddingBottom="5sp"
+            android:paddingTop="4sp"
+            android:paddingBottom="4sp"
             android:text="@string/sore_throat_lbl"
-            android:textColor="@android:color/white"
-            android:textSize="23sp"
-            android:textStyle="bold" />
+            android:textSize="22sp" />
 
         <CheckBox
             android:id="@+id/chkChestPressure"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorPrimary"
-            android:buttonTint="@android:color/white"
-            android:paddingTop="5sp"
-            android:paddingBottom="5sp"
+            android:paddingTop="4sp"
+            android:paddingBottom="4sp"
             android:text="@string/chest_pressure_lbl"
-            android:textColor="@android:color/white"
-            android:textSize="23sp"
-            android:textStyle="bold" />
+            android:textSize="22sp" />
 
         <CheckBox
             android:id="@+id/chkDiarrhea"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorPrimary"
-            android:buttonTint="@android:color/white"
-            android:paddingTop="5sp"
-            android:paddingBottom="5sp"
+            android:paddingTop="4sp"
+            android:paddingBottom="4sp"
             android:text="@string/diarrhea_lbl"
-            android:textColor="@android:color/white"
-            android:textSize="23sp"
-            android:textStyle="bold" />
+            android:textSize="22sp" />
 
         <CheckBox
             android:id="@+id/chkNOA"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/rounded_bottom_item"
-            android:buttonTint="@android:color/white"
-            android:paddingTop="5sp"
-            android:paddingBottom="5sp"
+            android:paddingTop="4sp"
+            android:paddingBottom="4sp"
             android:text="@string/noa_lbl"
-            android:textColor="@android:color/white"
-            android:textSize="23sp"
-            android:textStyle="bold" />
+            android:textSize="22sp" />
 
         <Button
             android:id="@+id/btnYesSymptomNext"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="20sp"
+            android:layout_marginTop="15sp"
             android:background="@drawable/rounded_button"
-            android:drawableEnd="@drawable/ic_arrow_forward_white_24dp"
             android:onClick="onclickBtnYesSymptomNext"
             android:padding="16dp"
             android:text="@string/next_lbl"

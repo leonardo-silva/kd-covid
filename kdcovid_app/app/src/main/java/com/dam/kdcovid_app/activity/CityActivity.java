@@ -16,8 +16,8 @@ import com.dam.kdcovid_app.model.Patient;
 public class CityActivity extends AppCompatActivity {
 
     private Patient patient;
-    private TextView tvHeaderCity;
-    private TextView tvHeaderFeelOkCity;
+    //private TextView tvHeaderCity;
+    //private TextView tvHeaderFeelOkCity;
     private RadioButton rdbSalinas;
     private RadioButton rdbAracuai;
     private RadioButton rdbTaiobeiras;
@@ -51,13 +51,13 @@ public class CityActivity extends AppCompatActivity {
         rdbMontesClaros = findViewById(R.id.rdbMontesClaros);
         rdbOtherCity = findViewById(R.id.rdbOtherCity);
         rdgCity = findViewById(R.id.rdgCity);
-        tvHeaderCity = findViewById(R.id.tvHeaderCity);
-        tvHeaderFeelOkCity = findViewById(R.id.tvHeaderFeelOkCity);
+        //tvHeaderCity = findViewById(R.id.tvHeaderCity);
+        //tvHeaderFeelOkCity = findViewById(R.id.tvHeaderFeelOkCity);
         // Control header
-        if (! this.patient.getHasSymptom()) {
-            tvHeaderCity.setVisibility(View.GONE);
-            tvHeaderFeelOkCity.setVisibility(View.VISIBLE);
-        }
+        //if (! this.patient.getHasSymptom()) {
+        //    tvHeaderCity.setVisibility(View.GONE);
+        //    tvHeaderFeelOkCity.setVisibility(View.VISIBLE);
+        //}
     }
 
     public void onclickBtnCityNext(View view) {

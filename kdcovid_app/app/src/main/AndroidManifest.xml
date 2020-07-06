@@ -10,29 +10,37 @@
     <application
         android:usesCleartextTraffic="true"
         android:allowBackup="true"
-        android:icon="@drawable/kdcovid_logo_white_background"
+        android:icon="@mipmap/ic_launcher_kdcovid_foreground"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_launcher_kdcovid_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.ResultActivity"></activity>
-        <activity android:name=".activity.PhoneActivity" />
+        <activity android:name=".activity.ResultActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.PhoneActivity"
+            android:screenOrientation="portrait" />
         <activity android:name=".activity.FullNameActivity" />
-        <activity android:name=".activity.ZipCodeActivity" />
-        <activity android:name=".activity.NeighborhoodActivity" />
-        <activity android:name=".activity.CityActivity" />
+        <activity android:name=".activity.ZipCodeActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.NeighborhoodActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.CityActivity"
+            android:screenOrientation="portrait"/>
         <activity android:name=".activity.GenderActivity" />
-        <activity android:name=".activity.PriorDiseasesActivity" />
+        <activity android:name=".activity.PriorDiseasesActivity"
+            android:screenOrientation="portrait" />
         <activity android:name=".activity.AgeRangeActivity" />
         <activity android:name=".activity.Last14DaysActivity" />
         <activity android:name=".activity.SymptomDurationActivity" />
-        <activity android:name=".activity.YesSymptomActivity" />
+        <activity android:name=".activity.YesSymptomActivity"
+            android:screenOrientation="portrait" />
         <activity android:name=".activity.FeelingActivity" />
-        <activity android:name=".activity.AgreementActivity" />
+        <activity android:name=".activity.AgreementActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".activity.MainActivity"
             android:launchMode="singleTask"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

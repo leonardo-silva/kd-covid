@@ -11,36 +11,24 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
-        android:background="@color/colorBackgroundGreen"
+        android:background="@color/colorBackgroundMain"
         android:orientation="vertical"
-        android:paddingTop="15sp"
-        android:paddingBottom="15sp"
+        android:padding="15sp"
         tools:context=".activity.ResultActivity">
 
-        <TextView
-            android:id="@+id/tvHeaderResult"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingBottom="19sp"
-            android:text="@string/result_lbl"
-            android:textAlignment="center"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="23sp"
-            android:textStyle="bold"
-            android:visibility="visible" />
+        <include layout="@layout/header_logo" />
 
         <Button
             android:id="@+id/btnLowRisk"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorPrimary"
-            android:padding="19sp"
-            android:text="@string/result_low_risk2_msg"
-            android:textAlignment="textStart"
+            android:padding="5sp"
+            android:text="@string/lbl_result_low_risk"
+            android:textAlignment="center"
             android:textAllCaps="false"
             android:textColor="@android:color/white"
-            android:textSize="22sp"
-            tools:text="low risk text"
+            android:textSize="23sp"
             tools:visibility="visible" />
 
         <Button
@@ -48,13 +36,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorWarning"
-            android:padding="20sp"
-            android:text="@string/result_medium_risk4_msg"
-            android:textAlignment="textStart"
+            android:padding="5sp"
+            android:text="@string/lbl_result_medium_risk"
+            android:textAlignment="center"
             android:textAllCaps="false"
             android:textColor="@android:color/black"
-            android:textSize="21sp"
-            tools:text="medium risk text"
+            android:textSize="23sp"
             tools:visibility="visible" />
 
         <Button
@@ -62,24 +49,36 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorRisk"
-            android:padding="16sp"
-            android:text="@string/result_very_high_risk7_msg"
-            android:textAlignment="textStart"
+            android:padding="5sp"
+            android:text="@string/lbl_result_high_risk"
+            android:textAlignment="center"
             android:textAllCaps="false"
             android:textColor="@android:color/white"
-            android:textSize="20sp"
-            tools:text="high risk text"
+            android:textSize="23sp"
             tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tvRecommendation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorBackground"
+            android:padding="5sp"
+            android:textAlignment="viewStart"
+            android:textColor="@android:color/black"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            android:visibility="visible"
+            tools:text="Recommendation" />
 
         <Button
             android:id="@+id/btnGoHome"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="20sp"
             android:background="@drawable/rounded_button"
             android:padding="15dp"
-            android:text="@string/go_home_lbl"
+            android:text="@string/lbl_go_home"
             android:textColor="@android:color/white"
             android:textSize="17sp"
             android:textStyle="bold" />

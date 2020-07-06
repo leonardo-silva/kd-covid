@@ -42,10 +42,10 @@ public class Last14DaysActivity extends AppCompatActivity {
         tvHeaderFeelOkLast14 = findViewById(R.id.tvHeaderFeelOkLast14);
         tvHeaderLast14 = findViewById(R.id.tvHeaderLast14);
         // Control header
-        if (! this.patient.getHasSymptom()) {
-            tvHeaderLast14.setVisibility(View.GONE);
-            tvHeaderFeelOkLast14.setVisibility(View.VISIBLE);
-        }
+        //if (! this.patient.getHasSymptom()) {
+        //    tvHeaderLast14.setVisibility(View.GONE);
+        //    tvHeaderFeelOkLast14.setVisibility(View.VISIBLE);
+        //}
         CompoundButton.OnCheckedChangeListener listener =
                 new CompoundButton.OnCheckedChangeListener() {
                     @Override
@@ -54,9 +54,9 @@ public class Last14DaysActivity extends AppCompatActivity {
                         CheckBox chk = ((CheckBox) buttonView);
                         if (isChecked) {
                             chkLast14DaysNOA.setChecked(false);
-                            chk.setBackgroundColor(getResources().getColor(R.color.colorSelected));
+                            //chk.setBackgroundColor(getResources().getColor(R.color.colorSelected));
                         } else {
-                            chk.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+                            //chk.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
                         }
                     }
                 };
@@ -72,18 +72,13 @@ public class Last14DaysActivity extends AppCompatActivity {
                         CheckBox chk = ((CheckBox) buttonView);
                         if (isChecked) {
                             uncheckAllButLast14DaysNOA();
-                            chk.setBackgroundColor(getResources().getColor(R.color.colorSelected));
+                            //chk.setBackgroundColor(getResources().getColor(R.color.colorSelected));
                         } else {
-                            chk.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+                            //chk.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
                         }
                     }
                 });
     }
-
-    //public void uncheckLast14DaysNOA(View view) {
-    //    // Click event for all checkboxes except NOA
-    //    chkLast14DaysNOA.setChecked(false);
-   // }
 
     private void uncheckAllButLast14DaysNOA() {
         // Click event for chkLast14DaysNOA

@@ -54,9 +54,9 @@ public class PriorDiseasesActivity extends AppCompatActivity {
                         if (isChecked) {
                             chkDontHavePriorDisease.setChecked(false);
                             chkPriorDiseaseDWA.setChecked(false);
-                            chk.setBackgroundColor(getResources().getColor(R.color.colorSelected));
+                            //chk.setBackgroundColor(getResources().getColor(R.color.colorSelected));
                         } else {
-                            chk.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+                            //chk.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
                         }
                     }
                 };
@@ -75,9 +75,9 @@ public class PriorDiseasesActivity extends AppCompatActivity {
                         CheckBox chk = ((CheckBox) buttonView);
                         if (isChecked) {
                             uncheckAllButDontHavePriorDisease();
-                            chk.setBackgroundColor(getResources().getColor(R.color.colorSelected));
+                            //chk.setBackgroundColor(getResources().getColor(R.color.colorSelected));
                         } else {
-                            chk.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+                            //chk.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
                         }
                     }
                 });
@@ -89,9 +89,9 @@ public class PriorDiseasesActivity extends AppCompatActivity {
                         CheckBox chk = ((CheckBox) buttonView);
                         if (isChecked) {
                             uncheckAllButPriorDiseaseDWA();
-                            chk.setBackgroundColor(getResources().getColor(R.color.colorSelected));
+                            //chk.setBackgroundColor(getResources().getColor(R.color.colorSelected));
                         } else {
-                            chk.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+                            //chk.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
                         }
                     }
                 });

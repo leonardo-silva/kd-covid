@@ -9,6 +9,8 @@
     android:padding="20sp"
     tools:context=".activity.ZipCodeActivity">
 
+    <include layout="@layout/header_logo" />
+
     <TextView
         android:id="@+id/tvHeaderFeelOkZipCode"
         android:layout_width="match_parent"
@@ -30,7 +32,8 @@
         android:textAlignment="center"
         android:textColor="@color/colorAccent"
         android:textSize="25sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:visibility="gone" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/layoutZipCode"
@@ -53,12 +56,11 @@
 
     <Button
         android:id="@+id/btnZipCodeNext"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="30sp"
         android:background="@drawable/rounded_button"
-        android:drawableEnd="@drawable/ic_arrow_forward_white_24dp"
         android:onClick="onclickBtnZipCodeNext"
         android:padding="16dp"
         android:text="@string/next_lbl"

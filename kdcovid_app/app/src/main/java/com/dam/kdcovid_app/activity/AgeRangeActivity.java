@@ -16,8 +16,8 @@ import com.dam.kdcovid_app.model.Patient;
 public class AgeRangeActivity extends AppCompatActivity {
 
     private Patient patient;
-    private TextView tvHeaderAgeRange;
-    private TextView tvHeaderFeelOkAgeRange;
+    //private TextView tvHeaderAgeRange;
+    //private TextView tvHeaderFeelOkAgeRange;
     private RadioButton rdb1to15Years;
     private RadioButton rdb16to30Years;
     private RadioButton rdb31to45Years;
@@ -43,13 +43,13 @@ public class AgeRangeActivity extends AppCompatActivity {
         rdb46to60Years = findViewById(R.id.rdb46to60Years);
         rdb60PlusYears = findViewById(R.id.rdb60PlusYears);
         rdgAgeRange = findViewById(R.id.rdgAgeRange);
-        tvHeaderAgeRange = findViewById(R.id.tvHeaderAgeRange);
-        tvHeaderFeelOkAgeRange = findViewById(R.id.tvHeaderFeelOkAgeRange);
+        //tvHeaderAgeRange = findViewById(R.id.tvHeaderAgeRange);
+        //tvHeaderFeelOkAgeRange = findViewById(R.id.tvHeaderFeelOkAgeRange);
         // Control header
-        if (! this.patient.getHasSymptom()) {
-            tvHeaderAgeRange.setVisibility(View.GONE);
-            tvHeaderFeelOkAgeRange.setVisibility(View.VISIBLE);
-        }
+        //if (! this.patient.getHasSymptom()) {
+        //    tvHeaderAgeRange.setVisibility(View.GONE);
+        //    tvHeaderFeelOkAgeRange.setVisibility(View.VISIBLE);
+        //}
     }
 
     public void onclickBtnAgeRangeNext(View view) {

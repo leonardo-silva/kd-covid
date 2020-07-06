@@ -16,8 +16,8 @@ import com.dam.kdcovid_app.model.Patient;
 public class NeighborhoodActivity extends AppCompatActivity {
 
     private Patient patient;
-    private TextView tvHeaderNeighborhood;
-    private TextView tvHeaderFeelOkNeighborhood;
+    //private TextView tvHeaderNeighborhood;
+    //private TextView tvHeaderFeelOkNeighborhood;
     private Spinner spnNeighborhood;
     private TextView tvNeighborhood;
 
@@ -47,13 +47,13 @@ public class NeighborhoodActivity extends AppCompatActivity {
                 ArrayAdapter.createFromResource(this, cityArrayId, R.layout.spinner_item);
         spnNeighborhood.setAdapter(adapter);
 
-        tvHeaderNeighborhood = findViewById(R.id.tvHeaderNeighborhood);
-        tvHeaderFeelOkNeighborhood = findViewById(R.id.tvHeaderFeelOkNeighborhood);
+        //tvHeaderNeighborhood = findViewById(R.id.tvHeaderNeighborhood);
+        //tvHeaderFeelOkNeighborhood = findViewById(R.id.tvHeaderFeelOkNeighborhood);
         // Control header
-        if (! this.patient.getHasSymptom()) {
-            tvHeaderNeighborhood.setVisibility(View.GONE);
-            tvHeaderFeelOkNeighborhood.setVisibility(View.VISIBLE);
-        }
+        //if (! this.patient.getHasSymptom()) {
+        //    tvHeaderNeighborhood.setVisibility(View.GONE);
+        //    tvHeaderFeelOkNeighborhood.setVisibility(View.VISIBLE);
+        //}
     }
 
     public void onclickBtnNeighborhoodNext(View view) {

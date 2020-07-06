@@ -9,12 +9,14 @@ import android.widget.TextView;
 
 import com.dam.kdcovid_app.R;
 import com.dam.kdcovid_app.model.Patient;
+import com.github.rtoshiro.util.format.SimpleMaskFormatter;
+import com.github.rtoshiro.util.format.text.MaskTextWatcher;
 
 public class ZipCodeActivity extends AppCompatActivity {
 
     private Patient patient;
-    private TextView tvHeaderZipCode;
-    private TextView tvHeaderFeelOkZipCode;
+    //private TextView tvHeaderZipCode;
+    //private TextView tvHeaderFeelOkZipCode;
     private TextView tvZipCode;
 
     @Override
@@ -30,13 +32,20 @@ public class ZipCodeActivity extends AppCompatActivity {
 
     private void setUpViewById() {
         tvZipCode = findViewById(R.id.etZipCode);
-        tvHeaderZipCode = findViewById(R.id.tvHeaderZipCode);
-        tvHeaderFeelOkZipCode = findViewById(R.id.tvHeaderFeelOkZipCode);
+
+        // Brazilian cell phone mask
+        SimpleMaskFormatter smf =
+                new SimpleMaskFormatter(getResources().getString(R.string.zip_code_mask));
+        MaskTextWatcher mtw = new MaskTextWatcher(tvZipCode, smf);
+        tvZipCode.addTextChangedListener(mtw);
+
+        //tvHeaderZipCode = findViewById(R.id.tvHeaderZipCode);
+        //tvHeaderFeelOkZipCode = findViewById(R.id.tvHeaderFeelOkZipCode);
         // Control header
-        if (! this.patient.getHasSymptom()) {
-            tvHeaderZipCode.setVisibility(View.GONE);
-            tvHeaderFeelOkZipCode.setVisibility(View.VISIBLE);
-        }
+        //if (! this.patient.getHasSymptom()) {
+        //    tvHeaderZipCode.setVisibility(View.GONE);
+        //    tvHeaderFeelOkZipCode.setVisibility(View.VISIBLE);
+        //}
     }
 
     public void onclickBtnZipCodeNext(View view) {

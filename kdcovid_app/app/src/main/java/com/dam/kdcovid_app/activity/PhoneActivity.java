@@ -48,8 +48,8 @@ public class PhoneActivity extends AppCompatActivity {
 
     private Patient patient;
     private ProgressBar pgbDB;
-    private TextView tvHeaderPhone;
-    private TextView tvHeaderFeelOkPhone;
+    //private TextView tvHeaderPhone;
+    //private TextView tvHeaderFeelOkPhone;
     private TextInputEditText etEnterPhone;
     private TextInputEditText etEnterEmail;
 
@@ -82,13 +82,13 @@ public class PhoneActivity extends AppCompatActivity {
         MaskTextWatcher mtw = new MaskTextWatcher(etEnterPhone, smf);
         etEnterPhone.addTextChangedListener(mtw);
 
-        tvHeaderPhone = findViewById(R.id.tvHeaderPhone);
-        tvHeaderFeelOkPhone = findViewById(R.id.tvHeaderFeelOkPhone);
+        //tvHeaderPhone = findViewById(R.id.tvHeaderPhone);
+        //tvHeaderFeelOkPhone = findViewById(R.id.tvHeaderFeelOkPhone);
         // Control header
-        if (! this.patient.getHasSymptom()) {
-            tvHeaderPhone.setVisibility(View.GONE);
-            tvHeaderFeelOkPhone.setVisibility(View.VISIBLE);
-        }
+        //if (! this.patient.getHasSymptom()) {
+        //    tvHeaderPhone.setVisibility(View.GONE);
+        //    tvHeaderFeelOkPhone.setVisibility(View.VISIBLE);
+        //}
     }
 
     public void onclickBtnPhoneNext(View view) {

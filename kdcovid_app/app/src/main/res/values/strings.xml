@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">KD-Covid</string>
-    <string name="welcome_msg">Olá, bem-vindo ao <b>KD-Covid</b>! \n\nEste aplicativo tem
+    <string name="dsc_logo_image">Logo oficial do KD-Covid</string>
+    <string name="welcome_msg">Olá, bem-vindo(a) ao <b>KD-Covid</b>! \n\nEste aplicativo tem
         a intenção de acompanhar e monitorar os casos de COVID-19 na nossa região,
         principalmente nas cidades de Salinas e Janaúba. Para nos ajudar a
         construir essa rede segura de informações, é simples: responda ao
@@ -10,13 +11,13 @@
         casos pode promover um melhor acesso aos testes e serviços de saúde.
         \n\nEstamos com você!</string>
     <string name="with_support_msg">Com o apoio de</string>
-    <string name="next_lbl">Continue</string>
+    <string name="next_lbl">Próxima</string>
     <string name="iagree_lbl">Eu concordo</string>
     <string name="feeling_msg">Como você está se sentindo?</string>
-    <string name="nosymptom_msg">bem, não sinto nenhum \ntipo de sintoma</string>
-    <string name="yessymptom_msg">Sinto algum sintoma \nou incômodo</string>
+    <string name="nosymptom_msg"> Bem, não sinto nenhum tipo de sintoma</string>
+    <string name="yessymptom_msg"> Sinto algum sintoma ou incômodo</string>
     <string name="warning_feeling_msg">Obs: clique nesta opção se estiver sentindo qualquer tipo de sintoma, mesmo tosse ou nariz escorrendo</string>
-    <string name="tell_symptoms_lbl">Assinale os sintomas que você tem sentido:</string>
+    <string name="tell_symptoms_lbl">Quais sintomas você tem sentido?</string>
     <string name="fever_lbl">Febre</string>
     <string name="running_nose_lbl">Nariz escorrendo (coriza)</string>
     <string name="tiredness_lbl">Cansaço</string>
@@ -38,7 +39,7 @@
     <string name="contact_with_infected_lbl">Teve contato com alguém infectado por Covid-19</string>
     <string name="feel_sth_lbl">Sinto algum sintoma</string>
     <string name="feel_ok_lbl">Sinto-me bem!</string>
-    <string name="age_range_lbl">Assinale sua faixa étaria (idade)</string>
+    <string name="age_range_lbl">Assinale sua faixa etária (idade)</string>
     <string name="one_to_fifteen_years_lbl">1 a 15 Anos</string>
     <string name="sixteen_to_thirty_years_lbl">16 a 30 Anos</string>
     <string name="thirtyone_to_fortyfive_years_lbl">31 a 45 Anos</string>
@@ -76,18 +77,18 @@
     <string name="phone_lbl">Qual o seu telefone?</string>
     <string name="hint_phone_lbl">Informe aqui seu telefone</string>
     <string name="result_lbl">Relatório Preliminar</string>
-    <string name="result_low_risk1_msg">Baseado em suas respostas, \né provável que você não se
-        \nencaixe como caso suspeito de Covid-19.
-        No entanto, continue mantendo as condutas de prevenção, como:
+    <string name="result_low_risk1_msg">Baseado em suas respostas, é
+        provável que você não se encaixe como caso suspeito de Covid-19.
+        \n\nNo entanto, continue mantendo as condutas de prevenção, como:
         \n- Higienize sempre as mãos com água e sabão ou álcool gel;
         \n- Permaneça em isolamento social;
         \n- Use máscara;
         \n- Evite tocar nos olhos, nariz e boca com as mãos não higienizadas;
         \n- Não compartilhe objetos de uso pessoal.
         \n\nCaso a sua situação mude, refaça o questionário.</string>
-    <string name="result_low_risk2_msg">Baseado em suas respostas, \né provável que você não se
-        \nencaixe como caso suspeito de Covid-19.
-        No entanto, continue mantendo as condutas de prevenção, como:
+    <string name="result_low_risk2_msg">Baseado em suas respostas, é
+        provável que você não se encaixe como caso suspeito de Covid-19.
+        \n\nNo entanto, continue mantendo as condutas de prevenção, como:
         \n- Higienize sempre as mãos com água e sabão ou álcool gel;
         \n- Permaneça em isolamento social;
         \n- Use máscara;
@@ -158,12 +159,16 @@
         mais próxima.
         \n\nNos próximos dias, a equipe do KD-Covid
         poderá entrar em contato com você!</string>
-    <string name="go_home_lbl">Voltar para o início</string>
-    <string name="smell_taste_loss_lbl">Perda de olfato ou paladar</string>
-    <string name="phone_or_email_lbl">Para finalizar, informe seu telefone e/ou email de contato</string>
-    <string name="enter_phone_lbl">Informe aqui seu telefone</string>
-    <string name="enter_email_lbl">Informe aqui seu email</string>
+    <string name="lbl_result_low_risk">Risco Baixo</string>
+    <string name="lbl_result_medium_risk">Risco Médio</string>
+    <string name="lbl_result_high_risk">Atenção</string>
+    <string name="lbl_go_home">Voltar para o início</string>
+    <string name="lbl_smell_taste_loss">Perda de olfato ou paladar</string>
+    <string name="lbl_phone_or_email">Para finalizar, informe seu telefone e/ou email de contato</string>
+    <string name="lbl_enter_phone">Informe aqui seu telefone</string>
+    <string name="lbl_enter_email">Informe aqui seu email</string>
     <string name="cell_phone_mask">(NN)NNNNN-NNNN</string>
+    <string name="zip_code_mask">NNNNN-NNN</string>
     <string name="err_select_atleast_one_answer">Favor selecionar pelo menos uma resposta!</string>
     <string name="err_select_atleast_one_neighborhood">Favor selecionar seu bairro!</string>
     <string name="err_invalid_phone">Favor informar um telefone VÁLIDO!</string>

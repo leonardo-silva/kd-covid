@@ -16,8 +16,8 @@ import com.dam.kdcovid_app.model.Patient;
 public class GenderActivity extends AppCompatActivity {
 
     private Patient patient;
-    private TextView tvHeaderGender;
-    private TextView tvHeaderFeelOkGender;
+    //private TextView tvHeaderGender;
+    //private TextView tvHeaderFeelOkGender;
     private RadioButton rdbMale;
     private RadioButton rdbFemale;
     private RadioButton rdbOtherGender;
@@ -39,13 +39,13 @@ public class GenderActivity extends AppCompatActivity {
         rdbFemale = findViewById(R.id.rdbFemale);
         rdbOtherGender = findViewById(R.id.rdbOtherGender);
         rdgGender = findViewById(R.id.rdgGender);
-        tvHeaderGender = findViewById(R.id.tvHeaderGender);
-        tvHeaderFeelOkGender = findViewById(R.id.tvHeaderFeelOkGender);
+        //tvHeaderGender = findViewById(R.id.tvHeaderGender);
+        //tvHeaderFeelOkGender = findViewById(R.id.tvHeaderFeelOkGender);
         // Control header
-        if (! this.patient.getHasSymptom()) {
-            tvHeaderGender.setVisibility(View.GONE);
-            tvHeaderFeelOkGender.setVisibility(View.VISIBLE);
-        }
+        //if (! this.patient.getHasSymptom()) {
+        //    tvHeaderGender.setVisibility(View.GONE);
+        //    tvHeaderFeelOkGender.setVisibility(View.VISIBLE);
+        //}
     }
 
     public void onclickBtnGenderNext(View view) {

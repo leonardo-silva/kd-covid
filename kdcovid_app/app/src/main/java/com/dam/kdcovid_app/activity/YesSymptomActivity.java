@@ -60,9 +60,9 @@ public class YesSymptomActivity extends AppCompatActivity {
                         CheckBox chk = ((CheckBox) buttonView);
                         if (isChecked) {
                             chkNOA.setChecked(false);
-                            chk.setBackgroundColor(getResources().getColor(R.color.colorSelected));
+                            //chk.setBackgroundColor(getResources().getColor(R.color.colorSelected));
                         } else {
-                            chk.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+                            //chk.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
                         }
                     }
                 };
@@ -85,9 +85,9 @@ public class YesSymptomActivity extends AppCompatActivity {
                         CheckBox chk = ((CheckBox) buttonView);
                         if (isChecked) {
                             uncheckAllCheckboxesButNOA();
-                            chk.setBackgroundColor(getResources().getColor(R.color.colorSelected));
+                            //chk.setBackgroundColor(getResources().getColor(R.color.colorSelected));
                         } else {
-                            chk.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+                            //chk.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
                         }
                     }
                 });

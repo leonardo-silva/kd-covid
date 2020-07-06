@@ -6,9 +6,10 @@
     android:layout_height="wrap_content"
     android:layout_gravity="center_vertical"
     android:orientation="vertical"
-    android:paddingTop="20sp"
-    android:paddingBottom="20sp"
+    android:padding="20sp"
     tools:context=".activity.PhoneActivity">
+
+    <include layout="@layout/header_logo" />
 
     <TextView
         android:id="@+id/tvHeaderFeelOkPhone"
@@ -31,19 +32,18 @@
         android:textAlignment="center"
         android:textColor="@color/colorAccent"
         android:textSize="25sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:visibility="gone" />
 
     <TextView
         android:id="@+id/tvPhoneLBL"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
-        android:paddingLeft="10sp"
-        android:paddingRight="10sp"
-        android:paddingBottom="10sp"
-        android:text="@string/phone_or_email_lbl"
-        android:textColor="@android:color/background_light"
-        android:textSize="25sp"
+        android:background="@drawable/border"
+        android:padding="5sp"
+        android:text="@string/lbl_phone_or_email"
+        android:textAlignment="center"
+        android:textSize="23sp"
         android:textStyle="bold" />
 
 
@@ -55,14 +55,13 @@
         android:paddingLeft="15sp"
         android:paddingTop="5sp"
         android:paddingRight="15sp"
-        android:textColorHint="@color/colorAccent"
         app:hintTextAppearance="@style/TextLabel">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etEnterPhone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/enter_phone_lbl"
+            android:hint="@string/lbl_enter_phone"
             android:inputType="phone"
             android:textAlignment="viewStart"
             android:textColor="@color/colorPrimaryDark"
@@ -79,14 +78,13 @@
         android:layout_marginBottom="20sp"
         android:paddingLeft="15sp"
         android:paddingRight="15sp"
-        android:textColorHint="@color/colorAccent"
         app:hintTextAppearance="@style/TextLabel">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etEnterEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/enter_email_lbl"
+            android:hint="@string/lbl_enter_email"
             android:inputType="textWebEmailAddress"
             android:textColor="@color/colorPrimaryDark"
             android:textColorHint="@color/colorAccent"
@@ -97,12 +95,11 @@
 
     <Button
         android:id="@+id/btnPhoneNext"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="30sp"
         android:background="@drawable/rounded_button"
-        android:drawableEnd="@drawable/ic_arrow_forward_white_24dp"
         android:onClick="onclickBtnPhoneNext"
         android:padding="16dp"
         android:text="@string/lbl_finish"

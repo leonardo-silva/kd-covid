@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.dam.kdcovid_app.R;
@@ -18,6 +19,7 @@ public class ResultActivity extends AppCompatActivity {
     private Toast backToast;
 
     private Patient patient;
+    private TextView tvRecommendation;
     private Button btnLowRisk;
     private Button btnMediumRisk;
     private Button btnHighRisk;
@@ -58,32 +60,33 @@ public class ResultActivity extends AppCompatActivity {
         if (result <= Covid19.Risk.LOW.getValue()) {
             btnLowRisk.setVisibility(View.VISIBLE);
             if (result == Covid19.Risk.UNLIKELY.getValue()) {
-                btnLowRisk.setText(R.string.result_low_risk1_msg);
+                tvRecommendation.setText(R.string.result_low_risk1_msg);
             } else {
-                btnLowRisk.setText(R.string.result_low_risk2_msg);
+                tvRecommendation.setText(R.string.result_low_risk2_msg);
             }
         } else if (result <= Covid19.Risk.MEDIUM_2.getValue()) {
             btnMediumRisk.setVisibility(View.VISIBLE);
             if (result == Covid19.Risk.MEDIUM_1.getValue()) {
-                btnMediumRisk.setText(R.string.result_medium_risk3_msg);
+                tvRecommendation.setText(R.string.result_medium_risk3_msg);
             } else {
-                btnMediumRisk.setText(R.string.result_medium_risk4_msg);
+                tvRecommendation.setText(R.string.result_medium_risk4_msg);
             }
         } else if (result <= Covid19.Risk.HIGH_2.getValue()) {
             btnHighRisk.setVisibility(View.VISIBLE);
             if (result == Covid19.Risk.HIGH_1.getValue()) {
-                btnHighRisk.setText(R.string.result_high_risk5_msg);
+                tvRecommendation.setText(R.string.result_high_risk5_msg);
             } else {
-                btnHighRisk.setText(R.string.result_high_risk6_msg);
+                tvRecommendation.setText(R.string.result_high_risk6_msg);
             }
         } else {
             btnHighRisk.setVisibility(View.VISIBLE);
-            btnHighRisk.setText(R.string.result_very_high_risk7_msg);
             btnHighRisk.setBackgroundColor(getResources().getColor(R.color.colorAccent));
+            tvRecommendation.setText(R.string.result_very_high_risk7_msg);
         }
     }
 
     private void setUpViewById() {
+        tvRecommendation = findViewById(R.id.tvRecommendation);
         btnLowRisk = findViewById(R.id.btnLowRisk);
         btnMediumRisk = findViewById(R.id.btnMediumRisk);
         btnHighRisk = findViewById(R.id.btnHighRisk);

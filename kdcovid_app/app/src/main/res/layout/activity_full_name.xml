@@ -1,109 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_gravity="center_vertical"
-    android:orientation="vertical"
-    android:padding="20sp"
-    tools:context=".activity.FullNameActivity">
+    android:fillViewport="true">
 
-    <TextView
-        android:id="@+id/tvHeaderFeelOkFullName"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="30sp"
-        android:text="@string/feel_ok_lbl"
-        android:textAlignment="center"
-        android:textColor="@color/colorPrimary"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        android:visibility="gone" />
+        android:layout_gravity="center_vertical"
+        android:orientation="vertical"
+        android:padding="20sp"
+        tools:context=".activity.FullNameActivity">
 
-    <TextView
-        android:id="@+id/tvHeaderFullName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingBottom="30sp"
-        android:text="@string/feel_sth_lbl"
-        android:textAlignment="center"
-        android:textColor="@color/colorAccent"
-        android:textSize="25sp"
-        android:textStyle="bold" />
+        <include layout="@layout/header_logo" />
 
-    <TextView
-        android:id="@+id/tvWhatIsFullName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/rounded_subheader_textview"
-        android:paddingLeft="5sp"
-        android:paddingRight="5sp"
-        android:paddingBottom="10sp"
-        android:text="@string/full_name_lbl"
-        android:textColor="@android:color/background_light"
-        android:textSize="25sp"
-        android:textStyle="bold" />
-
-    <RadioGroup
-        android:id="@+id/rdgFullName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <RadioButton
-            android:id="@+id/rdbFullNameDWA"
+        <TextView
+            android:id="@+id/tvHeaderFeelOkFullName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorPrimary"
-            android:buttonTint="@android:color/white"
-            android:paddingTop="5sp"
-            android:paddingBottom="5sp"
-            android:text="@string/dwa_lbl"
-            android:textColor="@android:color/white"
+            android:paddingBottom="30sp"
+            android:text="@string/feel_ok_lbl"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
             android:textSize="25sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:visibility="gone" />
 
-        <RadioButton
-            android:id="@+id/rdbFillFullName"
+        <TextView
+            android:id="@+id/tvHeaderFullName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/rounded_bottom_item"
-            android:buttonTint="@android:color/white"
-            android:paddingTop="5sp"
-            android:paddingBottom="5sp"
-            android:text="@string/fill_lbl"
-            android:textColor="@android:color/white"
+            android:paddingBottom="30sp"
+            android:text="@string/feel_sth_lbl"
+            android:textAlignment="center"
+            android:textColor="@color/colorAccent"
             android:textSize="25sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvWhatIsFullName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:padding="5sp"
+            android:text="@string/full_name_lbl"
+            android:textAlignment="center"
+            android:textSize="23sp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/rdgFullName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/rdbFullNameDWA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="5sp"
+                android:paddingBottom="5sp"
+                android:text="@string/dwa_lbl"
+                android:textSize="23sp" />
+
+            <RadioButton
+                android:id="@+id/rdbFillFullName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="5sp"
+                android:paddingBottom="5sp"
+                android:text="@string/fill_lbl"
+                android:textSize="23sp" />
+
+
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/etFullName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/hint_full_name_lbl"
+            android:inputType="textPersonName"
+            android:maxLines="1"
+            android:maxLength="40"
+            android:ellipsize="end"
+            android:textSize="20sp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btnFullNameNext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30sp"
+            android:background="@drawable/rounded_button"
+            android:onClick="onclickBtnFullNameNext"
+            android:padding="16dp"
+            android:text="@string/next_lbl"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
 
-    </RadioGroup>
+    </LinearLayout>
 
-    <EditText
-        android:id="@+id/etFullName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="@string/hint_full_name_lbl"
-        android:inputType="textPersonName"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="20sp"
-        android:visibility="invisible" />
-
-    <Button
-        android:id="@+id/btnFullNameNext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="30sp"
-        android:background="@drawable/rounded_button"
-        android:drawableEnd="@drawable/ic_arrow_forward_white_24dp"
-        android:onClick="onclickBtnFullNameNext"
-        android:padding="16dp"
-        android:text="@string/next_lbl"
-        android:textColor="@android:color/white"
-        android:textSize="18sp"
-        android:textStyle="bold" />
-
-
-</LinearLayout>
+</ScrollView>
