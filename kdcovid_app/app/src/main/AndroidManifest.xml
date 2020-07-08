@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.dam.kdcovid_app">
+    package="com.ifnmg.dmelab.kdcovid">
 
     <!-- this is the internet permission -->
     <uses-permission android:name="android.permission.INTERNET" />
@@ -15,30 +15,30 @@
         android:roundIcon="@mipmap/ic_launcher_kdcovid_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.ResultActivity"
+        <activity android:name="com.ifnmg.dmelab.kdcovid.activity.ResultActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".activity.PhoneActivity"
+        <activity android:name="com.ifnmg.dmelab.kdcovid.activity.PhoneActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".activity.FullNameActivity" />
-        <activity android:name=".activity.ZipCodeActivity"
+        <activity android:name="com.ifnmg.dmelab.kdcovid.activity.FullNameActivity" />
+        <activity android:name="com.ifnmg.dmelab.kdcovid.activity.ZipCodeActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".activity.NeighborhoodActivity"
+        <activity android:name="com.ifnmg.dmelab.kdcovid.activity.NeighborhoodActivity"
             android:screenOrientation="portrait"/>
-        <activity android:name=".activity.CityActivity"
+        <activity android:name="com.ifnmg.dmelab.kdcovid.activity.CityActivity"
             android:screenOrientation="portrait"/>
-        <activity android:name=".activity.GenderActivity" />
-        <activity android:name=".activity.PriorDiseasesActivity"
+        <activity android:name="com.ifnmg.dmelab.kdcovid.activity.GenderActivity" />
+        <activity android:name="com.ifnmg.dmelab.kdcovid.activity.PriorDiseasesActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".activity.AgeRangeActivity" />
-        <activity android:name=".activity.Last14DaysActivity" />
-        <activity android:name=".activity.SymptomDurationActivity" />
-        <activity android:name=".activity.YesSymptomActivity"
+        <activity android:name="com.ifnmg.dmelab.kdcovid.activity.AgeRangeActivity" />
+        <activity android:name="com.ifnmg.dmelab.kdcovid.activity.Last14DaysActivity" />
+        <activity android:name="com.ifnmg.dmelab.kdcovid.activity.SymptomDurationActivity" />
+        <activity android:name="com.ifnmg.dmelab.kdcovid.activity.YesSymptomActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".activity.FeelingActivity" />
-        <activity android:name=".activity.AgreementActivity"
+        <activity android:name="com.ifnmg.dmelab.kdcovid.activity.FeelingActivity" />
+        <activity android:name="com.ifnmg.dmelab.kdcovid.activity.AgreementActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.MainActivity"
+            android:name="com.ifnmg.dmelab.kdcovid.activity.MainActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" >
             <intent-filter>

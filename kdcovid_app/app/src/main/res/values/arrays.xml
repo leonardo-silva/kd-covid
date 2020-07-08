@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string-array name="cities">
+        <item></item>
+        <item>Araçuai</item>
+        <item>Coronel Murta</item>
+        <item>Janaúba</item>
+        <item>Montes Claros</item>
+        <item>Porteirinha</item>
+        <item>Salinas</item>
+        <item>São João do Paraíso</item>
+        <item>Taiobeiras</item>
+        <item>Outra</item>
+    </string-array>
     <string-array name="neighborhood_salinas">
         <item></item>
         <item>Água Boa</item>

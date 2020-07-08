@@ -68,8 +68,8 @@
     <string name="porteirinha_lbl">Porteirinha</string>
     <string name="montes_claros_lbl">Montes Claros</string>
     <string name="other_city_lbl">Outra</string>
-    <string name="neighborhood_salinas_lbl">Selecione o seu bairro em Salinas:</string>
-    <string name="neighborhood_janauba_lbl">Selecione o seu bairro em Janaúba:</string>
+    <string name="neighborhood_salinas_lbl">Selecione seu bairro em Salinas</string>
+    <string name="neighborhood_janauba_lbl">Selecione seu bairro em Janaúba</string>
     <string name="zip_code_lbl">Informe aqui o seu CEP</string>
     <string name="full_name_lbl">Qual o seu nome completo?</string>
     <string name="fill_lbl">Preencher</string>
@@ -169,7 +169,10 @@
     <string name="lbl_enter_email">Informe aqui seu email</string>
     <string name="cell_phone_mask">(NN)NNNNN-NNNN</string>
     <string name="zip_code_mask">NNNNN-NNN</string>
+    <string name="err_invalid_zip_code">Favor informar um CEP VÁLIDO!</string>
     <string name="err_select_atleast_one_answer">Favor selecionar pelo menos uma resposta!</string>
+    <string name="err_select_atleast_one_zipcode">Favor informar o CEP!</string>
+    <string name="err_select_atleast_one_city">Favor selecionar pelo menos uma cidade!</string>
     <string name="err_select_atleast_one_neighborhood">Favor selecionar seu bairro!</string>
     <string name="err_invalid_phone">Favor informar um telefone VÁLIDO!</string>
     <string name="err_invalid_email">Favor informar um email VÁLIDO!</string>

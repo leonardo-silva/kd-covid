@@ -63,14 +63,7 @@ class DbOperation
 		$male = $obj->male;
 		$female = $obj->female;
 		$otherGender = $obj->otherGender;
-		$citySalinas = $obj->citySalinas;
-		$cityAracuai = $obj->cityAracuai;
-		$cityTaiobeiras = $obj->cityTaiobeiras;
-		$cityCoronelMurta = $obj->cityCoronelMurta;
-		$citySaoJoaoDoParaiso = $obj->citySaoJoaoDoParaiso;
-		$cityJanauba = $obj->cityJanauba;
-		$cityPorteirinha = $obj->cityPorteirinha;
-		$cityMontesClaros = $obj->cityMontesClaros;
+		$cityName = $obj->cityName;
 		$otherCity = $obj->otherCity;
 		$neighborhoodName = $obj->neighborhoodName;
 		$zipCode = $obj->zipCode;
@@ -79,19 +72,18 @@ class DbOperation
 		$phone = $obj->phone;
 		$email = $obj->email;
 		$android_id = $obj->android_id;
+		$resultCode = $obj->resultCode;
 		$visitedPoints = $obj->visitedPoints;
 				
-		$stmt = $this->con->prepare("INSERT INTO patient (hasSymptom, hasFever, hasSmellTasteLoss, hasRunningNose, hasTiredness, hasCough,
+		$stmt = $this->con->prepare("INSERT INTO PATIENT (hasSymptom, hasFever, hasSmellTasteLoss, hasRunningNose, hasTiredness, hasCough,
 				hasBreathProblem, hasPurpleMouth, hasSoreThroat, hasChestPressure, hasDiarrhea, hasNOASymptom, 
 				duration1to3Days, duration4to7Days, duration8to10Days, duration11to14Days, duration14PlusDays, wentOutOfCity, 
 				hadContactWithOutsider, hadContactWithInfected, hadLast14DaysNOA, age1to15Years, age16to30Years, age31to45Years, 
 				age46to60Years, age60PlusYears, hasDiabetes, hasHeartProblem, hasChronicKidney,	hasChronicRespiratory, 
 				hasHighPressure, hasCancer, dontHavePriorDisease, priorDiseasesDWA, male, female, 
-				otherGender, citySalinas, cityAracuai, cityTaiobeiras, cityCoronelMurta, citySaoJoaoDoParaiso, 
-				cityJanauba, cityPorteirinha, cityMontesClaros, otherCity, neighborhoodName, zipCode, 
-				fullNameDWA, fullName, phone, email, android_id, visitedPoints) 
+				otherGender, cityName, otherCity, neighborhoodName, zipCode, fullNameDWA, 
+				fullName, phone, email, android_id, resultCode, visitedPoints) 
 			VALUES(?, ?, ?, ?, ?, ?,
-				   ?, ?, ?, ?, ?, ?,   
 				   ?, ?, ?, ?, ?, ?,   
 				   ?, ?, ?, ?, ?, ?,   
 				   ?, ?, ?, ?, ?, ?,   
@@ -100,7 +92,7 @@ class DbOperation
 				   ?, ?, ?, ?, ?, ?,   
 			       ?, ?, ?, ?, ?, ST_GeomFromText(?))");
 				   
-		$field_types = "iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiississsss";		 
+		$field_types = "iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiisississssis";		 
 		
 		if (empty($visitedPoints)) {
 			$multipoint_field = null;
@@ -114,9 +106,8 @@ class DbOperation
 				$hadContactWithOutsider, $hadContactWithInfected, $hadLast14DaysNOA, $age1to15Years, $age16to30Years, $age31to45Years, 
 				$age46to60Years, $age60PlusYears, $hasDiabetes, $hasHeartProblem, $hasChronicKidney, $hasChronicRespiratory, 
 				$hasHighPressure, $hasCancer, $dontHavePriorDisease, $priorDiseasesDWA, $male, $female, 
-				$otherGender, $citySalinas, $cityAracuai, $cityTaiobeiras, $cityCoronelMurta, $citySaoJoaoDoParaiso, 
-				$cityJanauba, $cityPorteirinha, $cityMontesClaros, $otherCity, $neighborhoodName, $zipCode, 
-				$fullNameDWA, $fullName, $phone, $email, $android_id, $multipoint_field
+				$otherGender, $cityName, $otherCity, $neighborhoodName, $zipCode, $fullNameDWA, 
+				$fullName, $phone, $email, $android_id, $resultCode, $multipoint_field
 			);
 							
 		if($stmt->execute())
@@ -130,7 +121,7 @@ class DbOperation
 	* PARAM $interval_in_days = interval (in days) considered since the creation of the record, according to current_date
 	*/
 	function getPatients($email, $phone, $interval_in_days){
-		$query = "SELECT id, android_id, created_at FROM patient 
+		$query = "SELECT id, android_id, created_at FROM PATIENT 
 				  WHERE ((email <> '' AND email = ? ) OR (phone <> '' AND phone = ? )) 
 			  	    AND (DATE(DATE_ADD(created_at, INTERVAL ? DAY))) >= CURRENT_DATE()";
 			  

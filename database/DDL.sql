@@ -57,15 +57,8 @@ CREATE TABLE IF NOT EXISTS `kd-covid`.`PATIENT` (
   `male` TINYINT NULL,
   `female` TINYINT NULL,
   `otherGender` TINYINT NULL,
-  `citySalinas` TINYINT NULL,
-  `cityAracuai` TINYINT NULL,
-  `cityTaiobeiras` TINYINT NULL,
-  `cityCoronelMurta` TINYINT NULL,
-  `citySaoJoaoDoParaiso` TINYINT NULL,
-  `cityJanauba` TINYINT NULL,
-  `cityPorteirinha` TINYINT NULL,
-  `cityMontesClaros` TINYINT NULL,
   `otherCity` TINYINT NULL,
+  `cityName` VARCHAR(30) NOT NULL,
   `neighborhoodName` VARCHAR(40) NULL,
   `zipCode` CHAR(10) NULL,
   `fullNameDWA` TINYINT NULL,
@@ -76,6 +69,7 @@ CREATE TABLE IF NOT EXISTS `kd-covid`.`PATIENT` (
   `created_at` TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP(),
   `updated_at` TIMESTAMP NULL,
   `android_id` VARCHAR(25) NULL,
+  `resultCode` TINYINT NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
@@ -94,11 +88,12 @@ BEGIN
 
 	DECLARE phone VARCHAR(16) DEFAULT TRIM(NEW.phone);
 	DECLARE email VARCHAR(40) DEFAULT TRIM(NEW.email);
+	DECLARE cityName VARCHAR(30) DEFAULT TRIM(NEW.cityName);
     
     IF (phone = '' AND email = '')
 		THEN
 			SIGNAL SQLSTATE '02000' SET MESSAGE_TEXT = phoneOrEmailErrorMessage;
-	ELSEIF NOT(NEW.citySalinas XOR NEW.cityAracuai XOR NEW.cityTaiobeiras XOR NEW.cityCoronelMurta XOR NEW.citySaoJoaoDoParaiso XOR NEW.cityJanauba XOR NEW.cityPorteirinha XOR NEW.cityMontesClaros XOR NEW.otherCity)
+	ELSEIF (NEW.cityName = '')
 		THEN
 			SIGNAL SQLSTATE '02000' SET MESSAGE_TEXT = cityErrorMessage;
 	ELSEIF NOT(NEW.male XOR NEW.female XOR NEW.otherGender)
