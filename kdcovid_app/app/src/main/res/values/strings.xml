@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">KD-Covid</string>
     <string name="dsc_logo_image">Logo oficial do KD-Covid</string>
+    <string name="dsc_logo_janauba">Logo oficial da Prefeitura de Janaúba</string>
+    <string name="dsc_logo_salinas">Logo oficial da Prefeitura de Salinas</string>
+    <string name="dsc_logo_ifnmg">Logo oficial do IFNMG</string>
     <string name="welcome_msg">Olá, bem-vindo(a) ao <b>KD-Covid</b>! \n\nEste aplicativo tem
         a intenção de acompanhar e monitorar os casos de COVID-19 na nossa região,
         principalmente nas cidades de Salinas e Janaúba. Para nos ajudar a
@@ -191,7 +194,7 @@
         \n<b>Todos os direitos reservados.</b>
         \n\nEstes termos de uso têm por objetivo definir as
         \nregras a serem seguidas para a utilização do
-        \nKD-Covid (\'<b><a href="http://www.leonardosilva.educationhost.cloud/kdcovid/TermosUsoATF-24_6_20.html">Termos de Uso</a></b>\'), sem prejuízo da
+        \nKD-Covid (\'<b><a href="http://174.138.35.55/api/doc/TermosUsoATF-24_6_20.html">Termos de Uso</a></b>\'), sem prejuízo da
         \naplicação da legislação vigente.
         \n\n<b>Ao utilizar o KD-Covid, você automaticamente
         \nconcorda com estes termos de uso,
@@ -199,7 +202,7 @@
         \ne quaisquer atos praticados por você na
         \naplicação ou em serviços a ela relacionados.
         \nVocê também concorda com os termos descritos
-        \nem nossa <a href="http://www.leonardosilva.educationhost.cloud/kdcovid/PoliticaPrivacidade-ATF-24_6_20.html">Política de Privacidade</a>.
+        \nem nossa <a href="http://174.138.35.55/api/doc/PoliticaPrivacidade-ATF-24_6_20.html">Política de Privacidade</a>.
         \nCaso você não concorde com qualquer dos
         \ntermos e condições abaixo estabelecidos,
         \nvocê não deve utilizar o KD-Covid.</b>

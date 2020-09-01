@@ -15,27 +15,15 @@
         tools:context=".activity.MainActivity">
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/ivMainLogo"
             android:layout_width="125dp"
             android:layout_height="125dp"
+            android:contentDescription="@string/dsc_logo_image"
             android:scaleType="centerCrop"
-            android:src="@drawable/kdcovid_logo_noborder"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvKD" />
-
-        <TextView
-            android:id="@+id/tvKD"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="KD-Covid"
-            android:textColor="@android:color/black"
-            android:textSize="30sp"
-            android:textStyle="bold"
-            android:visibility="gone"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/kdcovid_logo_noborder" />
 
         <TextView
             android:id="@+id/tvWelcome"
@@ -50,7 +38,7 @@
             android:textSize="17sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+            app:layout_constraintTop_toBottomOf="@+id/ivMainLogo" />
 
         <TextView
             android:id="@+id/tvWithSupport"
@@ -64,39 +52,41 @@
             app:layout_constraintTop_toBottomOf="@+id/tvWelcome" />
 
         <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/ivIFLogo"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
+            android:contentDescription="@string/dsc_logo_ifnmg"
             android:src="@drawable/ifnmg_vertical_jpg"
-            app:layout_constraintEnd_toStartOf="@+id/imageView4"
+            app:layout_constraintEnd_toStartOf="@+id/ivJanaubaLogo"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvWithSupport" />
 
         <ImageView
-            android:id="@+id/imageView3"
+            android:id="@+id/ivSalinasLogo"
             android:layout_width="115dp"
             android:layout_height="115dp"
             android:layout_marginTop="1dp"
-            android:src="@drawable/prefeitura_salinas_fundobranco"
+            android:contentDescription="@string/dsc_logo_salinas"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/imageView4"
+            app:layout_constraintStart_toEndOf="@+id/ivJanaubaLogo"
             app:layout_constraintTop_toBottomOf="@+id/tvWithSupport"
             app:srcCompat="@drawable/prefeitura_salinas_fundobranco" />
 
         <ImageView
-            android:id="@+id/imageView4"
+            android:id="@+id/ivJanaubaLogo"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:src="@drawable/prefeitura_janauba"
-            app:layout_constraintEnd_toStartOf="@+id/imageView3"
+            android:contentDescription="@string/dsc_logo_janauba"
+            app:srcCompat="@drawable/prefeitura_janauba"
+            app:layout_constraintEnd_toStartOf="@+id/ivSalinasLogo"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/imageView2"
+            app:layout_constraintStart_toEndOf="@+id/ivIFLogo"
             app:layout_constraintTop_toBottomOf="@+id/tvWithSupport" />
 
         <Button
@@ -105,7 +95,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="6dp"
             android:background="@drawable/rounded_button"
-            android:drawableRight="@drawable/ic_arrow_forward_white_24dp"
+            android:drawableEnd="@drawable/ic_arrow_forward_white_24dp"
             android:padding="9sp"
             android:text="@string/next_lbl"
             android:textColor="@android:color/background_light"
@@ -115,7 +105,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView4"
+            app:layout_constraintTop_toBottomOf="@+id/ivJanaubaLogo"
             app:layout_constraintVertical_bias="0.067" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -3,4 +3,9 @@ doc/.DS_Store
 database/.DS_Store
 database/create_user.sql
 database/kd-covid.mwb.bak
+database/kd-covid_test.mwb
+database/kd-covid_test.mwb.bak
+database/partialResults
+kdcovid_app/app/release
+kdcovid_app/app/src/main/java/com/ifnmg/dmelab/kdcovid/control/api/Api.java
 keys

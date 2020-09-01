@@ -79,6 +79,7 @@ public class NeighborhoodActivity extends AppCompatActivity {
                     tvNeighborhood.setVisibility(View.VISIBLE);
                     spnNeighborhood.setVisibility(View.VISIBLE);
                     etZipCodeOtherCity.setVisibility(View.GONE);
+                    etZipCodeOtherCity.setText("");
                     // Set up neighborhood if city is Salinas or Janaúba
                     setUpNeighborhood(cityName);
                 } else if (cityName.equalsIgnoreCase(otherCity)) {
@@ -89,6 +90,7 @@ public class NeighborhoodActivity extends AppCompatActivity {
                     tvNeighborhood.setVisibility(View.GONE);
                     spnNeighborhood.setVisibility(View.GONE);
                     etZipCodeOtherCity.setVisibility(View.GONE);
+                    etZipCodeOtherCity.setText("");
                 }
             }
 
