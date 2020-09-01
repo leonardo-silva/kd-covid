@@ -9,7 +9,7 @@
     android:padding="20sp"
     tools:context=".activity.FeelingActivity">
 
-    <include layout="@layout/header_logo" />
+    <include layout="@layout/header_logo_api21" />
 
     <TextView
         android:id="@+id/tvFeeling"

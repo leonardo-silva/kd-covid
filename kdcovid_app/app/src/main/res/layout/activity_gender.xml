@@ -16,18 +16,7 @@
         android:padding="20sp"
         tools:context=".activity.GenderActivity">
 
-        <TextView
-            android:id="@+id/tvGenderAppName"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:drawableStart="@drawable/logo_drawable_attr"
-            android:drawablePadding="5sp"
-            android:gravity="center_vertical"
-            android:text="@string/app_name"
-            android:textAlignment="center"
-            android:textSize="30sp"
-            android:textStyle="bold" />
+        <include layout="@layout/header_logo_api21" />
 
         <TextView
             android:id="@+id/tvHeaderFeelOkGender"

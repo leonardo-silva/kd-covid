@@ -8,7 +8,7 @@
     android:padding="20sp"
     tools:context=".activity.NeighborhoodActivity">
 
-    <include layout="@layout/header_logo" />
+    <include layout="@layout/header_logo_api21" />
 
     <TextView
         android:id="@+id/tvHeaderFeelOkNeighborhood"

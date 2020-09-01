@@ -5,6 +5,9 @@
         android:drawable="@drawable/kdcovid_logo_noborder"
         android:width="100sp"
         android:height="100sp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:gravity="center"
         />
 
 </layer-list >
