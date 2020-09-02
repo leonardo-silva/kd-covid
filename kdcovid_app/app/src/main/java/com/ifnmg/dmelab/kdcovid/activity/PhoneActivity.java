@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
@@ -51,6 +52,7 @@ public class PhoneActivity extends AppCompatActivity {
     //private TextView tvHeaderFeelOkPhone;
     private TextInputEditText etEnterPhone;
     private TextInputEditText etEnterEmail;
+    private Button btnPhoneNext;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,6 +74,7 @@ public class PhoneActivity extends AppCompatActivity {
 
     private void setUpViewById() {
         pgbDB = findViewById(R.id.pgbDB);
+        btnPhoneNext = findViewById(R.id.btnPhoneNext);
         etEnterEmail = findViewById(R.id.etEnterEmail);
         etEnterPhone = findViewById(R.id.etEnterPhone);
 
@@ -110,8 +113,16 @@ public class PhoneActivity extends AppCompatActivity {
             this.patient.setPhone(etEnterPhone.getText().toString());
             this.patient.setAndroid_id(androidId);
             this.patient.setResultCode((byte)Covid19.Screening(this.patient.generateCovid19Input()).getValue());
-            // Verify if the questionnaire was already answered in the last INTERVAL_DAYS
-            this.verifyPatientAlreadyRecorded(INTERVAL_DAYS);
+
+            if (btnPhoneNext.getVisibility() == View.VISIBLE) {
+                // Verify if the questionnaire was already answered in the last INTERVAL_DAYS
+                this.verifyPatientAlreadyRecorded(INTERVAL_DAYS);
+            }
+            else {
+                // It's a trial version (data won't be recorded) - see issue #5
+                Toast.makeText(this, getResources().getText(R.string.msg_finish_test), Toast.LENGTH_LONG).show();
+                gotoNextActivity();
+            }
         }
     }
 

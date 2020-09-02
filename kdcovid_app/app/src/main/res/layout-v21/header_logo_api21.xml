@@ -10,6 +10,7 @@
         android:layout_height="100dp"
         android:layout_weight="0.9"
         android:contentDescription="@string/dsc_logo_image"
+        android:paddingStart="5dp"
         android:paddingEnd="5dp"
         android:scaleType="fitEnd"
         app:srcCompat="@drawable/kdcovid_logo_noborder" />

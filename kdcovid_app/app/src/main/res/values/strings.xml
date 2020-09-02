@@ -186,6 +186,8 @@
     <string name="err_db_unexpected_exception">Ocorreu um erro inesperado! Tente novamente em alguns instantes!</string>
     <string name="msg_db_insert_ok">Dados enviados com SUCESSO!</string>
     <string name="lbl_finish">Finalizar</string>
+    <string name="lbl_finish_test">Finalizar Teste! \nNenhum dado será gravado.</string>
+    <string name="msg_finish_test">Obrigado por realizar este Teste!</string>
     <string name="msg_press_again_to_leave">Pressione novamente para sair</string>
     <string name="lbl_terms_of_use">TERMO DE USO</string>
     <string name="msg_agreement">Bem-vindo(a)! Obrigado por utilizar o KD-Covid!
