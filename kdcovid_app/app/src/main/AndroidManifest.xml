@@ -4,7 +4,8 @@
 
     <!-- this is the internet permission -->
     <uses-permission android:name="android.permission.INTERNET" />
-    <!-- fine location permission -->
+    <!-- location permission -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
