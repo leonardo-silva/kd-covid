@@ -21,9 +21,9 @@ public class NeighborhoodActivity extends AppCompatActivity {
 
     private Patient patient;
     private Spinner spnCity;
-    private TextView tvCity;
     private Spinner spnNeighborhood;
     private TextView tvNeighborhood;
+    private String cityBerizal;
     private String cityJanauba;
     private String citySalinas;
     private String otherCity;
@@ -41,6 +41,7 @@ public class NeighborhoodActivity extends AppCompatActivity {
     }
 
     private void setUpViewById() {
+        cityBerizal = getResources().getString(R.string.berizal_lbl);
         cityJanauba = getResources().getString(R.string.janauba_lbl);
         citySalinas = getResources().getString(R.string.salinas_lbl);
         otherCity = getResources().getString(R.string.other_city_lbl);
@@ -75,12 +76,13 @@ public class NeighborhoodActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 String cityName = parent.getItemAtPosition(position).toString();
                 if ((cityName.equalsIgnoreCase(citySalinas)) ||
+                    (cityName.equalsIgnoreCase(cityBerizal)) ||
                     (cityName.equalsIgnoreCase(cityJanauba))) {
                     tvNeighborhood.setVisibility(View.VISIBLE);
                     spnNeighborhood.setVisibility(View.VISIBLE);
                     etZipCodeOtherCity.setVisibility(View.GONE);
                     etZipCodeOtherCity.setText("");
-                    // Set up neighborhood if city is Salinas or Janaúba
+                    // Set up neighborhood if city is Salinas, Berizal, or Janaúba
                     setUpNeighborhood(cityName);
                 } else if (cityName.equalsIgnoreCase(otherCity)) {
                     tvNeighborhood.setVisibility(View.GONE);
@@ -108,8 +110,10 @@ public class NeighborhoodActivity extends AppCompatActivity {
 
         if (cityName.equalsIgnoreCase(cityJanauba)) {
             neighborhood_lbl = getResources().getString(R.string.neighborhood_janauba_lbl);
-            //tvNeighborhood.setText(getResources().getString(R.string.neighborhood_janauba_lbl));
             neighborhoodArrayId = R.array.neighborhood_janauba;
+        } else if (cityName.equalsIgnoreCase(cityBerizal)) {
+            neighborhood_lbl = getResources().getString(R.string.neighborhood_berizal_lbl);
+            neighborhoodArrayId = R.array.neighborhood_berizal;
         }
         tvNeighborhood.setText(neighborhood_lbl);
 
@@ -127,7 +131,10 @@ public class NeighborhoodActivity extends AppCompatActivity {
             Toast.makeText(this, getResources().getString(R.string.err_select_atleast_one_city), Toast.LENGTH_LONG).show();
         } else {
             String cityName = selectedCity.toString();
-            if ((cityName.equalsIgnoreCase(citySalinas)) || (cityName.equalsIgnoreCase(cityJanauba))) {
+            if ((cityName.equalsIgnoreCase(citySalinas)) ||
+                (cityName.equalsIgnoreCase(cityBerizal)) ||
+                (cityName.equalsIgnoreCase(cityJanauba)))
+            {
                 Object selectedNeighborhood = spnNeighborhood.getSelectedItem();
                 if (selectedNeighborhood == null ||
                         selectedNeighborhood.toString().isEmpty()) {

@@ -3,6 +3,7 @@
     <string-array name="cities">
         <item></item>
         <item>Araçuai</item>
+        <item>Berizal</item>
         <item>Coronel Murta</item>
         <item>Janaúba</item>
         <item>Montes Claros</item>
@@ -11,6 +12,15 @@
         <item>São João do Paraíso</item>
         <item>Taiobeiras</item>
         <item>Outra</item>
+    </string-array>
+    <string-array name="neighborhood_berizal">
+        <item></item>
+        <item>Barreiros</item>
+        <item>Centro</item>
+        <item>Planalto</item>
+        <item>Tabatinga</item>
+        <item>Taperinha</item>
+        <item>Vila São João</item>
     </string-array>
     <string-array name="neighborhood_salinas">
         <item></item>
