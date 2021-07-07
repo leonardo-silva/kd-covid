@@ -1,3 +1,20 @@
-<b>Kd-Covid</b>:  Project to organize COVID-19 tests in northern Minas Gerais, Brazil
+# KD-Covid
+<p>Project to organize COVID-19 tests in northern Minas Gerais, Brazil.</p>
+Conif Research Project No. 01/2020 - Confronting COVID-19: <b>"Detect to Confront: Monitoring and Diagnosis of Oligosymptomatic COVID-19 Cases through Digital, Geospatial and Molecular Tools"</b>
 
-Projeto de Pesquisa Edital Conif n°01/2020 – Enfrentamento à COVID-19 : <b>"Detectar para Enfrentar: Monitoramento e Diagnóstico de Casos Oligossintomáticos de COVID-19 através de Ferramentas Digitais, Geoespaciais e Moleculares"</b> - projeto SELECIONADO conforme resultado final divulgado em 15 de maio de 2020.
+<h1 align="center">
+    <img alt="kdcovid" title="KD-Covid" src="img/kdcovid_logo_noborder_640x610.jpeg" />
+</h1>
+
+<br>
+
+## 🧪 Technologies
+
+This project was developed using the following technologies:
+
+- [Android Studio](https://developer.android.com/studio)
+- [Java](https://www.oracle.com/br/java/technologies/javase-downloads.html)
+- [PHP](https://www.php.net/)
+
+
+---
