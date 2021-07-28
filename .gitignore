@@ -11,3 +11,4 @@ database/tests
 kdcovid_app/app/release
 kdcovid_app/app/src/main/java/com/ifnmg/dmelab/kdcovid/control/api/Api.java
 keys
+docprivate
