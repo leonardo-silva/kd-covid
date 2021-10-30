@@ -1,6 +1,7 @@
 .DS_Store
 doc/.DS_Store
 database/.DS_Store
+database/backup
 database/create_user.sql
 database/kd-covid.mwb
 database/kd-covid.mwb.bak
